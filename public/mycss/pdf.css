@@ -1,0 +1,61 @@
+#pdf_panel {
+  padding: 0;
+}
+
+#pdf_panel {
+  min-height: 20px !important;
+}
+
+.list-pane-ul {
+  margin: 0;
+  padding: 0;
+  /* border: 2px solid #484C49; */
+}
+
+.list-pane-li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+  font-size: 16px;
+}
+
+.list-pane-li:hover {
+  cursor: pointer;
+}
+
+.list-pane-li-odd {
+  border: 2px solid #2F3031;
+  background-color: #2F3031;
+}
+
+.list-pane-li-even {
+  border: 2px solid #343536;
+  background-color: #343536;
+}
+
+.list-pane-li-clicked {
+  border: 2px solid #00A4A7;
+  background-color: #43616D;
+}
+
+.list-pane-ul li span {
+  margin-left: 10px;
+  font-size: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.list-pane-span-clicked {
+  color: #00EAF2;
+}
+
+#test {
+  padding: 0px;
+  border: 1px solid #595959;
+  min-height: 10px !important;
+}
+
+#test #ui-id-1 {
+  margin: 0.4em 0;
+}

@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<style type="text/css"> 
+</style>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+    <title>Iframe与3DDataCenter之间的通信</title>
+    <script src="../libs/jquery.js"></script>
+
+    <script type="text/javascript">
+       function load(){
+
+         //通讯方式一：直接传入调用的api
+         // 如：传入"main.sceneManager.viewManager3d.getDefaultEventHandler().lookAtByData('f2r2c02r206')"
+          $('#btnSend').click(function(e){
+              var txtMsg = $('#mestxt').val();
+              var content = window.frames['myFrame'].contentWindow;
+              content.postMessage(txtMsg,'*');
+          })
+
+          //通讯方式二：直接改变frame中的url的has
+          // 直接传#id=f2r2c02r206
+          $('#btnChangeUrl').click(function(e){
+              var txt = $('#url').val();
+              var src = window.frames['myFrame'].src;
+              var orgUrl = src.substring(0,src.indexOf('#'));
+              if (!orgUrl) {
+                 orgUrl = src;
+              };
+              window.frames['myFrame'].src = orgUrl+'#id='+txt;
+          });
+       }
+    </script>
+</head>
+ <body onload='load()'>
+    <label>msg(如：main.sceneManager.viewManager3d.getDefaultEventHandler().lookAtByData('f2r2c02r206'))，其中“f2r2c02r206”是资产id</label>
+    <input id = 'mestxt' style='width:500px;'>
+    <button id='btnSend'>发送</button>
+    <br>
+    <label>msg(如：f2r2c02r206</label>
+    <input id = 'url' style='width:300px;'>
+    <button id='btnChangeUrl'>改变url</button>
+    <div style="height:500px">
+      <iframe id = "myFrame" src="http://localhost:8081" style="position: relative;height: 100%;width: 100%">
+      </iframe>
+    </div>
+</body> 
+
+</html>

@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+    <title>向导</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link href="data:text/css;charset=utf-8," data-href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+    <link rel="stylesheet" href="../css/docs.min.css">
+    <script src="../libs/jquery.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    	$(function() {
+            
+    	});
+    </script>
+</head>
+<body>
+	<header class="navbar navbar-fixed-top bs-docs-nav" id="top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="../" class="navbar-brand">3D机房管理系统</a>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="bs-docs-header" id="content" tabindex="-1">
+      <div class="container">
+        <h1>向导</h1>
+        <p>以此初始化地球、园区、楼层、上架设备、管线、动环等场景。</p>
+      </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-sm-9" role="main">
+                <div class="bs-docs-section">
+                    <h1 id="earth" class="page-header">
+                        <a class="anchorjs-link " href="#earth" aria-label="Anchor link for: dropdowns" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>地球</h1>
+                    <p>
+                        1、能够通过配置文件更换星空盒图片、太阳图片、地球图片<br>
+                        2、能够通过鼠标点选，在地球上添加园区位置，同时能在预设list中选取设定园区位置点的气泡图片、染色、名称
+                
+                    </p>
+                    <a href="#">配置地球</a>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="park" class="page-header">
+                        <a class="anchorjs-link " href="#park" aria-label="Anchor link for: dropdowns" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>园区</h1>
+                    <p>
+                        1.  能够把obj园区模型（不含可双击大楼）添加到系统中，并配置为某园区的模型<br>
+                        2.  能够把obj大楼模型添加到系统中，并配置为某园区的主楼（可双击大楼）<br>
+                        3.  可为大楼定义多个楼层，及染色（在预定义颜色列表中选取；炸开大楼时用它染色楼层）
+                    </p>
+                    <a href="#">配置园区</a>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="floor" class="page-header">
+                        <a class="anchorjs-link " href="#floor" aria-label="Anchor link for: dropdowns" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>楼层</h1>
+                    <p>
+                        1.  可通过导入或绘制方式，来创建全楼层房型，包括内墙、外墙、立柱、门、窗、玻璃隔断<br>
+                        2.  可导入或绘制通道、机柜、上架设备<br>
+                        3.  可导入或绘制摄像头、烟感、温度点、湿度点、漏水绳<br>
+                        4.  可导入或绘制空调、配电柜、蓄电池组、灭火器、发电机组<br>
+                        5.  可导入或绘制办公桌椅、电脑、植物
+                    </p>
+                    <a href="#">配置楼层</a>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="asset" class="page-header">
+                        <a class="anchorjs-link " href="#asset" aria-label="Anchor link for: dropdowns" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>上架设备</h1>
+                    <p>
+                        1.  可通过编辑器创建和编辑各类1-8U标准尺寸的服务器、网络设备<br>
+                        2.  可对面板端口对象设置id标识，方便索引
+                    </p>
+                    <a href="#">上架设备</a>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="link" class="page-header">
+                        <a class="anchorjs-link " href="#link" aria-label="Anchor link for: dropdowns" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>管线</h1>
+                    <p>
+                        1.  可通过编辑器或导入创建管线，可设置管线的颜色、贴图、粗细、走向（或自动走向）<br>
+                        2.  可设置管线两端端点，可以是设备，或设备上的端口id
+                    </p>
+                    <a href="#">配置管线</a>
+                </div>
+                <div class="bs-docs-section">
+                    <h1 id="pems" class="page-header">
+                        <a class="anchorjs-link " href="#pems" aria-label="Anchor link for: btn groups" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>动环</h1>
+                    <p>
+                        1.  告警（告警点、级别、描述等）<br>
+                        2.  温湿度<br>
+                        3.  电力负载
+                    </p>
+                    <a href="#">配置动环</a>
+                </div>
+            </div>
+            <div class="col-sm-3" role="complementary">
+                <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix-top">
+                    <ul class="nav bs-docs-sidenav">
+                        <li><a href="#earth">地球</a></li>
+                        <li><a href="#park">园区</a></li>
+                        <li><a href="#floor">楼层</a></li>
+                        <li><a href="#asset">上架设备</a></li>
+                        <li><a href="#link">管线</a></li>
+                        <li><a href="#pems">动环</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

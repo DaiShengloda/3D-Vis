@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>设备上下架</title>
+    <meta name="keywords" content="TWaver, TWaver 3D, 3D, editor, " />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jstree.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/easyui-bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrapValidator.min.css">
+    <!--<link rel="stylesheet" href="../css/twaver-doodle.css">-->
+    <link rel="stylesheet" href="../css/client-all.css">
+    <link rel="stylesheet" href="./css/bootstrap-select.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="DCIM" src="../css/images/logo.svg" id='top-logo'>
+                </a>
+            </div>
+            <!--<ul id="mynav" class="nav navbar-nav">
+                <li><a href="./datatype.html">资产模型</a></li>
+                <li><a href="./data.html">资产</a></li>
+                <li><a href="./scene.html">场景</a></li>
+                <li><a href="./index.html">列表</a></li>
+                <li><a href="./deviceEditor.html">面板</a></li>
+            </ul>-->
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">视图模式<span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="view">
+                        <li><a href="#" data-type="zoomReset">实际尺寸</a></li>
+                        <li><a href="#" data-type="zoomOverview">适应屏幕</a></li>
+                        <li><a href="#" data-type="zoomIn">放大</a></li>
+                        <li><a href="#" data-type="zoomOut">缩小</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编辑<span class="caret"></span></a>
+                    <ul class="dropdown-menu" id="edit">
+                        <li><a href="#" data-type="undo">回退</a></li>
+                        <li><a href="#" data-type="redo">前进</a></li>
+                    </ul>
+                </li>
+                <!--<li><a class="export" href="#">导出 JSON</a></li>-->
+                <li><a class="submit" href="#">保存</a></li>
+                <li><a class="clear" href="#">清除</a></li>
+
+            </ul>
+        </div>
+    </nav>
+    <div class="rack-editor">
+
+        <!--机柜列表-->
+        <div class="rack-list">
+            <div class="header"><span>选择机柜</span></div>
+            <div class="bar-box row">
+
+                <div class="row">
+                    <div class=" col-md-4">
+                        <label for="rack-size" class="inputpane-label label-box label-min">承载U数</label>
+                    </div>
+                    <div class="value-box col-md-8">
+                        <input id="rack-size" class="input-min contral-width" value="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" col-md-4">
+                        <label for="rack-id" class="inputpane-label label-box label-min">机柜编号</label>
+                    </div>
+                    <div class="value-box col-md-8">
+                        <input id="rack-id" class="input-min contral-width">
+                    </div>
+                </div>
+            </div>
+            <div class="tree-container">
+
+                <div class="tree-box">
+
+                </div>
+
+            </div>
+            <div class="header"><span>选择设备</span></div>
+            <div class="comp-box">
+                <ul class="comp-ul">
+
+                </ul>
+            </div>
+        </div>
+        <!--机柜编辑器-->
+        <div class="content"></div>
+        <!--设备列表-->
+        <div class="comp-list">
+            <div class="props">
+                <div class="header"><span>设备信息</span></div>
+                <div class="prop-box">
+                    <div class="basic-box">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="bid" class="inputpane-label label-box label-min">设备编号</label>
+                            </div>
+                            <div class="value-box col-md-8">
+                                <input id="bid" class="input-min contral-width" name="bid" property-type="client" value-type="string">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="name" class="inputpane-label label-box label-min">设备名称</label>
+                            </div>
+                            <div class="value-box col-md-8">
+                                <input id="name" class="input-min contral-width" name="name" property-type="client" value-type="string">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="description" class="inputpane-label label-box label-min">设备描述</label>
+                            </div>
+                            <div class="value-box col-md-8">
+                                <input id="description" class="input-min contral-width" name="description" property-type="client" value-type="string">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="loc" class="inputpane-label label-box label-min">设备位置</label>
+                            </div>
+                            <div class="value-box col-md-8">
+                                <input id="loc" class="input-min contral-width" readonly name="loc" property-type="client" value-type="int">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="businessTypeId" class="inputpane-label label-box label-min">业务类型</label>
+                            </div>
+                            <div class="value-box col-md-8">
+                            <select id="businessTypeSelect" class="input-min contral-width show-tick form-control" tabindex="-98">
+                               <option value="" class="input-min">- 请选择 -</option>
+                            </select>
+                                <input type="hidden" id="businessTypeId" class="input-min contral-width" name="businessTypeId" property-type="client" value-type="string">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="weight" class="inputpane-label label-box label-min">设备重量</label>
+                            </div>
+                            <div class="value-box col-md-8">
+                                <input id="weight" class="input-min contral-width" name="weight" property-type="client" value-type="int">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-box">
+
+                    </div>
+                    <!--<div class="row">
+                        <div class="without-padding col-md-12">
+                            <span id="btnSave" class="base-panel-search-btn" type="submit" title="确认">保存</span>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/jquery.ba-resize.js"></script>
+    <script type="text/javascript" src="./libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-progressbar.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-select.js"></script>
+
+    <script type="text/javascript" src="./libs/t.js"></script>
+    <script type="text/javascript" src="./libs/twaver.js"></script>
+    <script type="text/javascript" src="./libs/itv-all-min.js"></script>
+    <script type="text/javascript" src="./libs/twaver-doodle.js"></script>
+
+    <script type="text/javascript" src="./libs/twaver-make.js"></script>
+    
+    <script type="text/javascript" src="./libs/bluebird.js"></script>
+    <script type="text/javascript" src="./libs/moment.min.js"></script>
+    <script type="text/javascript" src="./libs/layer.min.js"></script>
+    <script type="text/javascript" src="./libs/PropertyPanel.js"></script>
+	
+	<script type="text/javascript" src="../libs/License2D.js"></script>
+    <script type="text/javascript" src="../libs/License3D.js"></script>
+	
+    <script type="text/javascript" src="./js/config.js"></script>
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/rackEditor.js"></script>
+    <script type="text/javascript" src="../extend/ModelPlugin.js"></script>
+    <script type="text/javascript" src="../theme/models/models.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+/* new breadcrumb */
+@import "default";
+@import "mixin";
+.breadcrumb-box {
+    position: static;
+    display: flex;
+    height: 34px;
+    background-color: $default-bg-color;
+    padding: 5px 0px 5px 0px;
+    color: $default-highlight-color;
+    @include widthFontSize(200px,240px,300px);
+    .lay-box{
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .left-box{
+        margin: 0 5px 0 15px;
+    }
+    .middle-box{
+        width: 78%;
+        overflow: hidden;
+        // position: relative;
+        justify-content: flex-start;
+    }
+    .right-box{
+        position: static; 
+        // margin-left: -5px;
+        width: 11%;
+        cursor: pointer;
+    }
+    .right-box:hover .bt-arrow {
+        border-left: 9px solid #00f6ff;
+    }
+    .home-icon {
+        cursor: pointer;
+        padding: 0;
+        float: none;
+        &:hover{
+            color:$default-arrow;
+        }
+    }
+    ul{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        // position: absolute;
+        // left: 0;
+        li {
+            padding-right: 4px;
+            cursor: pointer;
+            flex: none;
+            a{
+                padding-right: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            a:hover{
+                color: $default-highlight-bg-color;
+            }
+        }
+        li:last-child {
+            cursor: default;
+            color: $default-highlight-bg-color;
+        }
+    }
+}
+@media screen and (max-width: 1919px) {
+}
+@media screen and (max-width: 1440px) {
+    .breadcrumb-box {
+        .right-box{
+            margin-left: -7px;
+            .bt-arrow {
+                border-top: 7px solid transparent;
+                border-left: 7px solid $default-arrow;
+                border-bottom: 7px solid transparent;
+            }
+        }
+        .right-box:hover .bt-arrow {
+            border-left: 7px solid $default-highlight-bg-color;
+        }
+    }
+}
+

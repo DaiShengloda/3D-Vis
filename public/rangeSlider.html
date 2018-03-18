@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+    <title>滑块</title>
+    <link rel="stylesheet" href='css/jquery-ui.min.css'>
+    <script src="./libs/jquery.js"></script>
+    <script src="./libs/jquery-ui.js"></script>
+    <script src="./js/utils.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $.widget("ui.rangeSlider", $.ui.slider, {
+                _create: function () {
+
+                    this._super();
+                    var element = this.element;
+                    this.centerHeader = element.find('.ui-widget-header');
+                    this.leftHeader = $('<div class="ui-slider-range ui-widget-header ui-widget-header-left ui-corner-all" style="left: 00%; width: 20%;"></div>')
+                    this.rightHeader = $('<div class="ui-slider-range ui-widget-header ui-widget-header-right ui-corner-all" style="left: 80%; width: 20%;"></div>')
+                    element.prepend(this.leftHeader);
+                    element.append(this.rightHeader);
+
+                    this.leftHeader.css('background-color', this.options['header.left.color']);
+                    this.centerHeader.css('background-color', this.options['header.center.color']);
+                    this.rightHeader.css('background-color', this.options['header.right.color']);
+
+                    this.customChange = this.options.change;
+                    this.options.change = this._changeHandler;
+                    this.customSlide = this.options.slide;
+                    this.options.slide = this._slideHandler
+                },
+                _destroy: function () {
+                    this._off(this.element, "change.default");
+                    this.leftHeader.remove();
+                    this.rightHeader.remove();
+                    delete this.leftHeader;
+                    delete this.rightHeader;
+                },
+                _setOption: function (key, value) {
+                    if (key === "header.left.color") {
+                        this.leftHeader.css('background-color', value);
+                        return;
+                    }
+                    if (key === "header.center.color") {
+                        this.centerHeader.css('background-color', value);
+                        return;
+                    }
+                    if (key === "header.right.color") {
+                        this.rightHeader.css('background-color', value);
+                        return;
+                    }
+                    if (key === "change") {
+                        this.customChange = value;
+                        value = this._changeHandler;
+                    }
+                    if (key === "change") {
+                        this.customSlide = value;
+                        value = this._slideHandler;
+                    }
+                    this._super(key, value);
+                },
+                _changeHandler: function (event, ui) {
+                    var scope = $(event.target).rangeSlider('instance');
+                    with (scope) {
+                        var vs = ui.values;
+                        var dis = options.max - options.min;
+                        var p1 = (vs[0] - options.min) / dis * 100;
+                        var p2 = (vs[1] - options.min) / dis * 100;
+
+                        leftHeader.css('width', p1 + '%');
+                        centerHeader.css('left', p1 + '%')
+                        centerHeader.css('width', (p2 - p1) + '%')
+                        rightHeader.css('left', p2 + '%')
+                        rightHeader.css('width', (100 - p2) + '%')
+                    }
+                    scope.customChange && scope.customChange.call(this, event, ui);
+                },
+                _slideHandler: function (event, ui) {
+                    var scope = $(event.target).rangeSlider('instance');
+                    with (scope) {
+                        var width = element.width();
+                        var centerLeft = parseFloat(centerHeader.css('left'));
+                        var centerWidth = centerHeader.width();
+                        leftHeader.css('width', centerLeft / width * 100 + '%')
+                        rightHeader.css('left', (centerLeft + centerWidth) / width * 100 + '%')
+                        rightHeader.css('width', (width - centerLeft - centerWidth) / width * 100 + '%')
+                    }
+                    scope.customSlide && scope.customSlide.call(this, event, ui);
+                },
+            });
+
+            $('.rangSliderBar').rangeSlider({
+                range: true,
+                values: [20, 80],
+                'header.left.color': 'green',
+                'header.center.color': 'orange',
+                'header.right.color': 'red',
+                slide: function (event, ui) {
+//                    console.log(event, ui);
+                },
+                change: function (event, ui) {
+//                    console.log(event, ui);
+                }
+            }).show();
+        })
+
+
+    </script>
+</head>
+<body style="width: 1000px;height: 1000px">
+<div class="rangSliderBar"></div>
+</body>
+</html>

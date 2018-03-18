@@ -1,0 +1,86 @@
+@mixin width($w1, $w2, $w3) {
+    @media screen and (min-width: 1919px) {
+        width: $w3;
+    }
+    @media screen and (max-width: 1919px) {
+        width: $w2;
+    }
+    @media screen and (max-width: 1440px) {
+        width: $w1;
+    }
+}
+
+@mixin fontSize($fs1:12px, $fs2:14px, $fs3:14px) {
+    @media screen and (min-width: 1919px) {
+        font-size: $fs3;
+    }
+    @media screen and (max-width: 1919px) {
+        font-size: $fs2;
+    }
+    @media screen and (max-width: 1440px) {
+        font-size: $fs1;
+    }
+}
+
+@mixin titleFontSize($fs1:14px, $fs2:14px, $fs3:16px) {
+    @media screen and (min-width: 1919px) {
+        font-size: $fs3;
+    }
+    @media screen and (max-width: 1919px) {
+        font-size: $fs2;
+    }
+    @media screen and (max-width: 1440px) {
+        font-size: $fs1;
+    }
+}
+
+@mixin alarmFontSize($fs1:12px, $fs2:14px, $fs3:14px) {
+    @media screen and (min-width: 1919px) {
+        font-size: $fs3;
+    }
+    @media screen and (max-width: 1919px) {
+        font-size: $fs2;
+    }
+    @media screen and (max-width: 1440px) {
+        font-size: $fs1;
+    }
+}
+
+@mixin alarmLevelFontSize($fs1:14px, $fs2:16px, $fs3:16px) {
+    @media screen and (min-width: 1919px) {
+        font-size: $fs3;
+    }
+    @media screen and (max-width: 1919px) {
+        font-size: $fs2;
+    }
+    @media screen and (max-width: 1440px) {
+        font-size: $fs1;
+    }
+}
+
+@mixin widthFontSize($w1, $w2, $w3, $fs1:12px, $fs2:14px, $fs3:16px) {
+    @media screen and (min-width: 1919px) {
+        width: $w3;
+        font-size: $fs3;
+    }
+    @media screen and (max-width: 1919px) {
+        width: $w2;
+        font-size: $fs2;
+    }
+    @media screen and (max-width: 1440px) {
+        width: $w1;
+        font-size: $fs1;
+    }
+}
+
+@mixin height($w1, $w2, $w3) {
+    @media screen and (min-width: 1919px) {
+        height: $w3;
+    }
+    @media screen and (max-width: 1919px) {
+        height: $w2;
+    }
+    @media screen and (max-width: 1440px) {
+        height: $w1;
+    }
+}

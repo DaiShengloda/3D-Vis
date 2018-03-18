@@ -1,0 +1,1760 @@
+@charset "UTF-8";
+/*jquery-ui-dialog start*/
+html body {
+  font-family: "NotoSansHans",  Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+  color: #bcbcbc;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html body {
+    font-size: 12px;
+  }
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bt-arrow {
+  display: block;
+  border-top: 9px solid transparent;
+  border-left: 9px solid #23888f;
+  border-bottom: 9px solid transparent;
+  cursor: pointer;
+  transition: all 0.3S;
+}
+
+.bt-arrow:hover {
+  border-left: 9px solid #00ffff;
+}
+
+.bt-arrow-open {
+  transform: rotate(90deg);
+}
+
+.bt-scroll::-webkit-scrollbar,
+.scroll-class::-webkit-scrollbar {
+  background-color: rgba(53, 53, 53, 0.95);
+  width: 10px;
+}
+
+.bt-scroll::-webkit-scrollbar-thumb,
+.scroll-class::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  height: 24px;
+}
+
+.bt-value {
+  color: #d6d6d6;
+}
+
+.bt-value-input {
+  color: #bcbcbc;
+  border: 2px solid #2d2d2d;
+  background: #343434;
+  padding: 5px;
+}
+
+.bt-btn, .new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn.active {
+  border: 1px solid #46606b;
+  color: #ffffff;
+  background: #46606b;
+  border-radius: 3px;
+}
+
+.bt-btn:hover, .new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn.active:hover {
+  border: 1px solid default-highlight-bg-color;
+  background: #46606b;
+}
+
+.bt-btn-second {
+  border: 1px solid #6a6a6a;
+  color: #ffffff;
+  background: #6a6a6a;
+  border-radius: 3px;
+}
+
+.bt-btn-second:hover {
+  border: 1px solid #00ffff;
+  background: #46606b;
+}
+
+@media screen and (max-width: 1919px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 8px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 5px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+}
+
+.ui-dialog-blackStyle {
+  color: rgba(53, 53, 53, 0.95);
+  border: none;
+  padding: 0px;
+  background: rgba(53, 53, 53, 0.95);
+  border-radius: unset;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar {
+  background: #2a2a2a;
+  height: 38px;
+  border: none;
+  color: #bcbcbc;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar {
+    font-size: 14px;
+  }
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .ui-dialog-titlebar-close {
+  background: #2a2a2a;
+  border: none;
+  margin-right: 5px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick,
+.ui-dialog-blackStyle .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-button-text {
+  display: none;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar {
+    height: auto;
+  }
+}
+
+.ui-dialog-blackStyle .ui-dialog-content {
+  color: #bcbcbc;
+  font-family: "NotoSansHans",  Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+  padding: 10px;
+  border: 1px solid rgba(89, 89, 89, 0.5);
+  margin: 1em 1.3em 1.5em 1.3em;
+  background: #303030;
+  overflow: hidden;
+}
+
+.ui-dialog-blackStyle .pagerBox {
+  margin-top: 0px;
+}
+
+.ui-dialog-blackStyle .pagerBox .pagerMessage {
+  color: #bcbcbc;
+  padding: 0px;
+  margin: 5px;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle .pagerBox .pagerMessage {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .pagerBox .pagerMessage {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .pagerBox .pagerMessage {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle .pagerBox .fr {
+  padding-top: 5px;
+  letter-spacing: 2px;
+}
+
+.ui-dialog-blackStyle .pagerBox a {
+  background: rgba(63, 63, 63, 0);
+  border: none;
+  color: #bcbcbc;
+}
+
+.ui-dialog-blackStyle .pagerBox a:hover {
+  color: #00ffff;
+}
+
+.ui-dialog-blackStyle .ui-dialog-buttonpane {
+  background: rgba(48, 54, 62, 0.3);
+  padding: 0px 0px 0px 0px;
+  border-width: 0px 0px 0px 0px;
+  box-shadow: inset 0 0px 0 #ffffff;
+}
+
+.ui-dialog-blackStyle .ui-dialog-buttonset button {
+  color: #30363e;
+  font-size: 12px;
+  text-shadow: 0 0px 0px;
+  border-color: #ffab00;
+  background-color: #ffab00;
+  background-image: -webkit-linear-gradient(top, #ffab00, #bc7f01);
+  background-position: 0px -32px;
+}
+
+.ui-dialog-blackStyle .ui-state-hover,
+.ui-dialog-blackStyle .ui-widget-content .ui-state-hover,
+.ui-dialog-blackStyle .ui-widget-header .ui-state-hover {
+  border: none;
+  background: none;
+  font-weight: normal;
+  color: #bcbcbc;
+}
+
+.ui-dialog-blackStyle .ui-state-focus,
+.ui-dialog-blackStyle .ui-widget-content .ui-state-focus,
+.ui-dialog-blackStyle .ui-widget-header .ui-state-focus {
+  color: #454545;
+}
+
+.ui-dialog-blackStyle .ui-state-active,
+.ui-dialog-blackStyle .ui-widget-content .ui-state-active,
+.ui-dialog-blackStyle .ui-widget-header .ui-state-active {
+  border: none;
+  background: none;
+  font-weight: normal;
+  color: #bcbcbc;
+}
+
+.datetimepicker {
+  background-color: #343434;
+  border: 2px solid #2d2d2d;
+  box-shadow: 3px 3px 2px #000000;
+  color: #bcbcbc;
+}
+
+/*jquery-ui-dialog end*/
+/*historyAlarmDialog start*/
+.ui-dialog-blackStyle #alarmListDialog {
+  padding: 0px 0px;
+  border: none;
+  margin-top: 0px;
+  background: rgba(48, 48, 48, 0);
+  margin: 0px 20px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox {
+  padding: 5px 0px 10px 0px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .mytd {
+  padding-bottom: 2px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+    padding-right: 16px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox {
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+    padding-right: 16px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox {
+    padding-bottom: 10px;
+  }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems:last-child {
+  padding-right: 0px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+  line-height: 25px;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  height: 27px;
+  line-height: 27px;
+  color: #bcbcbc;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  background-color: #343434;
+  border: 2px solid #2d2d2d;
+  height: 27px;
+  line-height: 27px;
+  color: #bcbcbc;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .searchButton {
+  border: none;
+  height: 27px;
+  line-height: 27px;
+  color: #e6e6e6;
+  padding: 0px 10px 8px 10px;
+  border-radius: 3px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  color: #bcbcbc;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+  overflow: hidden;
+  color: #bcbcbc;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #alarmListDialog #alarmListBox .fs10 {
+  width: 50px;
+  height: 23px;
+  line-height: 23px;
+  color: #ffffff;
+  border: 1px solid transparent;
+  font-size: 12px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog #alarmListBox .fs10:hover {
+  background: #47626d;
+  border: 1px solid #00f6ff;
+  color: #ffffff;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table {
+  display: inline-block;
+  width: 100%;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody {
+  display: inline-block;
+  width: 100%;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr {
+  display: inline-block;
+  width: 100%;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .asset-number input {
+  width: 155px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .asset-name input {
+  width: 155px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .alarm-time input {
+  width: 150px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchButton {
+  width: 60px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .searchItems-br {
+  display: unset;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #alarmListDialog {
+    margin: 0px 15px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox {
+    padding: 15px 0px 10px 0px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .asset-number input {
+    width: 150px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .asset-name input {
+    width: 150px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .alarm-time input {
+    width: 150px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems {
+    float: left;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .searchItems-span {
+    position: relative;
+    top: -10px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .searchItems-br {
+    display: none;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .modal {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #alarmListDialog {
+    margin: 0px 15px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox {
+    padding: 15px 0px 10px 0px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .asset-number input {
+    width: 150px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .asset-name input {
+    width: 150px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .alarm-time input {
+    width: 150px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems {
+    float: left;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .searchItems-span {
+    position: relative;
+    top: -10px;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .searchItems-br {
+    display: none;
+  }
+  .ui-dialog-blackStyle #alarmListDialog .searchBox table tbody tr .searchItems .modal {
+    display: inline-block;
+  }
+}
+
+/*historyAlarmDialog end*/
+/*equipStatisticsDialog start*/
+.ui-dialog-blackStyle #equipStatisticsListDialog {
+  padding: 0px 6px;
+  border: none;
+  margin-top: 0px;
+  background: rgba(48, 48, 48, 0);
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox {
+  padding: 5px 0px 10px 0px;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .mytd {
+  padding-bottom: 2px;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems {
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems {
+    padding-right: 16px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems {
+    padding-right: 16px;
+  }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems:last-child {
+  padding-right: 0px;
+}
+
+@media screen and (max-width: 1920px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems span:first-child {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems span:first-child {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems span:first-child {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  height: 27px;
+  line-height: 27px;
+  color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  background-color: #343434;
+  border: 2px solid #2d2d2d;
+  height: 27px;
+  line-height: 27px;
+  color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .searchButton {
+  background-color: #46606b;
+  border: 1px solid transparent;
+  height: 28px;
+  line-height: 28px;
+  color: #e6e6e6;
+  padding: 0px 5px;
+  border-radius: 3px;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .searchButton:hover {
+  cursor: pointer;
+  background-color: #46606b;
+  color: #ffffff;
+  border: 1px solid #00f6ff;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog #alarmListBox {
+  overflow: hidden;
+  color: #bcbcbc;
+}
+
+@media screen and (max-width: 1920px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog #equipListBox {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog #equipListBox {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .ui-dialog-blackStyle #equipStatisticsListDialog #equipListBox {
+    font-size: 12px;
+  }
+}
+
+/*equipStatisticsDialog end*/
+/*alarmDetail start*/
+.ui-dialog-blackStyle .label-inline-block {
+  font-weight: 700;
+}
+
+.ui-dialog-blackStyle .label-min {
+  width: 90px;
+  text-align: left;
+}
+
+.ui-dialog-blackStyle .label-value {
+  color: #bcbcbc;
+}
+
+/*alarmDetail end*/
+/*alarmConfirm start*/
+.ui-dialog-blackStyle .ui-dialog-content .form-control {
+  background: #404040;
+  border-radius: unset;
+  border: 1px solid #2a2a2a;
+  color: #717171;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-control:focus {
+  border-color: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group .control-label {
+  width: 90px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group div {
+  text-align: right;
+  width: 280px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group div button {
+  background: #6a6a6a;
+  border-radius: 5px;
+  color: white;
+  width: 60px;
+  height: 30px;
+  border: none;
+  margin-right: 35px;
+}
+
+/*alarmConfirm end*/
+/*alarmContentPane start*/
+.ui-dialog-blackStyle .alarm-content-panel {
+  top: 0px;
+  background: rgba(48, 48, 48, 0);
+  border: none;
+  padding: 0px;
+  margin: 15px 20px 0px 20px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel span {
+  font-size: 14px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .fs10 {
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  color: #ffffff;
+  border: none;
+  font-size: 12px;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .alarm-content-panel span {
+    font-size: 12px;
+  }
+  .ui-dialog-blackStyle .alarm-content-panel .fs10 {
+    width: 40px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .alarm-content-panel span {
+    font-size: 12px;
+  }
+  .ui-dialog-blackStyle .alarm-content-panel .fs10 {
+    width: 40px;
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group {
+  margin-top: 0px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group input {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  height: 28px;
+  line-height: 28px;
+  color: #bcbcbc;
+  outline: none;
+  width: 200px;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle .alarm-content-panel .input-group input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .alarm-content-panel .input-group input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .alarm-content-panel .input-group input {
+    font-size: 12px;
+  }
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group input:focus {
+  border: 2px solid #2d2d2d;
+  outline: none;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel #alarm_chart_pane {
+  background: #303030;
+  border: 1px solid rgba(89, 89, 89, 0.5);
+  padding: 10px;
+  /*margin-top: -10px*/
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .fs10:hover {
+  background: #47626d;
+  border: 1px solid #00ffff;
+  color: #ffffff;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+  background: rgba(42, 42, 42, 0);
+  overflow: visible;
+}
+
+@media screen and (min-width: 1919px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+    font-size: 14px;
+  }
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_right:after {
+  top: 13px;
+  cursor: pointer;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_left {
+  margin-left: 0px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_left:before {
+  top: 13px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .alarm-content-panel {
+    margin: 15px 20px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .alarm-content-panel {
+    margin: 10px 15px 15px 15px;
+  }
+}
+
+/*alarmContentPane end*/
+/*panel panelInfo start*/
+.ui-dialog-blackStyle #serverPanel {
+  left: 0px;
+  position: relative;
+  padding: 0;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel {
+  background: #303030;
+  color: #bcbcbc;
+  position: absolute;
+  right: 1px;
+  top: 0;
+  width: 900px;
+  height: 510px;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel .content {
+  padding: 0px;
+  background: #303030;
+  margin: 0px;
+  border: none;
+  padding-top: 70px;
+  height: 510px;
+}
+
+.ui-dialog-blackStyle #serverPanel .app-head {
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel2dBox {
+  height: 440px;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel2dBox > div div:nth-child(2) {
+  left: 4px !important;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel {
+  /*width: '305px',*/
+  background: #393939;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 510px;
+  width: 100px;
+  border-right: 1px solid rgba(89, 89, 89, 0.5);
+  z-index: 9999;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel > div {
+  width: 100px;
+  height: 510px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .right {
+  position: absolute;
+  top: 5px;
+  left: 120px;
+  z-index: 9999999;
+  width: 800px;
+  height: 50px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .right #uploadSpeed {
+  float: left;
+  margin-right: 30px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .right #downloadSpeed {
+  float: left;
+  margin-right: 30px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .port-text {
+  float: left;
+  margin-right: 30px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .port-text p {
+  font-size: 14px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .port-text .top-text {
+  color: #bcbcbc;
+  margin-bottom: 5px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .port-text .bottom-text {
+  color: #00ffff;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .icon-switch-arrow:hover {
+  color: #228a8d;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .app-title {
+  cursor: move;
+}
+
+/*panel panelInfo end*/
+/* equipment link start */
+.ui-dialog-blackStyle .link-group {
+  /*width: 600px;*/
+  background-color: rgba(53, 53, 53, 0.9);
+  padding: 10px;
+  border: none;
+  color: #f0f0f0;
+  margin: 0;
+}
+
+.link-group .iconfont {
+  font-size: 24px;
+}
+
+.link {
+  background-color: #303030;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.link-over {
+  color: #039ca2;
+  background-color: #2a2a2a;
+}
+
+.link-over > .link-separater {
+  border-top: 1px solid #039ca2;
+}
+
+.link-separater {
+  width: 55px;
+  height: 1px;
+  border-top: 1px solid #f0f0f0;
+  margin: 0 10px;
+  display: inline-block;
+  margin: 0 -20px;
+}
+
+.link-over > .link-separater-over {
+  border-top: 1px solid #00fefe;
+}
+
+.link-node {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  /*border: 1px solid #006e54;*/
+  width: 90px;
+}
+
+.link-node-over {
+  color: #00fefe;
+}
+
+.link-without-type {
+  margin-top: 4px;
+}
+
+.link-node > span {
+  display: block;
+}
+
+@media screen and (min-width: 1919px) {
+  .link-node > span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .link-node > span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .link-node > span {
+    font-size: 12px;
+  }
+}
+
+/* equipment link end*/
+/* processList start*/
+.ui-dialog-blackStyle .processList {
+  padding: 0px;
+}
+
+.ui-dialog-blackStyle .processList .processListBox {
+  overflow: hidden;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table {
+  border: none;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table thead {
+  border: none;
+  background: rgba(53, 53, 53, 0.95);
+}
+
+.ui-dialog-blackStyle .processList .processListBox table thead tr {
+  width: 833px;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table tbody {
+  overflow-x: hidden;
+  height: 515px;
+  width: 850px;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table tbody .even {
+  background: #353535;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table tbody .odd {
+  background: #303030;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table tr,
+.ui-dialog-blackStyle .processList .processListBox table td {
+  border: none;
+  height: 30px;
+  line-height: 30px;
+}
+
+.ui-dialog-blackStyle .processList .processListBox table td.pid {
+  text-align: center;
+}
+
+/* processList end*/
+/* video panel start*/
+.ui-dialog-blackStyle .camera-box {
+  border: none;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .left-box {
+  border: none;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .left-box video {
+  border: 1px solid #595959;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box {
+  border: none;
+  width: 460px;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box {
+  border: 1px solid #595959;
+  height: 480px;
+  margin-top: 10px;
+  overflow-x: hidden;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table {
+  border-collapse: collapse;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table .name {
+  width: 25%;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table tr {
+  height: 30px;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table thead {
+  background: #1f1f1f;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table tbody tr .operation a {
+  color: #bcbcbc;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table tbody tr .operation a.on {
+  color: red;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table tbody tr .operation a:hover {
+  background: none;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box table tbody tr:hover {
+  background: #47626b;
+  border: 1px solid #00f6ff;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box::-webkit-scrollbar {
+  background-color: #555555;
+  width: 8px;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .camera-list-box::-webkit-scrollbar-thumb {
+  background-color: #202020;
+  border-radius: 4px;
+  height: 24px;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .even {
+  background-color: #242424;
+}
+
+.ui-dialog-blackStyle .camera-box .center-box .right-box .odd {
+  background: #282828;
+}
+
+@media screen and (max-width: 1919px) {
+  .ui-dialog-blackStyle .camera-box .center-box .right-box {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .ui-dialog-blackStyle .camera-box .center-box .right-box {
+    width: 340px;
+  }
+}
+
+/* video panel end*/
+/* new dialog1*/
+.new-dialog1.ui-dialog-blackStyle {
+  background: #353535;
+}
+
+.new-dialog1.ui-dialog-blackStyle .ui-dialog-titlebar {
+  margin: 0;
+  border-radius: 0;
+}
+
+.new-dialog1.ui-dialog-blackStyle .new-app-panel {
+  margin: 0;
+  background: none;
+  border: none;
+  padding: 10px 20px 0 20px;
+}
+
+.new-dialog1.ui-dialog-blackStyle .new-app-panel .app-btn-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.new-dialog1.ui-dialog-blackStyle .new-app-panel .app-btn-line .app-tip {
+  color: #d6d6d6;
+}
+
+.new-dialog1.ui-dialog-blackStyle .new-app-panel .app-btn-line .app-btn-group div {
+  cursor: pointer;
+  width: 60px !important;
+  font-size: 14px;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-table-block {
+  position: relative;
+  border: 2px solid #2d2d2d;
+  padding: 10px;
+  height: auto;
+  margin-top: 20px;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-table-block .app-title {
+  position: absolute;
+  top: -18px;
+  background: #353535;
+  padding: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-table-block .app-table {
+  margin-left: 20px;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-table-block .app-table .app-table-key {
+  text-align: right;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-table-block .app-table .app-table-value {
+  padding-left: 10px;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-btn-line {
+  margin-bottom: 10px;
+}
+
+.new-dialog1.ui-dialog-blackStyle .cancelOccupiedPop .bt-scroll .app-btn-line .app-btn-group {
+  margin: 0;
+}
+
+.new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-line {
+  margin-top: 0;
+}
+
+.new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-text-line {
+  justify-content: center;
+}
+
+.new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0 20px 0;
+}
+
+.new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn {
+  background-color: #46606b;
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  padding: 0px 5px;
+  margin-left: 10px;
+  cursor: default;
+  user-select: none;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+}
+
+@media screen and (min-width: 1919px) {
+  .new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn {
+    font-size: 12px;
+  }
+}
+
+.new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn.active {
+  cursor: pointer;
+}
+
+.new-dialog1.ui-dialog-blackStyle .conflictOccupiedPop .app-big-btn-group .bigBtn.active:hover {
+  background-color: #46606b;
+  border-color: #00ffff;
+}
+
+.new-dialog1.ui-dialog .ui-dialog-buttonpane {
+  margin-top: 0;
+}
+
+.PreOccupiedPop .app-tip {
+  color: #00ffff !important;
+}
+
+.PreOccupiedPop .clear-it {
+  background-color: #6a6a6a;
+}
+
+.portOccupancyPanel {
+  min-width: 240px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.portOccupancyPanel table {
+  width: 100%;
+}
+
+.portOccupancyPanel table thead tr {
+  background: #303030;
+}
+
+.portOccupancyPanel table thead td {
+  padding-left: 30px;
+}
+
+.portOccupancyPanel table td {
+  height: 24px;
+  border: none;
+  line-height: 24px;
+}
+
+.portOccupancyPanel tbody td {
+  padding-left: 20px;
+}
+
+.portOccupancyPanel tbody .even {
+  background: #353535;
+}
+
+.portOccupancyPanel tbody .odd {
+  background: #303030;
+}
+
+/* new dialog1 end*/
+/* mulCamera start */
+#mulCamera-box {
+  border: none;
+  background: none;
+  padding: 0px;
+}
+
+#mulCamera-box .center-box {
+  height: 517px;
+}
+
+#mulCamera-box .left-box {
+  float: left;
+  width: 74%;
+  height: 100%;
+}
+
+#mulCamera-box .left-box .parent-player-box {
+  height: 100%;
+  position: relative;
+  padding: 8px;
+  background: rgba(42, 42, 42, 0.95);
+}
+
+#mulCamera-box .left-box .icon-full-screen-:before {
+  content: "\e6b2";
+}
+
+#mulCamera-box .left-box .icon-full-screen-back:before {
+  content: "\e6b3";
+}
+
+#mulCamera-box .left-box .player-box {
+  height: 100%;
+  position: relative;
+  margin-left: -1%;
+}
+
+#mulCamera-box .left-box .player-box .videoBox {
+  float: left;
+  margin: 0px 0px 1% 1%;
+  position: relative;
+}
+
+#mulCamera-box .left-box .player-box .videoBox video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+#mulCamera-box .left-box .player-box .videoBox .video-id {
+  position: absolute;
+  top: 0px;
+  color: white;
+}
+
+#mulCamera-box .left-box .player-box .videoBox .video-name {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: white;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span {
+  display: inline-block;
+  width: 10px;
+  height: 3px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background: #bcbcbc;
+  position: absolute;
+  -webkit-animation: load 1.04s ease infinite;
+}
+
+@-webkit-keyframes load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(1) {
+  left: 20px;
+  top: 50%;
+  margin-top: -5px;
+  -webkit-animation-delay: 0.13s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(2) {
+  left: 24px;
+  top: 34px;
+  -webkit-transform: rotate(45deg);
+  -webkit-animation-delay: 0.26s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(3) {
+  left: 50%;
+  top: 30px;
+  margin-left: -15px;
+  -webkit-transform: rotate(90deg);
+  -webkit-animation-delay: 0.39s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(4) {
+  top: 34px;
+  right: 44px;
+  -webkit-transform: rotate(135deg);
+  -webkit-animation-delay: 0.52s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(5) {
+  right: 40px;
+  top: 50%;
+  margin-top: -5px;
+  -webkit-transform: rotate(180deg);
+  -webkit-animation-delay: 0.65s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(6) {
+  right: 44px;
+  bottom: 40px;
+  -webkit-transform: rotate(225deg);
+  -webkit-animation-delay: 0.78s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(7) {
+  bottom: 35px;
+  left: 50%;
+  margin-left: -15px;
+  -webkit-transform: rotate(270deg);
+  -webkit-animation-delay: 0.91s;
+}
+
+#mulCamera-box .left-box .player-box .loadEffect span:nth-child(8) {
+  bottom: 40px;
+  left: 24px;
+  -webkit-transform: rotate(315deg);
+  -webkit-animation-delay: 1.04s;
+}
+
+#mulCamera-box .left-box .btn-fullScreen {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 3;
+}
+
+#mulCamera-box .left-box .btn-fullScreen:hover {
+  color: #00f6ff;
+  cursor: pointer;
+}
+
+#mulCamera-box .fullScreen {
+  width: 100%;
+}
+
+#mulCamera-box .fullScreen .player-box {
+  background: #303030;
+}
+
+#mulCamera-box .right-box {
+  float: right;
+  width: 25%;
+  height: 100%;
+}
+
+#mulCamera-box .right-box .search-input {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  height: 25px;
+  line-height: 25px;
+  color: #bcbcbc;
+  outline: none;
+  width: 70%;
+  min-width: 150px;
+  padding: 5px;
+}
+
+#mulCamera-box .right-box .search {
+  float: right;
+  max-width: 50px;
+  width: 50px;
+  height: 25px;
+  background-color: #356f87;
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+#mulCamera-box .right-box .table-box {
+  height: 480px;
+  overflow-y: scroll;
+  margin-top: 10px;
+}
+
+#mulCamera-box .right-box .mul-camera-box {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#mulCamera-box .right-box .mul-camera-box .mul-camera-title {
+  margin-left: 25px;
+  padding: 0px 8px;
+}
+
+#mulCamera-box .right-box .mul-camera-box .mul-camera-row {
+  height: 25px;
+  padding-left: 20px;
+}
+
+#mulCamera-box .right-box .mul-camera-box .mul-camera-row .iconfont {
+  padding-right: 10px;
+}
+
+#mulCamera-box .right-box .firstFieldset {
+  margin-top: 0px;
+}
+
+#mulCamera-box .right-box .selected {
+  background: #47626d;
+  border: 2px solid #00f6ff;
+  color: white;
+}
+
+#mulCamera-box .right-box .selected .mul-camera-title {
+  color: #00f6ff;
+}
+
+#mulCamera-box .right-box .unSelected {
+  border: 2px solid #2d2d2d;
+  color: #bcbcbc;
+}
+
+#mulCamera-box .right-box .unSelected .mul-camera-title {
+  color: white;
+}
+
+@media screen and (max-width: 1919px) {
+  #mulCamera-box .left-box {
+    width: 74%;
+  }
+  #mulCamera-box .right-box {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #mulCamera-box .left-box {
+    width: 74%;
+  }
+  #mulCamera-box .right-box {
+    width: 25%;
+  }
+}
+
+/* mulCamera end */
+/* user dialog start */
+.user-dialog1.ui-dialog-blackStyle.ui-dialog {
+  background: #353535;
+}
+
+.user-dialog1.ui-dialog-blackStyle.ui-dialog .ui-dialog-titlebar {
+  margin: 0;
+  border-radius: 0;
+}
+
+.user-dialog1.ui-dialog-blackStyle.ui-dialog .ui-dialog-buttonpane {
+  margin-top: 0;
+}
+
+.user-dialog1.ui-dialog-blackStyle.ui-dialog .ui-dialog-content {
+  padding: 0;
+  border: 0;
+}
+
+.user-dialog1.ui-dialog-blackStyle.ui-dialog .ui-dialog-content iframe {
+  border: 0;
+}
+
+.user-dialog2.ui-dialog-blackStyle.ui-dialog {
+  background: #353535;
+}
+
+.user-dialog2.ui-dialog-blackStyle.ui-dialog .ui-dialog-titlebar {
+  border-radius: 0;
+  height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.user-dialog2.ui-dialog-blackStyle.ui-dialog .ui-dialog-buttonpane {
+  margin-top: 0;
+}
+
+.user-dialog2.ui-dialog-blackStyle.ui-dialog .ui-dialog-content {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.user-dialog2.ui-dialog-blackStyle.ui-dialog .ui-dialog-content iframe {
+  border: 0;
+}
+
+/* user dialog end */

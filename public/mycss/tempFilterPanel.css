@@ -1,0 +1,31 @@
+.tempFilter {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  background-color: rgba(53, 53, 53, 0.95);
+  transform: translateX(-50%);
+}
+
+.tempFilter .tf_item {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid rgba(0, 246, 255, 0);
+}
+
+.tempFilter .tf_item .tf_box {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 8px;
+  border: 2px solid #23888f;
+}
+
+.tempFilter .tf_item .tf_checked {
+  background-color: #00ffff;
+  border: 2px solid #00ffff;
+}
+
+.tempFilter .tf_over {
+  background-color: rgba(0, 246, 255, 0.2);
+  border: 1px solid #00ffff;
+}

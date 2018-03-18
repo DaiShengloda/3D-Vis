@@ -1,0 +1,64 @@
+.toolbar-box ul {
+  list-style: none;
+}
+
+.toolbar-box .bg {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 100% 0px 0px 0px;
+  overflow: hidden;
+}
+
+.toolbar-box .deepBgColor {
+  background: rgba(53, 53, 53, 0.9);
+}
+
+.toolbar-box .middleBgColor {
+  background: rgba(53, 53, 53, 0.6);
+}
+
+.toolbar-box .shadowBgColor {
+  background: rgba(53, 53, 53, 0.3);
+}
+
+.toolbar-box .toolbar-item {
+  position: absolute;
+  cursor: pointer;
+}
+
+.toolbar-box .toolbar-icon {
+  font-size: 32px;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+}
+
+.toolbar-box .toolbar-icon:hover {
+  font-size: 40px;
+  color: #00ffff;
+}
+
+.toolbar-box .selected {
+  color: #00ffff;
+}
+
+@media screen and (max-width: 1919px) {
+  .toolbar-box .toolbar-icon {
+    font-size: 28px;
+  }
+  .toolbar-box .toolbar-icon:hover {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .toolbar-box .toolbar-icon {
+    font-size: 28px;
+  }
+  .toolbar-box .toolbar-icon:hover {
+    font-size: 36px;
+  }
+}

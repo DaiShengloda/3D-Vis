@@ -1,0 +1,65 @@
+@import "default";
+@import "mixin";
+.toolbar-box {
+    ul {
+        list-style: none;
+    }
+    .bg {
+        position: absolute;
+        // background-color: $default-toolbar-bg-color;
+        width: 100px;
+        height: 100px;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 100% 0px 0px 0px;
+        overflow: hidden;
+    }
+    .deepBgColor{
+        background:$comp-toolbar-bg-deep-color;
+    }
+    .middleBgColor {
+        background:$comp-toolbar-bg-middle-color;
+    }
+    .shadowBgColor{
+        background:$comp-toolbar-bg-shadow-color;
+    }
+    .toolbar-item {
+        position: absolute;
+        cursor: pointer;
+    }
+    .toolbar-icon {
+        font-size: 32px;
+        -webkit-transition: font-size 0.25s ease-out 0s;
+        -moz-transition: font-size 0.25s ease-out 0s;
+        transition: font-size 0.25s ease-out 0s;
+        &:hover {
+            font-size: 40px;
+            color: $default-highlight-bg-color;
+        }
+    }
+    .selected {
+        color: $default-highlight-bg-color;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .toolbar-box {
+        .toolbar-icon {
+            font-size: 28px;
+            &:hover {
+                font-size: 36px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .toolbar-box {
+        .toolbar-icon {
+            font-size: 28px;
+            &:hover {
+                font-size: 36px;
+            }
+        }
+    }
+}

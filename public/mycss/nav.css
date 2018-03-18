@@ -1,0 +1,253 @@
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(53, 53, 53, 0.95);
+  position: relative;
+  height: 68px;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav li {
+  text-align: center;
+}
+
+.nav .nav-item {
+  height: 68px;
+  width: 68px;
+}
+
+.nav .nav-icon {
+  font-size: 36px;
+}
+
+.nav .nav-icon:hover {
+  font-size: 44px;
+  cursor: pointer;
+}
+
+.nav .icon {
+  line-height: 65px;
+  margin: 10px 0;
+  -webkit-transition: font-size 0.25s ease-out 0s;
+  -moz-transition: font-size 0.25s ease-out 0s;
+  transition: font-size 0.25s ease-out 0s;
+}
+
+.nav .selected {
+  color: #00ffff;
+}
+
+.nav .extended {
+  margin: 0 68px;
+}
+
+.nav .nav-bar {
+  background-color: #00ffff;
+  position: absolute;
+  z-index: 1;
+  width: 68px;
+  height: 4px;
+}
+
+.nav .menu-box {
+  position: absolute;
+  top: -89px;
+  left: 0px;
+  height: 89px;
+  overflow: hidden;
+}
+
+.nav .menu-box .outer {
+  width: 264px;
+  height: 132px;
+  border-width: 1px;
+  border-radius: 132px 132px 0px 0px;
+  background-color: rgba(53, 53, 53, 0.75);
+}
+
+.nav .menu-box .inner {
+  width: 132px;
+  height: 66px;
+  border-width: 1px;
+  border-radius: 66px 66px 0px 0px;
+  position: absolute;
+  top: 66px;
+  left: 66px;
+  background-color: rgba(53, 53, 53, 0.6);
+}
+
+.nav .menu-box ul {
+  list-style: none;
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+.nav .menu-box li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.nav .menu-box .menu-item-min {
+  font-size: 20px;
+}
+
+.nav .menu-box .menu-item-min:hover {
+  font-size: 26px;
+  cursor: pointer;
+  color: #00ffff;
+}
+
+.nav .menu-box .menu-item-max {
+  font-size: 32px;
+}
+
+.nav .menu-box .menu-item-max:hover {
+  font-size: 38px;
+  cursor: pointer;
+  color: #00ffff;
+}
+
+@media screen and (max-width: 1919px) {
+  .nav ul {
+    height: 58px;
+  }
+  .nav .nav-item {
+    height: 58px;
+    width: 58px;
+  }
+  .nav .extended {
+    margin: 0 58px;
+  }
+  .nav .nav-icon {
+    font-size: 28px;
+  }
+  .nav .nav-icon:hover {
+    font-size: 36px;
+  }
+  .nav .icon {
+    line-height: 58px;
+  }
+  .nav .nav-bar {
+    width: 58px;
+    height: 3px;
+  }
+  .nav .menu-box .outer {
+    width: 214px;
+    height: 107px;
+    border-radius: 107px 107px 0px 0px;
+  }
+  .nav .menu-box .inner {
+    width: 107px;
+    height: 53.5px;
+    border-radius: 53.5px 53.5px 0px 0px;
+    top: 53.5px;
+    left: 53.5px;
+  }
+  .nav .menu-box .menu-item-min {
+    font-size: 16px;
+  }
+  .nav .menu-box .menu-item-min:hover {
+    font-size: 20px;
+    color: #00ffff;
+  }
+  .nav .menu-box .menu-item-max {
+    font-size: 24px;
+  }
+  .nav .menu-box .menu-item-max:hover {
+    font-size: 30px;
+    color: #00ffff;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .nav ul {
+    height: 48px;
+  }
+  .nav .nav-item {
+    height: 48px;
+    width: 48px;
+  }
+  .nav .extended {
+    margin: 0 48px;
+  }
+  .nav .nav-icon {
+    font-size: 26px;
+  }
+  .nav .nav-icon:hover {
+    font-size: 34px;
+  }
+  .nav .icon {
+    line-height: 48px;
+  }
+  .nav .nav-bar {
+    width: 48px;
+    height: 3px;
+  }
+  .nav .menu-box {
+    top: -75px;
+    height: 75px;
+  }
+  .nav .menu-box .outer {
+    width: 174px;
+    height: 87px;
+    border-radius: 87px 87px 0px 0px;
+  }
+  .nav .menu-box .inner {
+    width: 87px;
+    height: 43.5px;
+    border-radius: 43.5px 43.5px 0px 0px;
+    top: 43.5px;
+    left: 43.5px;
+  }
+  .nav .menu-box .menu-item-min {
+    font-size: 16px;
+  }
+  .nav .menu-box .menu-item-min:hover {
+    font-size: 20px;
+    color: #00ffff;
+  }
+  .nav .menu-box .menu-item-max {
+    font-size: 20px;
+  }
+  .nav .menu-box .menu-item-max:hover {
+    font-size: 26px;
+    color: #00ffff;
+  }
+}
+
+.arc-box {
+  z-index: 1;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: center;
+  transition: transform 0.25s ease-out 0s;
+}
+
+.arc-box .arc-clip-box {
+  width: 272px;
+  height: 136px;
+  overflow: hidden;
+  position: absolute;
+  left: -136px;
+  top: -136px;
+}
+
+.arc-box .arc-bar {
+  width: 272px;
+  height: 272px;
+  border: 4px solid transparent;
+  border-radius: 50%;
+  position: absolute;
+  border-top: 4px solid #00FFFF;
+  border-left: 4px solid #00FFFF;
+  left: 0px;
+  top: 0px;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+}

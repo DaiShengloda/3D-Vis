@@ -1,0 +1,139 @@
+/* 楼层选择器 start */
+
+// .OverviewMgr .floor-box{
+//     width: 50px;
+//     // height: 300px;
+//     position: absolute;
+//     // left: 250px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center ;
+//     background: rgba(58,58,58,1);
+// }
+
+
+// .OverviewMgr .floor-box .floor-arrow{
+//     flex: none;
+//     width: 20px;
+//     height: 20px;
+//     display: flex;
+//     padding-left: 10px;
+//     align-items: center;
+//     justify-content: center;
+//     color: #138c85;
+//     left: 5px;
+//     position: relative;
+//     cursor: pointer;
+// }
+
+// .OverviewMgr .floor-box .floor-arrow:hover{
+//     color: #05feff;
+// }
+
+// .OverviewMgr .floor-box .floor-arrow.disable:hover{
+//     cursor: default;
+// }
+
+
+// .OverviewMgr .floor-box .floor-arrow.disable:hover{
+//     color: #138c85;
+// }
+
+
+// .OverviewMgr .floor-box .floor-datas-out{
+//     margin: 10px 0;
+//     overflow: hidden;
+//     width: 50px;
+    
+// }
+
+// .OverviewMgr .floor-box .floor-datas-in{
+//     overflow-y: scroll;
+//     width: 100px;
+// }
+
+// .OverviewMgr .floor-box .floor-data-out{
+//     color: #fff;
+//     cursor: pointer;
+//     user-select: none;
+//     font-weight: bold;
+//     height:30px;
+//     width: 50px;
+// }
+
+// .OverviewMgr .floor-box .floor-data-in{
+//     width: 100%;
+//     height: 100%;
+//     padding: 5px 10px 5px 20px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+ 
+// }
+
+// .OverviewMgr .floor-box .floor-data-out:hover{
+//     background:#00ffff;
+//     clip-path: polygon(0px 15px, 15px 3px, 50px 3px, 50px 27px, 15px 27px);
+// }
+
+// .OverviewMgr .floor-box .floor-data-out:hover .floor-data-in{
+//     background:#43616c;
+//     clip-path: polygon(3px 15px, 16px 5px, 48px 5px, 48px 25px, 16px 25px);
+// }
+
+// .OverviewMgr .floor-box .floor-data-out.active{
+//     background:#00ffff;
+//     clip-path: polygon(0px 15px, 15px 3px, 50px 3px, 50px 27px, 15px 27px);
+    
+// }
+
+// .OverviewMgr .floor-box .floor-data-out.active .floor-data-in{
+//     background:#43616c;
+//     clip-path: polygon(3px 15px, 16px 5px, 48px 5px, 48px 25px, 16px 25px);
+// }
+
+/* 楼层选择器 end */
+
+@import "default";
+@import "mixin";
+/* 楼层选择器开始 */
+.floor-box {
+    position: absolute;
+    top:30%;
+    right: 10px;
+    // width: 45px;
+    background: $default-bg-color;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 18px;
+    color: $default-highlight-color;
+    #floor-box-ul {    
+        padding: 0;
+        margin: 5px 0;   
+        .floor-box-li {
+            padding: 5px 15px;
+            width: 100%;
+            cursor: pointer;
+        }
+        .currentFloor,.floor-box-li:hover {
+            background-image:url('../images/currentFloor.png');
+            background-position: 0 2.5px;
+            background-repeat: no-repeat;
+            background-size: 107% 100%;
+        }
+
+    }
+    .icon-angle-top, .icon-angle-bottom {
+        cursor: pointer;
+        padding: 7px 0;
+        font-size: 13px;
+        color: $default-arrow;
+    }
+    .icon-angle-top:hover, .icon-angle-bottom:hover {
+        color: $default-highlight-bg-color;
+    }
+}
+
+/* 楼层选择器结束 */

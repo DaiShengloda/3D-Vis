@@ -1,0 +1,199 @@
+@import "_default";
+@import "_mixin";
+@import "base";
+.info {
+    // overflow-y: scroll!important;
+    // width: 487px;
+    .infoTab {
+        overflow-y: auto;
+        min-height: 200px;
+        max-height: 500px;
+        // width: 470px;
+        .iconfont {
+            color: $default-highlight-color;
+            float: right;
+            cursor: pointer;
+            // position: fixed;
+        }
+        .iconfont:hover {
+            color: $default-highlight-bg-color;
+        }
+        .panel {
+            border: 2px solid $comp-input-border-color;
+            position: relative;
+            padding-top: 10px;
+            // padding-left: 30px;
+            background: none;
+            margin-top: 20px;
+            .panel-header {
+                font-size: $default-title-font-size;
+                color: $default-highlight2-color;
+                position: absolute;
+                padding: 0 10px;
+                left: 10px;
+                top: -11px;
+                background-color: #373737;
+                user-select: none;
+            }
+            .panel-content {
+                .content-row {
+                    .left {
+                        // width: 135px;
+                        width: 100px;
+                        display: inline-block;
+                        color: $default-font-color;
+                        // margin-right: 30px;
+                        margin-right: 20px;
+                        line-height: 24px;
+                        user-select: none;
+                        // vertical-align: top;
+                        text-align: right;
+                        padding-top: 3px;
+                        padding-bottom: 3px;
+                    }
+                    .right {
+                        color: $default-highlight-color;
+                        display: inline-block;
+                        min-width: 135px;
+                        span {
+                            margin-bottom: 10px;
+                            display: block;
+                            line-height: 24px;
+                        }
+                        input {
+                            background: transparent;
+                            border: none;
+                            margin-bottom: 5px;
+                            color: $default-highlight-color;
+                            padding: 3px;
+                            width: 205px;
+                            height: 28px;
+                            &:first-child {
+                                margin-bottom: 10px;
+                            }
+                        }
+                        input.editable {
+                            @extend .bt-value-input;
+                            margin-left: -10px;
+                        }
+                        button {
+                            font-size: $default-font-size;
+                            margin-bottom: 10px;
+                            cursor: pointer;
+                            width: 40px;
+                            height: 22px;
+                        }
+                    }
+                }
+            }
+        }
+        .panel:first-child {
+            margin-top: 15px;
+        }
+        .buttons {
+            float: right;
+            margin-top: 10px;
+            button {
+                padding: 0;
+                width: 40px;
+                height: 22px;
+                margin-left: 10px;
+                @extend .bt-btn;
+            }
+            button:hover {
+                @extend .bt-btn:hover;
+            }
+        }
+        .displaynone {
+            display: none;
+        }
+    }
+}
+@media screen and (max-width: 1440px) {
+    .info {
+        .infoTab {
+            .panel {
+                margin-top: 10px;
+                &:first-child {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .baseInfo {
+        .baseInfoTab {
+            .panel {
+                margin-top: 20px;
+                .panel-content {
+                    .content-row {
+                        .right {
+                            input {
+                                width: 165px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 设备列表
+.deviceListInfo {
+    color: #bcbcbc;
+    .deviceListInfoTab {
+        margin-top: 5px;
+        .fixed-table-container {
+            .DeviceListTable {
+                border: 2px solid $default-title-bg-color;
+                border-spacing: 0px;
+                thead {
+                    th {
+                        border-left: none;
+                        background: $default-title-bg-color;
+                        .th-inner {
+                            height: 30px;
+                            line-height: 16px;
+                            padding: 8px 10px;
+                        }
+                    }
+                }
+                tbody {
+                    td {
+                        border-left: none;
+                        padding: 7px 10px;
+                        height: 30px;
+                    }
+                    tr:nth-child(odd) {
+                        background: transparent;
+                    }
+                    tr:nth-child(even) {
+                        background: $default-title-bg-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//告警信息
+.alarmTab {
+    .infoTab {
+        .panel {
+            padding-top: 15px;
+            &:first-child {
+                margin-top: 10px;
+            }
+            .panel-content {
+                .content-row {
+                    .left {
+                        width: 92px;
+                    }
+                }
+            }
+        }
+    }
+}

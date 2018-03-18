@@ -1,0 +1,646 @@
+/* css reset */
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+img {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset,
+img {
+    border: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+input::-moz-focus-inner {
+    border: none;
+    padding: 0;
+}
+
+select,
+input {
+    vertical-align: middle;
+}
+
+select,
+input,
+textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    outline-style: none;
+    -webkit-appearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+
+/*body { color:#333; font-size:12px;font-family:Verdana, Helvetica, Calibri, 'Microsoft Yahei', Arial, sans-serif; background:#fff;overflow: hidden;}*/
+
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #666;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #ff8400;
+    text-decoration: underline;
+}
+
+
+/* footer */
+
+#footer {
+    position: absolute;
+    bottom: 0px;
+    height: 35px;
+    width: 100%;
+    background-color: #f8f8f8;
+    border-top: 1px solid #c0c0c0;
+}
+
+.footer-p {
+    margin-left: 10px;
+    line-height: 35px;
+}
+
+
+/**** top *****/
+
+#top {
+    line-height: 39px;
+    font-size: 0
+}
+
+#top img {
+    margin-left: 30px
+}
+
+#top ul {
+    display: inline-block;
+    font-size: 16px;
+    list-style: none;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+
+#top ul li {
+    float: left;
+    margin-left: 20px
+}
+
+#top .toolbar {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#top>.toolbar>input {
+    border: none;
+    width: 60px;
+    height: 26px;
+    font-size: 14px;
+    border-radius: 5px;
+    background: #ffab00;
+    color: white;
+    margin-right: 10px
+}
+
+#top>.toolbar>input:hover {
+    background: #bc7f01
+}
+
+
+/******* room ******/
+
+.main {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 53px;
+    bottom: 0;
+}
+
+
+/****** room main*******/
+
+.room-m {
+    width: 59px;
+    float: left;
+}
+
+.room-m li {
+    width: 58px;
+    height: 58px;
+    border-left: 1px solid #c0c0c0;
+    border-bottom: 1px solid #c0c0c0;
+    cursor: pointer;
+}
+
+.li-main {
+    background: url(../images/left-menu.png) 0px 0px;
+}
+
+.li-style {
+    background: url(../images/left-menu.png) -58px 0px;
+}
+
+.li-private {
+    background: url(../images/left-menu.png) -116px 0px;
+}
+
+.li-public {
+    background: url(../images/left-menu.png) -174px 0px;
+}
+
+.li-main:hover,
+.li-main-hover {
+    background: url(../images/left-menu.png) 0px -58px;
+}
+
+.li-style:hover,
+.li-style-hover {
+    background: url(../images/left-menu.png) -58px -58px;
+}
+
+.li-private:hover,
+.li-private-hover {
+    background: url(../images/left-menu.png) -116px -58px;
+}
+
+.li-public:hover,
+.li-public-hover {
+    background: url(../images/left-menu.png) -174px -58px;
+}
+
+.room-m-pane {
+    position: absolute;
+    top: 1px;
+    bottom: 0px;
+    left: 59px;
+    width: 530px;
+    background-color: white;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+    display: none;
+}
+
+.image-split-pane {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.room-ruler {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 200px;
+    right: 0px;
+    border-left: 1px solid #c0c0c0;
+    overflow: hidden;
+}
+
+.room-marrow-left {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-image: url(../images/menuarrowl.png);
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.edit2d-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-top: 1px solid lightgrey;
+}
+
+.header-left {
+    float: left;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+
+/***********dialog ***********/
+
+.dialog-title-div {
+    padding-bottom: 20px;
+    cursor: move
+}
+
+.field {
+    width: 80px;
+    font-size: 14px;
+    text-align: right;
+    float: left;
+    margin-right: 5px;
+    padding-top: 4px;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.fieldlabel {
+    width: 10px;
+    font-size: 14px;
+    text-align: right;
+    margin-left: 1px;
+    float: left;
+    padding-top: 4px;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.customlabel {
+    width: 120px;
+    font-size: 14px;
+    text-align: right;
+    float: left;
+    margin-right: 5px;
+    padding-top: 4px;
+    border-bottom: 1px soild
+}
+
+.lb-save-template {
+    width: 50px;
+    float: left;
+    border: 0px;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.input {
+    height: 24px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    padding-left: 5px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ABADB3;
+    width: 230px
+}
+
+.input-r {
+    height: 24px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    padding-left: 5px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #ABADB3;
+}
+
+.innerLabel {
+    font-size: 14px;
+    float: left;
+    margin-right: 5px;
+    padding-top: 4px;
+    margin-left: 5px
+}
+
+.inner-import {
+    width: 350px;
+    min-width: 350px
+}
+
+#export-json {
+    position: absolute;
+    width: 95%;
+    background: white;
+    height: 95%;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+#import-json {
+    padding: 20px 30px 10px 20px
+}
+
+textarea {
+    width: 360px;
+    height: 400px
+}
+
+#import-json textarea {
+    width: 236px;
+    height: 210px
+}
+
+#accordion-resizer {
+    position: absolute;
+    width: 200px;
+    height: 1500px;
+}
+
+#accordion-resizer .mn-accordion {
+    padding: 10px 0px;
+}
+
+.item-li {
+    float: left;
+    margin-bottom: 15px;
+    text-align: center
+}
+
+.item-li img {
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 5px;
+}
+
+.item-li img:hover {
+    cursor: pointer;
+    background: rgb(252, 252, 252)
+}
+
+.item-label {
+    margin-top: 10px;
+}
+
+#toolbar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#toolbar label {
+    margin-bottom: 0
+}
+
+input {
+    outline: none;
+}
+
+
+/*************property sheet********/
+
+.property-main {
+    width: 295px;
+    padding: 10px;
+}
+
+.property-title {
+    text-align: center;
+    margin: 20px 0
+}
+
+.title-text {
+    max-width: 150px;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px
+}
+
+.property-content {
+    width: 100%;
+    height: 100%
+}
+
+.input-l {
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    color: #606670;
+    padding-right: 0;
+    float: left
+}
+
+.input-v {
+    padding-left: 0;
+}
+
+.property-conent .row {
+    margin-bottom: 10px;
+    margin-left: 0
+}
+
+.it_content .panel {
+    margin-bottom: 0px;
+    border-left: none;
+    border-bottom: none;
+}
+
+.it_content .col-md-6 {
+    padding-right: 0px;
+    padding-left: 0px
+}
+
+.save-scene-dialog .scroll-class {
+    height: 300px !important;
+}
+
+.rack-editor {
+    position: absolute;
+    top: 51px;
+    bottom: 1px;
+    /* height: 100%; */
+    width: 100%;
+}
+
+.rack-editor .rack-list {
+    position: absolute;
+    width: 20%;
+    top: 0px;
+    bottom: 0px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ddd
+}
+
+.rack-editor .rack-list .bar-box {
+    padding: 10px 0px 10px 10px;
+    background-color: rgba(250, 250, 250, 0.5);
+    ;
+}
+
+.rack-editor .rack-list .bar-box .value-box {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 50%;
+}
+
+.rack-editor .rack-list .bar-box .label-box {
+    padding-left: 20px;
+    padding-right: 0px;
+    width: 30%;
+}
+
+.rack-editor .rack-list .bar-box input {
+    height: 22px;
+    padding: 0 6px;
+    font-size: 12px;
+    line-height: 22px;
+    color: #919191;
+    border-radius: 0;
+    background: #DCDCDC;
+    border: 1px solid #FFFFFF;
+    font-family: "Microsoft Yahei", Verdana, Helvetica, Arial, 'Open Sans', sans-serif;
+    border-radius: 10px;
+}
+
+.rack-editor .rack-list .tree-container {
+    height: 250px;
+    bottom: 3px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.rack-editor .rack-list .comp-box {
+    bottom: 0px;
+    position: absolute;
+    top: 370px;
+    overflow-y: auto;
+}
+
+.rack-editor .content {
+    position: absolute;
+    width: 60%;
+    left: 20%;
+    top: 0px;
+    bottom: 0px;
+    /*border-style: solid;*/
+}
+
+.rack-editor .comp-list {
+    position: absolute;
+    right: 0px;
+    left: 80%;
+    top: 0px;
+    bottom: 0px;
+    border-style: solid;
+    border-width: 1px;
+    /*padding-top: 10px;*/
+    border-color: #ddd;
+}
+
+.rack-editor .comp-list .props {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.rack-editor .comp-list .props .prop-box {
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 15px;
+}
+
+.rack-editor .comp-list .props .prop-box .row {
+    padding-top: 5px;
+}
+
+.header {
+    height: 24px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #ddd;
+    padding-top: 2px;
+}
+
+.topology {}
+
+.topology .tree-container {
+    width: 200px;
+    top: 52px;
+    bottom: 0px;
+    overflow-y: auto;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+}
+
+.topology .tree-title {
+    text-align: center;
+    background-color: #ccc;
+    font-size: 16px;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.topology .content {
+    top: 51px;
+    bottom: 0px;
+    left: 200px;
+    right: 0px;
+    overflow-y: auto;
+    position: absolute;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #eee;
+}
+
+.topology .content .tool-bar {
+    position: absolute;
+    height: 31px;
+    width: 100%;
+    background-color: #bbb;
+}
+
+.topology .content .tool-bar .tool {
+    padding-top: 5px;
+    margin-left: 20px;
+}
+
+.topology .content .topo-box {
+    position: absolute;
+    width: 100%;
+    top: 31px;
+    bottom: 0px;
+}
+
+
+/* 解决场景编辑器里面窗口缩小导航栏的样式错乱问题 */
+
+@media screen and (max-width: 1360px) {
+    .scene {
+        top: 100px;
+    }
+}

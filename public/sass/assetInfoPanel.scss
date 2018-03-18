@@ -1,0 +1,136 @@
+/* assetInfo panel start */
+
+@import "default";
+@import "mixin";
+.assetInfo {
+    background-color: $default-bg-color;
+    color: $default-font-color;
+    position: relative;
+    overflow: hidden;
+    @include widthFontSize(260px, 300px, 360px);
+    user-select: none;
+    .title-box {
+        position: relative;
+        .assetInfo-bt-box {
+            width: 10%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 5px;
+            cursor: pointer;
+            .bt-arrow {
+                position: absolute;
+                top: 18%;
+                left: 13px;
+            }
+        }
+        .assetInfo-bt-box:hover .bt-arrow {
+            border-left: 9px solid #00f6ff;
+        }
+        .title {
+            display: inline-block;
+            margin: 5px 0px 5px 10px;
+            padding: 6px 10px;
+            line-height: 16px;
+            border-radius: 15px;
+            background-color: $default-title-bg-color;
+            @include titleFontSize();
+        }
+    }
+}
+
+.assetInfo-content {
+    // overflow-y: scroll;
+    // @media screen and (min-width: 1920px) { 
+    //     max-height: 1000px;
+    // }
+    // @media screen and (max-width: 1920px) { 
+    //     max-height: 470px;
+    // }
+    // @media screen and (max-width: 1440px) { 
+    //     max-height: 470px;
+    // } 
+}
+
+.assetInfo_item {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.assetInfo_title {
+    margin-bottom: 5px;
+    span {
+        display: inline-block;
+        padding: 6px 10px;
+        line-height: 16px;
+        border-radius: 15px;
+        background-color: $default-title-bg-color;
+        @include titleFontSize();
+    }
+}
+
+.assetInfo_item_asset {
+    margin-left: 10px;
+    .bt-item {
+        float: left;
+        width: 50%;
+        margin-bottom: 5px;
+        .bt-label {
+            display: inline-block;
+            vertical-align: top;
+            width: 50% // margin-right: 5px;
+        }
+        .bt-value {
+            user-select: text;
+            display: inline-block;
+            font-family: 'Pirulen';
+        }
+    }
+}
+
+.assetInfo_item_capacity {
+    margin-left: 10px;
+    .bt-item {
+        margin-bottom: 5px;
+        font-size: $default-font-size;
+    }
+    .bt-label {
+        display: inline-block;
+        margin-right: 2%;
+    }
+    .bt-progress {
+        display: inline-block;
+        background: rgba(48, 49, 52, 1);
+        border-left: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-radius: 8px;
+        transform: translateY(2px);
+        height: 12px;
+        width: 45%;
+        .bt-value {
+            position: relative;
+            float: left;
+            height: 100%;
+            margin: 0 -1px;
+            background: rgba(0, 169, 0, 1);
+            border-radius: 8px;
+        }
+    }
+    .bt-proportion {
+        display: inline-block;
+        margin-left: 2%;
+    }
+}
+
+.assetInfo_item_state {
+    margin-top: -20px;
+    @include height(150px, 160px, 170px)
+}
+
+.assetInfo_item_pue {
+    margin-top: -20px;
+    @include height(140px, 150px, 160px)
+}
+
+
+/* assetInfo panel end */

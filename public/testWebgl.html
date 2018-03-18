@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+    <title>测试</title>
+   <head></head>
+   <body>
+       <canvas width="500" height="500" id = "canvas"></canvas>
+       <script type="text/javascript">
+            var options = {
+              preserveDrawingBuffer :true,
+              premultipliedAlpha : true,
+              antialias : true,
+              stencil: true
+            }
+            var canvas = document.getElementById('canvas');
+            try {
+                 gl = canvas.getContext("webgl");
+             }
+            catch (x) { 
+               alert("error:" + x);
+             }
+
+            if (gl == null) {
+                try {
+                      gl = canvas.getContext("experimental-webgl"); ;
+                 }
+                catch (x) {
+                   alert("experimental error:" + x);
+                }
+            }
+            alert("gl:" + gl);
+       </script>
+   </body>
+</html>

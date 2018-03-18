@@ -1,0 +1,61 @@
+.data-nav {
+	padding: 1px;
+	position:absolute;
+	right:1px;
+	bottom:50%;
+	transform: translate(0, 50%);
+	display:none;
+}
+
+.data-nav ul {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 0px;
+  list-style-type:desc;
+  font-family: 'Microsoft Yahei',Arial,sans-serif;
+}
+
+.data-nav ul>li {
+	min-height: 20px;
+	max-width: 200px;
+	margin: 0px;
+	/*padding: 10px 30px;*/
+	box-sizing:border-box;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	display: block;
+    margin-bottom:-1px;
+    height: 40px;
+	line-height: 40px;
+	text-align:center;
+}
+
+.data-nav ul>li:first-child{
+	border-top-left-radius:4px;
+	border-top-right-radius:4px;
+}
+
+.data-nav ul>li:last-child{
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px;
+}
+
+.data-nav ul .disabled {
+	cursor: not-allowed;
+	color: #ff8400;
+}
+
+.data-nav ul>li>a {
+	text-decoration: none;
+	color:#454545;
+	display:block;
+	/*width:75px;*/ /* 使得自适应 2017-07-19 Kevin*/
+	min-width: 75px;
+	height: 40px;
+	line-height: 40px;
+	text-align:center;
+}
+.data-nav ul>li>a:hover {
+	color:#ff8400;
+	text-decoration: none;
+}

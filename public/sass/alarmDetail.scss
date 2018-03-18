@@ -1,0 +1,94 @@
+@import "default";
+@import "base";
+.alarmDetailDialog {
+    padding: 10px 20px!important;
+    background-color: transparent!important;
+    .bootstrap-table {
+        .fixed-table-container {
+            .fixed-table-body {
+                .table-no-bordered {
+                    tbody {
+                        tr {
+                            td {
+                                color: $default-font-color!important;
+                                font-size: $default-font-size!important;
+                                padding: 5px 10px!important;
+                                font-weight: normal!important;
+                                &:last-child {
+                                    color: $default-highlight-color!important;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .alarmDetailDialog {
+        padding: 10px 5px!important;
+    }
+}
+
+// 确认告警
+.form-horizontal {
+    padding: 15px 30px 10px!important;
+    .form-group {
+        margin-right: 0!important;
+        .control-label {
+            width: 80px!important;
+            padding: 0!important;
+            margin-right: 0!important;
+            color: $default-font-color!important;
+            font-size: $default-font-size!important;
+            margin-top: 3px!important;
+            font-weight: normal!important;
+        }
+        .col-sm-8 {
+            width: 236px!important;
+            padding: 0 0 0 10px!important;
+            input {
+                height: 28px!important;
+                border: 2px solid $comp-input-border-color!important;
+                background-color: $comp-input-bg-color!important;
+            }
+            button {
+                margin-right: 25px!important;
+                margin-top: 5px!important;
+                width: 60px!important;
+                height: 28px!important;
+                border: 1px solid transparent!important;
+                color: $comp-btn-color!important;
+                background: $comp-btn-bg-color!important;
+                border-radius: $comp-btn-border-radius!important;
+            }
+            button:hover {
+                border: 1px solid $comp-btn-border-hover-color!important;
+                background: $comp-btn-border-hover-bg-color!important;
+            }
+            textarea {
+                height: 56px!important;
+                color: $default-placeholder-color!important;
+                font-size: $default-font-size!important;
+                background-color: $comp-input-bg-color!important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .form-horizontal {
+        padding: 15px 15px 5px!important;
+        .form-group {
+            .col-sm-8 {
+                width: 210px!important;
+                button {
+                    margin-top: 0!important;
+                    margin-right: 18px !important;
+                }
+            }
+        }
+    }
+}

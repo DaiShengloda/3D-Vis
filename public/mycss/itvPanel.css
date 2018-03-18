@@ -1,0 +1,152 @@
+.itv-pane {
+    position: relative;
+    width: 250px;
+    min-width: 250px;
+    height: 200px;
+    min-height: 200px;
+    border-radius: 3px;
+    padding: 10px;
+    background-image: url('../images/itvPanelBg.png');
+    background-size: 100% 100%;
+    font-family: "Microsoft Yahei", Verdana, Helvetica, Arial, 'Open Sans', sans-serif;
+}
+
+.itv-pane-tab {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    margin: 0 auto;
+}
+
+.itv-pane-tab .menu {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    font-size: 13px;
+}
+
+.itv-pane-tab .menu .close {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    width: 15px;
+    height: 15px;
+    right: 0px;
+    top: 0px;
+    background: url(./images/close.png) no-repeat center;
+}
+
+.itv-pane-tab .menu ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.itv-pane-tab .menu ul li {
+    float: left;
+    width: 25%;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+}
+
+.itv-pane-tab .menu ul li a {
+    display: block;
+    width: 100%;
+    height: 28px;
+    color: rgb(0, 140, 132);
+}
+
+.itv-pane-tab .menu ul li.hover {
+    border-image: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(0, 255, 255, .8), rgba(0, 255, 255, 0)) 1;
+}
+
+.itv-pane-tab .menu ul li:hover {
+    border-image: linear-gradient(to right, rgba(0, 255, 255, 0), rgba(0, 255, 255, .8), rgba(0, 255, 255, 0)) 1;
+}
+
+.itv-pane-tab .menu ul li.hover a {
+    color: rgb(0, 255, 255);
+}
+
+.itv-pane-tab .menu ul li a:hover {
+    color: rgb(0, 255, 255);
+}
+
+.itv-pane-tab .contentbox {
+    clear: both;
+    color: rgb(55, 221, 255);
+    width: 100%;
+    margin: 5px;
+    overflow: auto;
+}
+
+.itv-pane-tab .contentbox .tab-pane {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.itv-pane-tab .contentbox .tab-pane .label-min {
+    text-align: right;
+}
+
+.itv_layout_box{
+    position: absolute;
+    width: 135px;
+    height: 230px;
+    bottom: 50px;
+    right: 20px;
+    color: #ffffff;
+}
+.itv_layout_header{
+    height: 22px;
+    background-color: rgb(6,7,8);
+    line-height: 22px;
+    padding-left: 10%;
+}
+.itv_layout_content{
+    height: 208px;
+    background-color: rgb(43,44,45);
+}
+.itv_layout_row{
+    position: relative;
+    height: 30px;
+}
+.itv_layout_txt{
+    padding-left: 20%;
+    line-height: 30px;
+}
+.itv_layout_radio_outer{
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    background: none;
+    border-radius: 50%;
+    border: 2px solid rgb(6,7,8);
+    cursor: pointer;
+}
+.itv_layout_radio_inner{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 6px;
+    height: 6px;
+    background: #0b917f;
+    border-radius: 50%;
+    visibility: hidden;
+}
+.itv_layout_radio_outer.active{
+    border-color: #00f6ff;
+}
+.itv_layout_radio_outer.active .itv_layout_radio_inner{
+    background: #00ffff;
+    visibility: visible;
+}

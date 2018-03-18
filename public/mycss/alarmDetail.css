@@ -1,0 +1,213 @@
+@charset "UTF-8";
+html body {
+  font-family: "NotoSansHans",  Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+  color: #bcbcbc;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html body {
+    font-size: 12px;
+  }
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bt-arrow {
+  display: block;
+  border-top: 9px solid transparent;
+  border-left: 9px solid #23888f;
+  border-bottom: 9px solid transparent;
+  cursor: pointer;
+  transition: all 0.3S;
+}
+
+.bt-arrow:hover {
+  border-left: 9px solid #00ffff;
+}
+
+.bt-arrow-open {
+  transform: rotate(90deg);
+}
+
+.bt-scroll::-webkit-scrollbar,
+.scroll-class::-webkit-scrollbar {
+  background-color: rgba(53, 53, 53, 0.95);
+  width: 10px;
+}
+
+.bt-scroll::-webkit-scrollbar-thumb,
+.scroll-class::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  height: 24px;
+}
+
+.bt-value {
+  color: #d6d6d6;
+}
+
+.bt-value-input {
+  color: #bcbcbc;
+  border: 2px solid #2d2d2d;
+  background: #343434;
+  padding: 5px;
+}
+
+.bt-btn {
+  border: 1px solid #46606b;
+  color: #ffffff;
+  background: #46606b;
+  border-radius: 3px;
+}
+
+.bt-btn:hover {
+  border: 1px solid default-highlight-bg-color;
+  background: #46606b;
+}
+
+.bt-btn-second {
+  border: 1px solid #6a6a6a;
+  color: #ffffff;
+  background: #6a6a6a;
+  border-radius: 3px;
+}
+
+.bt-btn-second:hover {
+  border: 1px solid #00ffff;
+  background: #46606b;
+}
+
+@media screen and (max-width: 1919px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 8px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 5px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+}
+
+.alarmDetailDialog {
+  padding: 10px 20px !important;
+  background-color: transparent !important;
+}
+
+.alarmDetailDialog .bootstrap-table .fixed-table-container .fixed-table-body .table-no-bordered tbody tr td {
+  color: #bcbcbc !important;
+  font-size: 14px !important;
+  padding: 5px 10px !important;
+  font-weight: normal !important;
+}
+
+.alarmDetailDialog .bootstrap-table .fixed-table-container .fixed-table-body .table-no-bordered tbody tr td:last-child {
+  color: #d6d6d6 !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .alarmDetailDialog {
+    padding: 10px 5px !important;
+  }
+}
+
+.form-horizontal {
+  padding: 15px 30px 10px !important;
+}
+
+.form-horizontal .form-group {
+  margin-right: 0 !important;
+}
+
+.form-horizontal .form-group .control-label {
+  width: 80px !important;
+  padding: 0 !important;
+  margin-right: 0 !important;
+  color: #bcbcbc !important;
+  font-size: 14px !important;
+  margin-top: 3px !important;
+  font-weight: normal !important;
+}
+
+.form-horizontal .form-group .col-sm-8 {
+  width: 236px !important;
+  padding: 0 0 0 10px !important;
+}
+
+.form-horizontal .form-group .col-sm-8 input {
+  height: 28px !important;
+  border: 2px solid #2d2d2d !important;
+  background-color: #343434 !important;
+}
+
+.form-horizontal .form-group .col-sm-8 button {
+  margin-right: 25px !important;
+  margin-top: 5px !important;
+  width: 60px !important;
+  height: 28px !important;
+  border: 1px solid transparent !important;
+  color: #ffffff !important;
+  background: #46606b !important;
+  border-radius: 3px !important;
+}
+
+.form-horizontal .form-group .col-sm-8 button:hover {
+  border: 1px solid #00ffff !important;
+  background: #46606b !important;
+}
+
+.form-horizontal .form-group .col-sm-8 textarea {
+  height: 56px !important;
+  color: #717171 !important;
+  font-size: 14px !important;
+  background-color: #343434 !important;
+}
+
+@media screen and (max-width: 1440px) {
+  .form-horizontal {
+    padding: 15px 15px 5px !important;
+  }
+  .form-horizontal .form-group .col-sm-8 {
+    width: 210px !important;
+  }
+  .form-horizontal .form-group .col-sm-8 button {
+    margin-top: 0 !important;
+    margin-right: 18px !important;
+  }
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+     <link rel="stylesheet" href="../css/client-all.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/client-all.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/easyui-bootstrap.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="../css/twaver-doodle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <!--<link rel="stylesheet" href="../css/jstree.css">-->
+
+    <title>场景管理</title>
+</head>
+
+<body>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="DCIM" src="../css/images/logo.svg" id='top-logo'>
+            </a>
+        </div>
+        <ul id="mynav" class="nav navbar-nav">
+            <!-- <li><a href="./datatype.html">资产模型</a></li>
+            <li><a href="./data.html">资产</a></li> -->
+            <li><a href="./scene.html">场景</a></li>
+            <li><a href="./index.html">列表</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a id="filter-menu" href="#" data-type="filter">过滤</a></li>
+            <li><a id="genId" href="#" data-type="filter">生成编号</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">视图模式<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="view">
+                    <li><a href="#" data-type="zoomReset">实际尺寸</a></li>
+                    <li><a href="#" data-type="zoomOverview">适应屏幕</a></li>
+                    <li><a href="#" data-type="zoomIn">放大</a></li>
+                    <li><a href="#" data-type="zoomOut">缩小</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">鼠标模式<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="mouseModel">
+                    <li><a class="pan" href="#" data-type="pan">拖拽模式</a></li>
+                    <li><a class="select" href="#" data-type="select">框选模式</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">对齐<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="alignment">
+                    <li><a href="#" data-type="up">上对齐</a></li>
+                    <li><a href="#" data-type="down">下对齐</a></li>
+                    <li><a href="#" data-type="left">左对齐</a></li>
+                    <li><a href="#" data-type="right">右对齐</a></li>
+                    <li><a href="#" data-type="center">水平对齐</a></li>
+                    <li><a href="#" data-type="middle">垂直对齐</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">布局<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="layout">
+                    <li><a href="#" data-type="hor">水平分布</a></li>
+                    <li><a href="#" data-type="ver">垂直分布</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">编辑<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="edit">
+                    <li><a href="#" data-type="undo">回退</a></li>
+                    <li><a href="#" data-type="redo">前进</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">工具<span class="caret"></span></a>
+                <ul class="dropdown-menu" id="tool">
+                    <li><a href="#" data-type="open">加载场景</a></li>
+                    <li><a href="#" data-type="save">保存场景</a></li>
+                    <li><a href="#" data-type="delete">删除场景</a></li>
+
+                    <li><a href="#" data-type="importDxf">导入DXF</a></li>
+                    <li><a href="#" data-type="importVs">导入VISIO</a></li>
+                    <li><a href="#" data-type="importroom">导入JSON</a></li>
+                    <li><a href="#" data-type="export">导出JSON</a></li>
+                    <li><a href="#" data-type="exportImage">导出图片</a></li>
+                    <li><a href="#" data-type="downloadDxf">下载DXF模板</a></li>
+                    <li><a href="#" data-type="downloadVsdx">下载VISIO模板</a></li>
+                    <li><a href="#" data-type="downloadVssx">下载VISIO模具库</a></li>
+                </ul>
+            </li>
+            <li class="btn-group navbar-form" role="group">
+                <button type="button" class="btn btn-default" id='clear'>清除</button>
+                <button type="button" class="btn btn-default" id='2d'>2D</button>
+                <button type="button" class="btn btn-default" id='3d'>3D</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="main scene">
+
+    </div>
+</div>
+
+<script type="text/javascript" src="../libs/jquery.js"></script>
+<script type="text/javascript" src="../libs/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../libs/jquery.ba-resize.js"></script>
+
+<script type="text/javascript" src="../libs/bootstrap.min.js"></script>
+<script type="text/javascript" src="../libs/bootstrapValidator.min.js"></script>
+<script type="text/javascript" src="../libs/bootstrap-progressbar.min.js"></script>
+<script type="text/javascript" src="../libs/layer.min.js"></script>
+<script type="text/javascript" src="../libs/twaver.js"></script>
+<script type="text/javascript" src="../libs/t.js"></script>
+<script type="text/javascript" src="../libs/itv-all-min.js"></script>
+<script type="text/javascript" src="../libs/dxf.js"></script>
+<script type="text/javascript" src="../libs/jszip.js"></script>
+<script type="text/javascript" src="../libs/twaver-make.js"></script>
+<script type="text/javascript" src="../libs/twaver-doodle.js"></script>
+<script type="text/javascript" src="../libs/socket.io.js"></script>
+
+<script type="text/javascript" src="../libs/License2D.js"></script>
+<script type="text/javascript" src="../libs/License3D.js"></script>
+
+<script type="text/javascript" src="../js/config.js"></script>
+<script type="text/javascript" src="./js/util.js"></script>
+<script type="text/javascript" src="./js/validator.js"></script>
+<script type="text/javascript" src="./js/sceneEditor.js"></script>
+<script type="text/javascript" src="./js/SaveSceneDialog.js"></script>
+<script type="text/javascript" src="../extend/ModelPlugin.js"></script>
+<script type="text/javascript" src="../theme/models/models.js"></script>
+</body>
+</html>

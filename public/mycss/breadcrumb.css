@@ -1,0 +1,109 @@
+/* new breadcrumb */
+.breadcrumb-box {
+  position: static;
+  display: flex;
+  height: 34px;
+  background-color: rgba(53, 53, 53, 0.95);
+  padding: 5px 0px 5px 0px;
+  color: #d6d6d6;
+}
+
+@media screen and (min-width: 1919px) {
+  .breadcrumb-box {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .breadcrumb-box {
+    width: 240px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .breadcrumb-box {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+
+.breadcrumb-box .lay-box {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breadcrumb-box .left-box {
+  margin: 0 5px 0 15px;
+}
+
+.breadcrumb-box .middle-box {
+  width: 78%;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+
+.breadcrumb-box .right-box {
+  position: static;
+  width: 11%;
+  cursor: pointer;
+}
+
+.breadcrumb-box .right-box:hover .bt-arrow {
+  border-left: 9px solid #00f6ff;
+}
+
+.breadcrumb-box .home-icon {
+  cursor: pointer;
+  padding: 0;
+  float: none;
+}
+
+.breadcrumb-box .home-icon:hover {
+  color: #23888f;
+}
+
+.breadcrumb-box ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb-box ul li {
+  padding-right: 4px;
+  cursor: pointer;
+  flex: none;
+}
+
+.breadcrumb-box ul li a {
+  padding-right: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.breadcrumb-box ul li a:hover {
+  color: #00ffff;
+}
+
+.breadcrumb-box ul li:last-child {
+  cursor: default;
+  color: #00ffff;
+}
+
+@media screen and (max-width: 1440px) {
+  .breadcrumb-box .right-box {
+    margin-left: -7px;
+  }
+  .breadcrumb-box .right-box .bt-arrow {
+    border-top: 7px solid transparent;
+    border-left: 7px solid #23888f;
+    border-bottom: 7px solid transparent;
+  }
+  .breadcrumb-box .right-box:hover .bt-arrow {
+    border-left: 7px solid #00ffff;
+  }
+}

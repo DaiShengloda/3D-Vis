@@ -1,0 +1,297 @@
+
+.app-panel{
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+    border-top: 2px solid #228791;
+    font-size: 14px;
+}
+
+.app-panel span, .app-panel .app-text-line{
+    user-select: none;
+    cursor: default;
+}
+
+.highlight-test{
+    background-color: #6cf;
+}
+
+.app-main{
+    padding: 1px 15px;
+    background: rgba(53, 53, 53, 0.95);
+}
+.app-tree{
+    background: rgba(53, 53, 53, 0.95);
+    padding: 0 15px;
+}
+
+
+
+/* head start */
+.app-head{
+    position: relative;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+
+.app-title{
+    background: #2a2a2a;
+    color: #d6d6d6;
+    height: 26px;
+    border-radius: 30px;
+    padding: 5px 15px;
+    user-select: none;
+    cursor: default;
+    font-size: 16px;
+}
+
+.app-circle{
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border-radius: 50%;
+    border: 2px solid #0b917f;
+    cursor: pointer;
+}
+
+.app-circle-inside{
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    width: 12px;
+    height: 12px;
+    background: #0b917f;
+    border-radius: 50%;
+}
+
+.app-circle:hover{
+    border-color: #00f6ff;
+}
+
+.app-circle:hover .app-circle-inside{
+    background: #00ffff;
+}
+
+
+/* head end */
+
+
+
+/* btn start */
+.app-btn-group{
+    /* margin-top: 20px; */
+    margin: 20px 0;
+}
+
+.app-btn-group div{
+    float: right;
+    background-color: #6a6a6a;
+    color: #fff;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    padding: 3px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    user-select: none;
+    height: 28px;
+}
+
+.app-btn-group div.active{
+    background-color: #356f87;
+}
+
+.app-btn-group div.active:hover{
+    background-color: #46606b;
+    border-color: #00f6ff;
+}
+/* btn end */
+
+
+
+/* line start */
+
+.app-panel .app-line{
+    display: flex;
+    height: 24px;
+    margin-top: 10px;
+}
+
+.app-panel .app-line .text{
+    width: 28%;
+    color: #bcbcbc;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.app-panel .app-black-line{
+    height: 0px;
+    border-top: 1px solid #2a2a2a;
+    margin-top: 20px;
+    width: 100%;
+    padding: 0 15px;
+}
+
+.app-panel .app-text-line{
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    height: 30px;
+}
+
+.app-panel input{
+    padding: 5px;
+    height: 28px;
+    color: #717171;
+    background-color: #343434;
+    border: 2px solid #2d2d2d;
+}
+
+.app-panel .app-input-line input{
+    width: 100%;
+}
+
+.app-panel .app-text-input-line .input{
+    width: 72%;
+}
+
+.app-panel .app-text-select-line .ui-widget{
+    display: flex;
+    align-items: center;
+    border: 2px solid #2d2d2d;
+    background-color: #363634;
+    color: #666;
+    height: 28px;
+}
+
+.app-panel .app-text-select-line .ui-widget:focus{
+    outline: 0px;
+}
+/* line end */
+
+
+/* line-select start */
+.ui-selectmenu-open ul.ui-widget-content{
+    border: 2px solid #2d2d2d;
+    background-color: #38393a;
+    color: #707070;
+    padding: 1px;
+    overflow-y: scroll;
+    max-height: 150px;
+}
+
+.ui-selectmenu-open ul.ui-widget-content li{
+    border: 1px solid transparent;
+    background-color: #363634;
+    color: #707070;
+    margin: 1px 0;
+}
+
+.ui-selectmenu-open ul.ui-widget-content li.ui-state-focus{
+    border-color: #00f6ff;
+    background-color: #47626d;
+    color: #fff;
+}
+/* line-select end */
+
+/* pop-start */
+.app-pop{
+    width: 300px;
+    padding: 20px 20px 30px 20px;;
+    background: rgba(53, 53, 53, 0.95);
+    position: absolute;
+    left: 330px;
+    top: 200px;
+    z-index: 2;
+    border: none;
+}
+
+.app-pop .pop-title-line{
+    font-size: 14px;
+    background: #2a2a2a;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 -5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app-pop .pop-close{
+    float: right;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.app-pop .app-main{
+    padding: 0;
+    background: none;
+}
+.app-pop .app-tree{
+    background: none;
+}
+
+.app-pop.app-panel.asset-on-pop{
+    padding: 20px 20px 0px 20px;;
+    left: 50%;
+    top: 30%;
+    margin-left: -150px;
+}
+
+.app-pop.app-panel.asset-on-pop .app-btn-group{
+    margin: 15px 0 10px 0;
+}
+    
+
+
+/* pop-end */
+
+
+
+
+.view-control .app-panel-selectmenu-ul li{
+    background-color: rgba(53,53,53,0.9);
+}
+
+/* ::-webkit-scrollbar        滚动条整体部分，其中的属性有width,height,background,border（就和一个块级元素一样）等。
+::-webkit-scrollbar-button      滚动条两端的按钮。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。
+::-webkit-scrollbar-track         外层轨道。可以用display:none让其不显示，也可以添加背景图片，颜色改变显示效果。
+::-webkit-scrollbar-track-piece        内层轨道，滚动条中间部分（除去）。
+::-webkit-scrollbar-thumb               滚动条里面可以拖动的那部分
+::-webkit-scrollbar-corner               边角
+::-webkit-resizer                       定义右下角拖动块的样式 */
+
+/* .view-control .app-panel-selectmenu-ul::-webkit-scrollbar{
+    background-color: #555555;
+    width: 8px;
+}
+
+.view-control .app-panel-selectmenu-ul::-webkit-scrollbar-thumb{
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    height: 24px;
+} */
+
+/* .view-control .app-panel-selectmenu-ul::-webkit-scrollbar-thumb:hover{
+    background-color: #0b917f;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+    <title>IT资产管理系统</title>
+     <script type="text/javascript" src="./libs/twaver.js"></script>
+     <script type="text/javascript" src="./libs/t.js"></script>
+     <script type="text/javascript" src="./libs/itv-all-min.js"></script>
+     <script type="text/javascript" src="./libs/twaver-make.js"></script>
+     <script type="text/javascript">
+		var interaction3;
+		var node, node1;
+		var box;
+		var light;
+		var network
+		function load() {
+				box = new TGL.DataBox();
+				var camera = new TGL.OrthoCamera(null,null,null,30000);
+				network = new TGL.Network3D(box, camera, 'container2',{
+					premultipliedAlpha : true,
+				});
+
+				
+				network.setClearColor(0.0,0,0,0.0);
+				network.setClearAlpha(0.0);
+
+				var camera = network.getCamera();
+				camera.p(0.,1844,0.1);
+				camera.lookAt(0,0,0);
+				
+				var defaultInteraction = new TGL.DefaultInteraction(network);
+				defaultInteraction.noRotate = true;
+				// defaultInteraction.yRistrict = false;
+				// defaultInteraction.rotateSpeed = 1;
+				// defaultInteraction.zoomSpeed = 50;
+				// defaultInteraction.dynamicDampingFactor = 0.5;
+				// defaultInteraction.staticMoving = false;
+				network.setInteractions([defaultInteraction]);
+
+				var data = [{"id":"twaver.idc.wall","objectId":"JsonObjectDBA80D54F94D4736BDED1078B3528A1A","data":[[-3635,1690],[-3635,-34],[-3027,-34],[-3027,-1862],[-1154,-1862],[-1154,-2381],[14,-2381],[14,-1857],[1410,-1857],[1410,-2380],[2595,-2380],[2595,-1862],[3046,-1862],[3046,-57],[3420,-57],[3420,1539],[1385,1539],[1385,1803],[79,1803],[79,1565],[-3122,1565],[-3122,1690]],"closed":true,"showFloor":true,"client":{"label":"twaver.idc.wall"}},{"id":"twaver.idc.innerWall","objectId":"JsonObject694E2E46F52545F2B1025BD2303A087C","data":[[-3122,1565],[-3122,-34]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObject19BFB1B72B4C4C788B04AC9C6D62D2EF","width":197.31027814753173,"depth":26,"position":[-3121.6121063203905,10,163.0927649792529],"rotation":[0,1.5707963267948966,0],"client":{"edgeIndex":0,"offset":0.8767399843782033}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObject927B2BEE9DD940A7B4310EF660271224","data":[[3046,-57],[3046,404]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObject8B8F12A1166D4ECAAE3EEC302F37EF9F","width":197.31027814753173,"depth":26,"position":[3045.693114108134,10,159.1811306222398],"rotation":[0,-1.5707963267948966,0],"client":{"edgeIndex":0,"offset":0.4689395458183076}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObject6144D4BF13AF490889F23E4BDAB9D73C","data":[[3046,404],[-3122,404]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObject493C95E1FC5D47DE928DDF2569F22EE1","width":197.3102781475311,"depth":26,"position":[1686.6135336718626,10,404.39268519156076],"client":{"edgeIndex":0,"offset":0.22039339596759686}},{"id":"twaver.idc.door","objectId":"JsonObject1D498BF9F926413EA5EFC62BA0A0B5DE","width":197.3102781475318,"depth":26,"position":[2691.043077024257,10,404.39268519156104],"client":{"edgeIndex":0,"offset":0.057548139263252765}},{"id":"twaver.idc.door","objectId":"JsonObjectDCE570B5D1074FA398C3DFBB7BED75EE","width":197.31027814753168,"depth":26,"position":[340.92000934776024,10,404.3926851915603],"client":{"edgeIndex":0,"offset":0.43856679485282746}},{"id":"twaver.idc.door","objectId":"JsonObject841C4C51453A4A6288422BEABCE83B41","width":197.3102781475318,"depth":26,"position":[-178.47480891931173,10,404.3926851915603],"client":{"edgeIndex":0,"offset":0.5227747744681115}},{"id":"twaver.idc.door","objectId":"JsonObjectE98E385A26FF445C90C516CB072D2249","width":197.31027814753202,"depth":26,"position":[-1731.225076883532,10,404.39268519155996],"client":{"edgeIndex":0,"offset":0.7745176843196387}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObject828CD9E42D9E4DF5853A0BA7BBDD1D15","data":[[79,1565],[79,404]],"client":{"label":"twaver.idc.innerWall"}},{"id":"twaver.idc.innerWall","objectId":"JsonObject585DC147742A4CB6BF2F10CC66072C66","data":[[1385,1539],[1385,404]],"client":{"label":"twaver.idc.innerWall"}},{"id":"twaver.idc.innerWall","objectId":"JsonObjectE9E9D7409C1A439C94B3305F51E745BE","data":[[2402,1539],[2402,404]],"client":{"label":"twaver.idc.innerWall"}},{"id":"twaver.idc.innerWall","objectId":"JsonObjectDDF2F6C28121485D852F6DB2073528A8","data":[[-1154,-1862],[14,-1862]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObjectC5FC4BA48E674FBA86D442F65A55EBA1","width":197.31027814753182,"depth":26,"position":[-291.2870156732706,10,-1861.821686244195],"client":{"edgeIndex":0,"offset":0.7386241304167204}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObject59CFB529CB41436E811878F78567689F","data":[[2595,-1862],[1410,-1862]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObjectD69AF03A626040248E104F44FA9FB289","width":197.31027814753088,"depth":26,"position":[1732.0765365959205,10,-1861.913948615149],"client":{"edgeIndex":0,"offset":0.7282054543494342}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObject2BED561790B94E4C8A72AFA2CBF131FF","data":[[-1550,-1862],[-1550,-34]],"client":{"label":"twaver.idc.innerWall"}},{"id":"twaver.idc.innerWall","objectId":"JsonObject902DA1F8E5F74DAB80C7247B6C779530","data":[[-3027,-34],[-1550,-34]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObjectEF9C51EBC6F14D578AB2B19014CC8313","width":197.31027814753202,"depth":26,"position":[-1818.624676601156,10,-33.721091370914905],"client":{"edgeIndex":0,"offset":0.8181281810418715}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObject30802A35DD464CA28426DA56F0C14B47","data":[[1410,-1862],[1410,-57]],"client":{"label":"twaver.idc.innerWall"}},{"id":"twaver.idc.innerWall","objectId":"JsonObject608C0349C9C74540858F524EF43AC654","data":[[3046,-57],[-1550,-57]],"client":{"label":"twaver.idc.innerWall"},"children":[{"id":"twaver.idc.door","objectId":"JsonObjectF31444B4CA4042018F11B4AED014B180","width":197.31027814753202,"depth":26,"position":[-1146.7459852107531,10,-57.13389243764061],"client":{"edgeIndex":0,"offset":0.9122597879048636}},{"id":"twaver.idc.door","objectId":"JsonObject8B7F6FC10B06426AAA8EC530919E8F36","width":197.31027814753156,"depth":26,"position":[1097.8096380527613,10,-57.13389243764061],"client":{"edgeIndex":0,"offset":0.4238882423732025}},{"id":"twaver.idc.door","objectId":"JsonObjectD4B1F6D46355491CAD9D85A60C5E163B","width":197.3102781475311,"depth":26,"position":[1682.9873725475813,10,-57.133892437640384],"client":{"edgeIndex":0,"offset":0.2965649755118404}}]},{"id":"twaver.idc.innerWall","objectId":"JsonObjectF78F49415468409FB38D7CAF395314A2","data":[[-1521,404],[-1521,1565]],"client":{"label":"twaver.idc.innerWall"}},{"id":"twaver.idc.column","objectId":"JsonObject478FBDD63ED24E029E2E2A7DB87BB323","width":66,"depth":67,"position":[-1550,"floor-top",-933.5],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObject55A07A996BF746A290E35DF7FE2D7394","width":66,"depth":67,"position":[-1550,"floor-top",-35.5],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObjectB7B5DCCA3B74462C8E5BA7336B33F6BA","width":67,"depth":68,"position":[-1524.5,"floor-top",395],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObjectD0A5E670D0FF4CCE825C9443253E7010","width":67,"depth":68,"position":[77.5,"floor-top",404],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObject56409DD5086040218C85BF830ACF27EF","width":66,"depth":68,"position":[1381,"floor-top",404],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObject2440DEC0D2E2447784E88B8B4BA8CF7A","width":66,"depth":68,"position":[2396,"floor-top",404],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObject41B4242149774097AB3C68B581AB7DB8","width":66,"depth":68,"position":[3043,"floor-top",404],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObject2A8776086D87442D845BDFC58EF27C2C","width":66,"depth":67,"position":[3044,"floor-top",-57.5],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObjectDA047B5D14954B1C9355B312CACE1E4C","width":66,"depth":67,"position":[1408,"floor-top",-57.5],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObjectA0CBCFEED78F4205B3BC0FC1008044CF","width":66,"depth":67,"position":[12,"floor-top",-57.5],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObjectE734A78903394011902B337095D84821","width":66,"depth":67,"position":[1414,"floor-top",-921.5],"client":{"label":"twaver.idc.column"}},{"id":"twaver.idc.column","objectId":"JsonObjectF33E3BF34FCD4A648D66742F5B00165F","width":67,"depth":68,"position":[-3088.5,"floor-top",404],"client":{"label":"twaver.idc.column"}}];
+                make.Default.path = "./modellib/"
+				var node = make.Default.load({id:'twaver.combo',data:data});
+				var floor = node.getChildren().get(0);
+				console.log(floor.getBoundingBox());
+   				
+   				box.addByDescendant(node);
+
+
+   				network.getPointOnPlane  = function(event, plane) {
+  					var mouse = {};
+  					var view = this.getView();
+  					var camera = this._camera;
+  					var rect = view.getBoundingClientRect();
+  					var clientX = event.clientX;
+  					var clientY = event.clientY;
+  					if (event.touches && event.touches.length) {
+  						clientX = event.touches[0].pageX;
+  						clientY = event.touches[0].pageY;
+  					}
+  					var x = (clientX - rect.left) / rect.width;
+  					var y = (clientY - rect.top) / rect.height;
+  					mouse.x = x * 2 - 1;
+  					mouse.y = -y * 2 + 1;
+  					var vector = new mono.Vec3(mouse.x, mouse.y, 0.5);
+  					this.projector.unprojectVector(vector, camera);
+  					var origin = camera._position;
+  					var ray = null;
+  					if(camera instanceof mono.PerspectiveCamera){
+  						var direction = vector.sub(camera._position).normalize();
+  						ray = new mono.Ray(origin, direction);
+  					}else{
+  					    var offset = vector.clone().sub(camera._position);
+  			            var direction = camera.getTarget().clone().sub(camera.p()).normalize();
+  			            var parall = direction.multiplyScalar(offset.clone().dot(direction));
+  			            var vertical = offset.sub(parall);
+
+  			            var pos = new mono.Vec3().addVectors(camera._position,vertical);
+  			            ray = new mono.Ray(pos, direction.normalize());
+  					}
+  					var planeDistance = ray.distanceToPlane(plane);
+  					if (planeDistance < 0 || Math.abs(planeDistance) < mono.Picking.prototype.precision) {
+  						return null;
+  					}
+
+  					var intersectPoint = ray.at(planeDistance);
+  					return intersectPoint;
+				};
+
+   				
+   				var pos = new mono.Vec3(-900,100,-500)
+   				for(var i = 0;i < 10;i ++){
+   					for(var j = 0;j < 3;j ++){
+          				var rack = make.Default.load({id:'twaver.idc.rack'});
+          				rack.setX(pos.x + i * 200);
+          				rack.setY(pos.y);
+          				rack.setZ(pos.z - j * 400);
+
+          				box.addByDescendant(rack);
+    				}
+    			}
+                var y = floor.p().y + floor.getBoundingBox().max.y;
+                var plane = new mono.math.Plane(new mono.Vec3(0, 1, 0),y);
+                // var plane2 = new mono.math.Plane(new mono.Vec3(0, 1, 0),10);
+                
+                var pathNode = new mono.PathNode({
+                	radius : 5,
+                });
+                pathNode.setY(3);
+                pathNode.s({
+                	'm.color':'cyan',
+                	'm.texture.image':'./model_images/pipeline/flow.jpg',
+                	'm.texture.repeat':new mono.Vec2(100,1),
+                });
+                box.add(pathNode);
+
+                function forceHorizontalVertical(point,lastPoint){
+                	var offsetX =  Math.abs(point.x - lastPoint.x),offsetZ = Math.abs(point.z - lastPoint.z);
+
+                	if(offsetX > offsetZ){
+                		point.z = lastPoint.z;
+                	}else {
+                		point.x = lastPoint.x;
+                	}
+                	return point;
+                };
+
+                network.getRootView().addEventListener('mousemove',function(event){
+                	if(network._editMode && network._points && network._points.length){
+                         var point = network.getPointOnPlane(event,plane);
+                         var path = new mono.Path();
+                         var points = network._points.slice();
+                         if(event.shiftKey){
+                         	forceHorizontalVertical(point,points[points.length - 1]);
+                         }
+                         points.push(point);
+                         path.fromPoints(points);
+                         if(points.length > 3){
+                          path = pathNode.adjustPath(path,5,2);
+                         }
+                          pathNode.setPath(path);
+                          pathNode.setStyle('m.texture.repeat',new mono.Vec2(path.getLength()/50,1));
+                	}
+                });
+
+   				network.getRootView().addEventListener('click',function(event){
+                   if(network._editMode){
+                   	  var point = network.getPointOnPlane(event,plane);
+                   	  var originPoint = point.clone();
+                      if(originPoint.equals(network._lastOriginalPoint)){
+                      	  return;
+                      }
+                      if(!network._path){
+                      	network._path = new mono.Path();
+                      }
+                      if(!network._points){
+                          network._points = [];
+                      }
+                      var points = network._points;
+                      if(event.shiftKey){
+                         	forceHorizontalVertical(point,points[points.length - 1]);
+                      }
+                      points.push(point);
+                      var path = new mono.Path();
+                      path.fromPoints(points);
+                      if(points.length > 3){
+                       path = pathNode.adjustPath(path,5,4);
+                      }
+                      pathNode.setPath(path);
+                      pathNode.setStyle('m.texture.repeat',new mono.Vec2(path.getLength()/50,1));
+                      network._lastOriginalPoint = originPoint;
+                   	  network._lastPoint = point;
+                   }
+   				});          
+   			}
+
+
+     </script>
+</head>
+<body onload="load()">
+   <canvas id = "container2" width = "1500" height = "700"/>
+</body>
+</html>

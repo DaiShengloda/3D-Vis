@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8"/>
+    <title>创建传感器</title>
+    <script src="./libs/jquery.js"></script>
+    <script src="./js/utils.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            it.util.Adminapi('data', 'getDataByCategory', JSON.stringify({id: 'rack'}), function (racks) {
+
+//                racks.forEach(function (rack) {
+//                    rack.position = it.util.s2o(rack.position);
+//                })
+                var roomRacks = {};
+                //按机房分组
+                racks.forEach(function (rack) {
+                    var parentId = rack.parentId;
+                    if (!roomRacks[parentId]) {
+                        roomRacks[parentId] = [];
+                    }
+                    roomRacks[parentId].push(rack);
+                })
+
+
+                printTemperature(roomRacks);
+                printHumidity(roomRacks);
+
+                console.log(racks);
+            })
+        });
+
+        function  printTemperature(roomRacks){
+            var type = 'temperature';
+            var box = $('.sqlBox');
+            box.append('<br>');
+            box.append('<span>' + type + '</span>');
+            box.append('<br>');
+            for (var roomId in roomRacks) {
+                box.append('<br>');
+                box.append('<span>' + roomId + '</span>');
+                box.append('<br>');
+                var rks = roomRacks[roomId];
+                rks.forEach(function (rack) {
+                    rack.type = type;
+                    rack.parentId = 'wdyt01';
+                    var sql = "insert into collector(`parent_id`, `position`, `location`, `width`, `depth`, `type`) values('{parentId}', '{position}', '{location}', 50, 50, '{type}')";
+                    sql = sql.format(rack);
+                    box.append('<span>' + sql + '</span>');
+                    box.append('<br>');
+                })
+            }
+        }
+
+        function printHumidity(roomRacks){
+            var type = 'humidity';
+            var box = $('.sqlBox');
+            box.append('<br>');
+            box.append('<span>' + type + '</span>');
+            box.append('<br>');
+            for (var roomId in roomRacks) {
+                box.append('<br>');
+                box.append('<span>' + roomId + '</span>');
+                box.append('<br>');
+                var rks = roomRacks[roomId];
+                rks.forEach(function (rack) {
+                    rack.type = type;
+                    rack.parentId = rack.id;
+                    var sql = "insert into collector(`parent_id`, `type`) values('{parentId}', '{type}')";
+                    sql = sql.format(rack);
+                    box.append('<span>' + sql + '</span>');
+                    box.append('<br>');
+                })
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="title">默认在每个机柜的位置创建一个温度和湿度传感器.</div>
+<div class="sqlBox"></div>
+</body>
+</html>

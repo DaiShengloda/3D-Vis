@@ -1,0 +1,307 @@
+@import "default";
+@import "mixin";
+@import "base";
+
+@mixin btnGroupMargin($mar1:10px,$mar2:10px,$mar3:20px) { 
+	@media screen and (min-width: 1919px) { 
+		margin: $mar3 0;
+	}
+	@media screen and (max-width: 1919px) { 
+		margin: $mar2 0;
+	}
+	@media screen and (max-width: 1440px) {
+		margin: $mar1 0; 
+	} 
+}
+
+.app-panel{
+    position: absolute;
+    left: 0px;
+    z-index: 2;
+    border-top: 1px solid #00f6ff;
+    @include widthFontSize(200px,240px,300px);
+    span, .app-text-line{
+        user-select: none;
+        cursor: default;
+    }
+    .app-main{
+        padding: 1px 15px;  
+        background: $default-bg-color;
+    }
+    .app-tree{
+        background: $default-bg-color;
+        padding: 0 0 15px 15px;
+    }
+    .app-line{
+        display: flex;
+        height: $comp-input-height;
+        margin: 10px 0;
+        .text{
+            width: 28%;
+            color: $default-font-color;
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+            font-size: $default-font-size;
+        }
+    }
+    .app-black-line{
+        height: 0px;
+        border-top: $comp-inner-separater-height solid $comp-inner-separater-color;
+        margin-top: 20px;
+        width: 100%;
+        padding: 0 15px;
+    }
+    .app-text-line{
+        color: #fff;
+        align-items: center;
+        // height: 30px;
+    }
+    input{
+        padding: 5px;
+        // height: 28px;
+        color: $comp-input-color;
+        background-color: $comp-input-bg-color;
+        border: $comp-input-border-width solid $comp-input-border-color;
+    }
+    .app-input-line input{
+        width: 100%;
+    }
+    .app-text-input-line .input{
+        width: 72%;
+    }
+    .app-text-select-line {
+        .ui-selectmenu-button{
+            display: flex;
+            align-items: center;
+            // border: $comp-input-select-border-width solid $comp-input-select-border-color;
+            // background-color: $comp-input-select-bg-color;
+            // color: $comp-input-select-color;
+            // font-size: 12px;
+            @extend .bt-value-input;
+
+            .ui-selectmenu-text {
+                padding:5px;
+            }
+        }
+        .ui-selectmenu-button:focus{
+            outline: 0px;
+        }
+    }
+}
+
+.app-head{
+    position: relative;
+    padding: 10px 0;
+    margin: 10px 0;
+    .app-title{
+        background: $default-title-bg-color;
+        color: $default-bg-color;
+        // height: 26px;
+        border-radius: 30px;
+        padding: 5px 15px;
+        user-select: none;
+        cursor: default;
+        @include titleFontSize();
+    }
+    .app-circle{
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        background: none;
+        border-radius: 50%;
+        border: 2px solid $default-close;
+        cursor: pointer;
+        .app-circle-inside{
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            width: 12px;
+            height: 12px;
+            background: $default-close;
+            border-radius: 50%;
+        }
+    }
+    .app-circle:hover{
+        border-color: $default-highlight-bg-color;
+        .app-circle-inside{
+            background: $default-highlight-bg-color;
+        }
+    }
+}
+
+/* btn start */
+.app-btn-group{
+    @include btnGroupMargin();
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    div{
+        // background-color: $comp-btn-bg-color;
+        // color: $comp-btn-color;
+        border: 1px solid transparent;
+        // border-radius: 3px;
+        padding: 0px 5px;
+        margin-left: 5px;
+        cursor: default;
+        user-select: none;
+        height: $comp-input-height;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // font-size: $comp-input-size;
+    }
+    div.active{
+        @extend .bt-btn;
+    }
+    div.active:hover{
+        background: $comp-btn-border-hover-bg-color;
+        border-color: $comp-btn-border-hover-color;
+    }
+    div.clear-it  {
+        @extend .bt-btn-second;
+    }
+}
+
+// jqui-select插件的样式
+.ui-selectmenu-open{
+    .app-panel-selectmenu-ul{
+        border: 2px solid $comp-input-border-color;
+        background-color: $comp-input-bg-color;
+        // color: $comp-input-select-color;
+        color:$default-font-color;
+        padding: 1px;
+        overflow-y: scroll;
+        max-height: 150px;
+        li{
+            border: 1px solid transparent;
+            background-color: $default-bg-color;
+            // color: $comp-input-select-color;
+            color:$default-font-color;
+            margin: 1px 0;
+            font-size: $default-font-size;
+        }
+        li.ui-state-focus{
+            border-color: $comp-btn-border-hover-color;
+            background-color: $comp-btn-border-hover-bg-color;
+            color: $comp-input-select-focus-color;
+        }
+    }
+    .app-panel-selectmenu-ul::-webkit-scrollbar{
+        background-color: $comp-input-select-scroll-bg-color;
+        width: 8px;
+    }
+    .app-panel-selectmenu-ul::-webkit-scrollbar-thumb{
+        background-color: $default-title-bg-color;
+        border-radius: 4px;
+        height: 24px;
+    }
+} 
+
+.app-pop{
+    @include widthFontSize(200px,240px,300px);
+    padding: 20px 20px 30px 20px;
+    @media screen and (max-width: 1919px) {
+		padding: 10px 1px;
+	} 
+    background:$default-bg-color;
+    position: absolute;
+    left: 330px;
+    top: 200px;
+    z-index: 2;
+    border: none;
+    .pop-title-line{
+        font-size: $default-title-font-size;
+        background: $default-title-bg-color;
+        color: $default-highlight-color;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 0 -5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .pop-close{
+        float: right;
+        font-size: $default-font-size;
+        cursor: pointer;
+    }
+    .app-main{
+        padding: 0;
+        background: none;
+    }
+    .app-tree{
+        background: none;
+    }
+}
+
+.app-pop.app-panel.asset-on-pop{
+    padding: 20px 20px 0px 20px;;
+    left: 50%;
+    top: 30%;
+    margin-left: -150px;
+    .app-btn-group{
+        margin: 15px 0 10px 0;
+    }
+}
+
+.link-search-pop{
+    display: block;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    .link{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .link-node{
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 1919px) { 
+    .app-panel{
+        .app-main{
+            padding: 1px 10px;
+        }
+        .app-line{
+            margin: 5px 0;
+            .text{
+                padding-left: 5px;
+            }
+        }
+    }
+    .app-head{
+        padding: 5px 0;
+    }
+}
+@media screen and (max-width: 1440px) {
+    .app-panel{
+        .app-main{
+            padding: 1px 10px;
+        }
+        .app-line{
+            margin: 5px 0;
+            .text{
+                padding-left: 0px;
+                width: 35%;
+            }
+            .input{
+                width: 65%;
+            }
+        }
+        .app-tree{
+            padding: 0 0 10px 10px;
+        }
+    }
+    .app-head{
+        padding: 5px 0;
+    }
+} 
+
+

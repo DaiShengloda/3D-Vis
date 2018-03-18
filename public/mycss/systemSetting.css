@@ -1,0 +1,163 @@
+
+/* 通用样式 */
+.systemSetting_container{
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    margin: 0;
+}
+@media screen and (min-width: 1919px) {
+    .systemSetting_section {
+      width: 400px;
+      font-size: 16px;
+    }
+  }
+  
+@media screen and (max-width: 1919px) {
+    .systemSetting_section {
+        width: 360px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .systemSetting_section {
+        width: 300px;
+        font-size: 12px;
+    }
+}
+.systemSetting_section{
+    position: relative;
+    height: auto;
+    border: 2px solid #2d2d2d;
+    padding: 5px 15px 15px;
+    user-select: none;
+}
+.systemSetting_sectionTitle{
+    position: absolute;
+    height: 20px;
+    left: 15px;
+    top: -18px;
+    text-align: center;
+    line-height: 20px;
+    background: #353535;
+    padding: 5px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* 机柜编号 */
+@media screen and (min-width: 1919px) {
+    .rackNumber_checked {
+        width: 22px;
+        height: 22px;
+    }
+  }
+  
+@media screen and (max-width: 1919px) {
+    .rackNumber_checked {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .rackNumber_checked {
+        width: 18px;
+        height: 18px;
+    }
+}
+.rackNumber_area{
+    margin-top: 8px;
+}
+.rackNumber_label{
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    vertical-align: middle;
+}
+.rackNumber_checked{
+    display: inline-block;
+    border: 2px solid #2d2d2d;
+    color: #343434;
+    background-color: #343434;
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.rackNumber_selected{
+    margin-left: 8px;
+}
+.rackNumber_selectedArea .rackNumber_label{
+    margin-right: 8px;
+}
+.ui-dialog-blackStyle .rackNumber_area input{
+    padding: 5px;
+    height: 28px;
+    color: #bcbcbc;
+    background-color: #343434;
+    border: 2px solid #2d2d2d;
+}
+.ui-dialog-blackStyle .rackNumber_area .select2-container {
+    vertical-align: middle;
+}
+.ui-dialog-blackStyle .rackNumber_area .select2-selection__rendered {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    border: 2px solid #2d2d2d;
+    color: #bcbcbc;
+}
+  
+@media screen and (min-width: 1919px) {
+    .ui-dialog-blackStyle .rackNumber_area .select2-selection__rendered {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle .rackNumber_area .select2-selection__rendered {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle .rackNumber_area .select2-selection__rendered {
+        font-size: 12px;
+    }
+}
+.rackNumber_stickerArea{
+    margin-top: 15px;
+}
+.rackNumber_area .stickerArea_content{
+    margin-left: 20%;
+}
+.rackNumber_area .app-line{
+    display: flex;
+    height: 28px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+.rackNumber_area .app-line span.text{
+    width: 28%;
+    display: flex;
+    align-items: center;
+}
+.rackNumber_area .app-line input{
+    width: 65%;
+}
+.systemSetting_btn_reset{
+    border: 1px solid #6a6a6a;
+    color: #ffffff;
+    background: #6a6a6a;
+    border-radius: 3px;
+}
+.systemSetting_btn_confirm{
+    border: 1px solid #46606b;
+    color: #ffffff;
+    background: #46606b;
+    border-radius: 3px;
+}
+.systemSetting_btn:hover{
+    background: #46606b;
+    border-color: #00ffff;
+}

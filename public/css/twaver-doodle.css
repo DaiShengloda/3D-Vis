@@ -1,0 +1,33 @@
+#accordion-resizer {position: absolute; width: 200px; height: 100%;}
+#accordion-resizer .mn-accordion{padding: 10px 0px;}
+.item-li{float: left;margin-bottom: 15px; width: 85px; text-align: center}
+.item-li img{width: 64px; height: 64px; display: inline-block; border: 1px solid rgb(213, 213, 213); border-radius: 5px;}
+.item-li img:hover{cursor: pointer; background: rgb(252, 252, 252)}
+.item-label{margin-top: 10px;}
+.network3d-view{position: absolute; left:0; box-sizing:border-box;top:0;}
+/*.right-content{box-shadow: 1px 0 5px #888; width: 0; position: absolute; height: 200px; right:0; top:10px; overflow: hidden; z-index: 2;background: #ECEFF2; margin-right: -300px;}*/
+.edit3d-container{display:none; position: relative;width:100%; height: 100%; border-top: 1px solid lightgrey}
+
+.propertySheetBox {position: absolute;width: 300px;height: 150px;top: 30px;right: 30px;z-index: 5;background-color: #f6f6f6;display: none}
+.accordionPaneBox {position: absolute;width: 220px;height: 100%;overflow-y: auto;}
+.networkBox {position: absolute;top: 0px;left:220px;right: 0px;height:100%;z-index: 1;}
+/*.room-ruler {position: absolute;top: 0px;bottom: 0px;left: 200px;right: 0px;border-left: 1px solid #c0c0c0;overflow: hidden;}*/
+.edit2d-container {position: relative;width: 100%;height: 100%;overflow: hidden;border-top: 1px solid lightgrey;}
+.editor-container{position: absolute;}
+
+.channelEditor .toolbar{position: absolute;left: 0px;top:0px;width: 100%;height:35px;padding: 10px 5px 5px 10px;}
+.channelEditor .toolbar input{ margin-left: 10px}
+.channelEditor .networkBox {position: absolute;left: 0px;top:0px;width: 100%;height:35px;padding: 10px 5px 5px 10px;}
+
+.it_content .panel{
+    margin-bottom: 0px;
+    border-left: none;
+    border-bottom: none;
+}
+.it_content .col-md-6{
+    padding-right: 0px;
+    padding-left: 0px
+}
+
+
+

@@ -1,0 +1,54 @@
+.dcLabel{
+    position: relative;
+}
+
+
+.label-box{
+    position: absolute;
+}
+
+.label-box .label-arrow{
+    position: absolute;
+    content: '';
+}
+
+.arrow1{
+    bottom: -10px;
+    right: 18px;
+    z-index: 1;
+    border-top: 11px solid #00f6ff;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    filter: drop-shadow(0.5px 1px 0.5px #000);
+}
+
+.arrow2{
+    bottom: -8px;
+    right: 20px;
+    z-index: 2;
+    border-top: 9px solid rgb(95,122,131);
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+}
+
+
+
+.label-table{
+   border: 1px solid #00f6ff;
+   background: rgba(77, 107, 118, 0.9);
+   padding: 10px;
+   border-radius: 5px;
+   box-shadow: 1px 1px 1px #000;
+}
+
+.label-title{
+   font-size: 16px;
+   color: #ffffff;
+}
+
+.label-line{
+    font-size: 14px;
+    color: #bcbcbc;
+    line-height: 22px;
+}
+

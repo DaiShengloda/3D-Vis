@@ -1,0 +1,454 @@
+/* 资产搜索界面开始 */
+
+@import "default";
+@import "mixin";
+@import "base";
+.pull-left {
+    float: left;
+    font-size: $comp-input-select-font-size;
+    padding-left:10px;
+}
+
+.pull-right {
+    float: right;
+}
+
+.it-search p,
+.it-search span,
+.it-search li {
+    user-select: none;
+}
+.it-search {
+    width: 300px;
+    background-color: $default-bg-color;
+    /* padding: 8px 0; */
+    overflow: hidden;
+    /* margin-left: -60px; */
+    /* height: 100%; */
+    position: absolute;
+    z-index: 2;
+    border-top: 2px solid $default-outter-separater-color;
+    ul {
+        margin: 0;
+        padding: 0;
+        padding-left: 5px;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: $default-font-size;
+    }
+    .app-head {
+        margin-left: 15px;
+        .app-circle {
+            right: 10px;
+        }
+    }
+    .search-title {
+        padding: 0 15px;
+        // margin-top: 15px;
+        color: $comp-input-color;
+        .it-search-text {
+            // border: 2px solid $comp-input-border-color;
+            // background-color: $comp-input-bg-color;
+            // margin-left: -8px;
+            // height: $comp-input-height;
+            // padding: 5px 0;
+            // color: $comp-input-color;    
+            @extend .bt-value-input;
+            width: 260px;
+            color:$default-font-color;
+        }
+        .jui-inputPane {
+            position: relative;
+            // margin: 10px 0 0 15px;
+            margin-bottom: 10px;
+            .icon-search {
+                position: absolute;
+                right: 15px;
+                top: 3px;
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+    .content-box {
+        // overflow: hidden;
+        position: absolute;
+        bottom: 0;
+        overflow-y: auto;
+    }
+    .searchContent {
+        // width: 300px;
+        width:100%;
+        padding: 0 15px;
+        color: $comp-input-select-color;
+        // margin-top: 15px;
+        // overflow: auto;
+        .it-search-moreConditions {
+            .search-moreConditions-title {
+                cursor: pointer;
+                padding: 5px;
+            }
+            .search-moreConditions-title:hover {
+                background-color: #454545;
+                color: $comp-input-select-focus-color;
+            }
+        }
+        .sanjiao-box {
+            float: right;
+            padding: 5px 7px;
+            span.sanjiao {
+                border-left: 5px solid $default-highlight-color;
+                border-top: 5px solid transparent;
+                border-right: 0px solid transparent;
+                border-bottom: 5px solid transparent;
+                transition: transform 0.3s linear;
+                transform: rotate(0deg);
+                padding-left:0;
+            }
+        }
+        .bussiness-type {
+            margin-bottom: 15px;
+            .bussiness-type-title {
+                cursor: pointer;
+                padding: 5px;
+            }
+            .bussiness-type-title:hover {
+                background-color: #454545;
+                color: $comp-input-select-focus-color;
+            }
+        }
+        .no-result {
+            margin-top: 15px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    }
+}
+
+
+/* .it-search .top-line {
+    width: 100%;
+    background-color: #363636;
+    height: 6px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+} */
+
+.it-search .search-title .it-search-btn {
+    padding: 5px 15px;
+    color: $comp-btn-color;
+    background-color: $comp-btn-bg-color;
+    border-radius: 15px;
+    border: 0 none;
+    cursor: pointer;
+}
+
+.it-search .search-title span.ball {
+    color: $default-outter-separater-color;
+}
+
+.it-search .search-title span.ball:hover {
+    color: $comp-btn-border-hover-color;
+    cursor: pointer;
+}
+
+.it-search .search-title .inputPane .it-search .search-title .it-search .searchContent .it-search-moreConditions {
+    margin-bottom: 15px;
+}
+
+// .it-search .searchContent .it-search-moreConditions span.sanjiao {
+//     margin-left: 10px;
+//     margin-top: 7px;
+//     border-left: 5px solid $comp-title-color;
+//     border-top: 5px solid transparent;
+//     border-right: 0px solid transparent;
+//     border-bottom: 5px solid transparent;
+//     transition: transform 0.3s linear;
+//     transform: rotate(0deg);
+//     cursor: pointer;
+// }
+.it-search .searchContent .it-search-moreConditions .search-moreConditions-title .sanjiao-box span.rotation {
+    transform: rotate(90deg);
+    transition: transform 0.3s linear;
+}
+
+.it-search .searchContent .it-search-moreConditions span.text {
+    // color: $comp-title-color;
+}
+
+.it-search .searchContent .it-search-result span.text {
+    // color: $comp-title-color;
+}
+
+.it-search .searchContent div.search-line {
+    background-color: $default-inner-separater-color;
+    height: $default-inner-separater-height;
+    .clearfix {
+
+    }
+}
+
+.it-search .searchContent div.search-line-result {
+    margin-top: 10px; 
+}
+
+.it-search .searchContent .it-search .searchContent .bussiness-type .text {
+    // color: $comp-title-color;
+}
+
+// .it-search .searchContent .bussiness-type .sanjiao {
+//     margin-left: 10px;
+//     margin-top: 7px;
+//     border-left: 5px solid $comp-title-color;
+//     border-top: 5px solid transparent;
+//     border-right: 0px solid transparent;
+//     border-bottom: 5px solid transparent;
+//     transition: transform 0.3s linear;
+//     transform: rotate(0deg);
+//     cursor: pointer;
+// }
+.it-search .searchContent .bussiness-type .bussiness-type-title .sanjiao-box span.rotation {
+    transform: rotate(90deg);
+    transition: transform 0.3s linear;
+}
+
+.it-search .searchContent .bussiness-type ul li {
+    float: left;
+    margin-right: 8px;
+    color: $default-font-color;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+
+.it-search .searchContent .bussiness-type ul li.clicked {
+    background-color: $comp-btn-border-hover-bg-color;
+    color: $comp-btn-color;
+    border: 1px solid $comp-btn-border-hover-color;
+}
+
+.it-search .searchContent .bussiness-type ul li:hover {
+    background-color: $comp-btn-border-hover-bg-color;
+    color: $comp-btn-color;
+    border: 1px solid $comp-btn-border-hover-color;
+}
+
+.it-search-moreConditions .app-line {
+    display: flex;
+    height: $comp-input-height;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.it-search-moreConditions .app-line .text {
+    width: 28%;
+    // color: $comp-label-color;
+    // padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.it-search-moreConditions input {
+    padding: 5px;
+    height: $comp-input-height;
+    color: $comp-input-color;
+    background-color: $comp-input-bg-color;
+    border: 2px solid $comp-input-border-color;
+}
+
+.it-search-moreConditions .app-input-line input {
+    width: 100%;
+}
+
+.it-search-moreConditions .app-text-input-line .input {
+    width: 70%;
+    // margin-left: 4px;
+}
+
+// .it-search-moreConditions .app-text-input-line .text {
+//     font-size: 14px!important;
+// }
+.it-search-moreConditions .app-text-select-line {
+    position: relative;
+    .select-tree-box {
+        width: 70%;
+        position: absolute;
+        top: $comp-input-height;
+        right: 0;
+        border: 2px solid $comp-input-select-border-color;
+        background-color: $comp-input-select-bg-color;
+        color: $comp-input-select-color;
+        padding: 1px;
+        overflow-y: scroll;
+        height: 200px;
+        display: none;
+        &::-webkit-scrollbar {
+            background-color: $comp-input-select-scroll-bg-color;
+            width: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $comp-input-select-scroll-bg-color;
+            border-radius: 4px;
+            height: 24px;
+        }
+        #tree-content {
+            top: 0!important;
+        }
+        ul {
+            padding-left: 0;
+        }
+    }
+}
+
+.it-search-moreConditions .app-text-select-line .ui-selectmenu-button {
+    display: flex;
+    align-items: center;
+    height: $comp-input-height;
+    // margin-left: 4px;
+    @extend .bt-value-input;
+    .ui-selectmenu-text {
+        padding: 5px;
+    }
+}
+
+.it-search-moreConditions .app-text-select-line .ui-selectmenu-button:focus {
+    outline: 0px;
+}
+
+.it-search-moreConditions .app-text-select-line .ui-selectmenu-menu {
+    background: $comp-input-bg-color;
+    border: 2px solid $comp-input-border-color;
+    color: $default-font-color;
+}
+
+.it-search-moreConditions .time-input-box {
+    margin-top: 10px;
+    // padding-left: 10px;
+    // color: $comp-title-color;
+}
+
+.it-search-moreConditions .time-input-box input {
+    width: 72%;
+}
+
+.it-search-moreConditions .time-input-box {
+    span {
+        width: 28%;
+        display: inline-block;
+    }
+    .later-time {
+        // margin-left: 5px;
+        margin-top: 10px;
+    }
+}
+
+.searchContent .scroll-class {
+    overflow: visible!important;
+}
+
+// .it-search .content-box::-webkit-scrollbar{
+//     background-color: $comp-bg-color;
+//     width: 10px;
+// }
+// .it-search .content-box::-webkit-scrollbar-corner {
+//     background-color: $comp-bg-color;
+// }
+// .it-search .content-box::-webkit-scrollbar-thumb{
+//     background-color: $comp-title-bg-color;
+//     border-radius: 10px;
+//     height: 24px;
+// }
+@media screen and (max-width: 1919px) {
+    .it-search {
+        $w: 240px;
+        width: $w;
+        .search-title {
+            padding: 0 10px;
+            margin-top: 10px;
+            .it-search-text {
+                width: $w - 20px;
+            }
+            .jui-inputPane {
+                margin: 10px 0;
+                .icon-search {
+                    right: 10px;
+                }
+            }
+        }
+        .searchContent {
+            width: $w;
+            padding: 0 10px;
+            // margin-top: 10px;
+            .bussiness-type {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .it-search-moreConditions .app-line {
+        margin-top: 5px;
+    }
+    .it-search-moreConditions .time-input-box {
+        margin-top: 5px;
+        .later-time {
+            margin-top: 5px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    .it-search {
+        $w: 200px;
+        width: $w;
+        .search-title {
+            padding: 0 10px;
+            margin-top: 10px;
+            .it-search-text {
+                width: $w - 20px;
+            }
+            .jui-inputPane {
+                margin: 10px 0;
+                .icon-search {
+                    right: 10px;
+                }
+            }
+        }
+        .searchContent {
+            width: $w;
+            padding: 0 10px;
+            // margin-top: 10px;
+            span.sanjiao {
+                margin-left: 5px;
+                margin-top: 4px;
+            }
+            .bussiness-type {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    .it-search-moreConditions .app-line {
+        margin-top: 5px;
+    }
+    .it-search-moreConditions .time-input-box {
+        margin-top: 5px;
+    }
+    .it-search-moreConditions .time-input-box {
+        .later-time {
+            margin-top: 5px;
+        }
+    }
+}
+
+
+.it-search-moreConditions .app-black-line {
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+/* 资产搜索界面结束 */

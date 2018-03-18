@@ -1,0 +1,312 @@
+/* 资产搜索界面开始 */
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+.it-search p,
+.it-search span,
+.it-search li {
+    user-select: none;
+}
+
+.it-search ul {
+    margin: 0;
+    padding: 0;
+}
+
+.it-search li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.it-search {
+    width: 300px;
+    background-color: rgba(53, 53, 53, 0.95);
+    /* padding: 8px 0; */
+    overflow: hidden;
+    /* margin-left: -60px; */
+    /* height: 100%; */
+    position: absolute;
+    /* top: 40px; */
+    z-index: 2;
+    border-top: 2px solid #228791;
+}
+
+@media screen and (max-width: 1440px) {
+    .it-search {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .it-search {
+        width: 200px;
+    }
+}
+
+
+/* .it-search .top-line {
+    width: 100%;
+    background-color: #363636;
+    height: 6px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+} */
+
+.it-search .search-title {
+    padding: 0 15px;
+    margin-top: 15px;
+}
+
+.it-search .content-box {
+    overflow: hidden;
+    height: 100%;
+}
+
+.it-search .searchContent {
+    padding: 0 15px;
+    margin-top: 15px;
+    overflow: auto;
+    min-height: 800px;
+}
+
+.it-search .search-title .it-search-btn {
+    padding: 5px 15px;
+    color: #d6d6d6;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    border: 0 none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.it-search .search-title span.ball {
+    color: #228791;
+}
+
+.it-search .search-title span.ball:hover {
+    color: #00f6ff;
+    cursor: pointer;
+}
+
+.it-search .search-title .it-search-text {
+    border: 2px solid #2d2d2d;
+    background-color: rgba(52, 52, 52, 0.7);
+    color: #717171;
+    width: 260px;
+    margin-left: -8px;
+    height: 28px;
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.it-search .search-title .inputPane .icon-search {
+    position: absolute;
+    right: 15px;
+    top: 3px;
+    color: #717171;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.it-search .search-title .inputPane {
+    width: 98%;
+    margin: 0 auto;
+    margin-top: 15px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.it-search .searchContent .it-search-moreConditions {
+    margin-bottom: 15px;
+}
+
+.it-search .searchContent .it-search-moreConditions span.sanjiao {
+    margin-left: 10px;
+    margin-top: 7px;
+    border-left: 5px solid #d6d6d6;
+    border-top: 5px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 5px solid transparent;
+    transition: transform 0.3s linear;
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.it-search .searchContent .it-search-moreConditions span.rotation {
+    transform: rotate(90deg);
+    transition: transform 0.3s linear;
+}
+
+.it-search .searchContent .it-search-moreConditions span.text {
+    color: #d6d6d6;
+    font-size: 16px;
+}
+
+.it-search .searchContent .it-search-result span.text {
+    color: #d6d6d6;
+    font-size: 16px;
+}
+
+.it-search .searchContent div.search-line {
+    background-color: #2a2a2a;
+    height: 1px;
+    margin-top: 5px;
+}
+
+.it-search .searchContent .bussiness-type {
+    margin-bottom: 15px;
+}
+
+.it-search .searchContent .bussiness-type .text {
+    color: #d6d6d6;
+    font-size: 16px;
+}
+
+.it-search .searchContent .bussiness-type .sanjiao {
+    margin-left: 10px;
+    margin-top: 7px;
+    border-left: 5px solid #d6d6d6;
+    border-top: 5px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 5px solid transparent;
+    transition: transform 0.3s linear;
+    transform: rotate(0deg);
+    cursor: pointer;
+}
+
+.it-search .searchContent .bussiness-type .rotation {
+    transform: rotate(90deg);
+    transition: transform 0.3s linear;
+}
+
+.it-search .searchContent .bussiness-type ul li {
+    float: left;
+    font-size: 14px;
+    margin-right: 8px;
+    color: #bcbcbc;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+}
+
+.it-search .searchContent .bussiness-type ul li.clicked {
+    background-color: #46606b;
+    color: white;
+    border: 1px solid #00f6ff;
+}
+
+.it-search .searchContent .bussiness-type ul li:hover {
+    background-color: #46606b;
+    color: white;
+    border: 1px solid #00f6ff;
+}
+
+.it-search-moreConditions .app-line {
+    display: flex;
+    height: 24px;
+    margin-top: 10px;
+}
+
+.it-search-moreConditions .app-line .text {
+    width: 28%;
+    color: #bcbcbc;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.it-search-moreConditions input {
+    padding: 5px;
+    height: 28px;
+    color: #717171;
+    background-color: #343434;
+    border: 2px solid #2d2d2d;
+}
+
+.it-search-moreConditions .app-input-line input {
+    width: 100%;
+}
+
+.it-search-moreConditions .app-text-input-line .input {
+    width: 72%;
+}
+
+.it-search-moreConditions .app-text-input-line .text {
+    font-size: 14px!important;
+}
+
+.it-search-moreConditions .app-text-select-line .ui-widget {
+    display: flex;
+    align-items: center;
+    border: 2px solid #2d2d2d;
+    background-color: #363634;
+    color: #666;
+    height: 28px;
+}
+
+.it-search-moreConditions .app-text-select-line .text {
+    font-size: 14px!important;
+}
+
+.it-search-moreConditions .app-text-select-line .ui-widget:focus {
+    outline: 0px;
+}
+
+.it-search-moreConditions .time-input-box {
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #d6d6d6;
+}
+
+.it-search-moreConditions .time-input-box input {
+    width: 35%;
+}
+
+.it-search-moreConditions .time-input-box .front-time {
+    margin-left: 10px;
+}
+
+.it-search-moreConditions .time-input-box .hengxian {
+    color: #2d2d2d;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.searchContent .scroll-class {
+    overflow: visible!important;
+}
+
+.it-search .content-box .searchContent::-webkit-scrollbar {
+    background-color: #555555;
+    width: 8px;
+}
+
+.it-search .content-box .searchContent::-webkit-scrollbar-thumb {
+    background-color: #2a2a2a;
+    border-radius: 4px;
+    height: 24px;
+}
+
+
+/* 资产搜索界面结束 */

@@ -1,0 +1,623 @@
+@charset "UTF-8";
+html body {
+  font-family: "NotoSansHans",  Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+  color: #bcbcbc;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html body {
+    font-size: 12px;
+  }
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bt-arrow {
+  display: block;
+  border-top: 9px solid transparent;
+  border-left: 9px solid #23888f;
+  border-bottom: 9px solid transparent;
+  cursor: pointer;
+  transition: all 0.3S;
+}
+
+.bt-arrow:hover {
+  border-left: 9px solid #00ffff;
+}
+
+.bt-arrow-open {
+  transform: rotate(90deg);
+}
+
+.bt-scroll::-webkit-scrollbar,
+.scroll-class::-webkit-scrollbar {
+  background-color: rgba(53, 53, 53, 0.95);
+  width: 10px;
+}
+
+.bt-scroll::-webkit-scrollbar-thumb,
+.scroll-class::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  height: 24px;
+}
+
+.bt-value {
+  color: #d6d6d6;
+}
+
+.bt-value-input {
+  color: #bcbcbc;
+  border: 2px solid #2d2d2d;
+  background: #343434;
+  padding: 5px;
+}
+
+.bt-btn, .app-btn-group .confirm-it {
+  border: 1px solid #46606b;
+  color: #ffffff;
+  background: #46606b;
+  border-radius: 3px;
+}
+
+.bt-btn:hover, .app-btn-group .confirm-it:hover {
+  border: 1px solid default-highlight-bg-color;
+  background: #46606b;
+}
+
+.bt-btn-second, .app-btn-group .clear-it, .app-btn-group .cancer-it {
+  border: 1px solid #6a6a6a;
+  color: #ffffff;
+  background: #6a6a6a;
+  border-radius: 3px;
+}
+
+.bt-btn-second:hover, .app-btn-group .clear-it:hover, .app-btn-group .cancer-it:hover {
+  border: 1px solid #00ffff;
+  background: #46606b;
+}
+
+@media screen and (max-width: 1919px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 8px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 5px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+}
+
+.new-app-panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1px 15px;
+  background: rgba(53, 53, 53, 0.95);
+  border-top: 1px solid #00ffff;
+  /* bootstrap-select插件样式 */
+  /* bootstrap-select插件样式完 */
+  /* jqui-autoComplete插件样式 */
+  /* jqui-autoComplete插件样式完 */
+  /* jstree样式 */
+  /* jstree样式完 */
+  /* jstree选择树样式 */
+  /* jstree选择树样式完 */
+}
+
+@media screen and (min-width: 1919px) {
+  .new-app-panel {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .new-app-panel {
+    width: 240px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .new-app-panel {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+
+.new-app-panel span,
+.new-app-panel .app-text-line {
+  user-select: none;
+  cursor: pointer;
+}
+
+.new-app-panel .app-line {
+  display: flex;
+  height: 28px;
+  margin-top: 10px;
+}
+
+.new-app-panel .app-line .text {
+  width: 28%;
+  color: #bcbcbc;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-width: 1919px) {
+  .new-app-panel .app-line .text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .new-app-panel .app-line .text {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .new-app-panel .app-line .text {
+    font-size: 12px;
+  }
+}
+
+.new-app-panel .app-line .input {
+  width: 72%;
+  position: relative;
+}
+
+.new-app-panel .app-time-line .input input {
+  width: 45%;
+  margin-right: 5%;
+}
+
+.new-app-panel .app-text-line {
+  color: #ffffff;
+  align-items: center;
+}
+
+.new-app-panel input {
+  width: 100%;
+  padding: 5px;
+  color: #bcbcbc;
+  background-color: #343434;
+  border: 2px solid #2d2d2d;
+}
+
+.new-app-panel .app-input-line input.input {
+  width: 100%;
+}
+
+.new-app-panel .app-result-title .app-text-line {
+  margin: 0;
+}
+
+.new-app-panel .app-result-title .app-black-line {
+  height: 0px;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 10px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.new-app-panel .big-tree-view .tree-title-box {
+  transition: all 1s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.new-app-panel .big-tree-view .tree-title-box .icon {
+  font-size: 10px;
+  transform: scale(0.5, 0.5) rotate(-90deg);
+}
+
+.new-app-panel .big-tree-view .tree-title-box.active {
+  border-bottom-color: #2a2a2a;
+}
+
+.new-app-panel .big-tree-view .tree-title-box.active .icon {
+  transform: scale(0.5, 0.5);
+}
+
+.new-app-panel .big-tree-view .tree-view {
+  transition: all 1s;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select {
+  width: 72%;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select .btn {
+  width: 100%;
+  padding: 0 0 0 5px;
+  border-radius: 0;
+  height: 100%;
+  color: #bcbcbc;
+  background-color: #343434;
+  border: 2px solid #2a2a2a;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select .btn .pull-left {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select .dropdown-toggle:focus {
+  outline: none !important;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .btn {
+  color: #717171;
+  background-color: #343434;
+  border: 2px solid #2a2a2a;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open {
+  color: #717171;
+  background-color: #343434;
+  border: 2px solid #2a2a2a;
+  margin-top: -2px;
+  padding: 0;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .bs-searchbox .form-control:focus {
+  box-shadow: none;
+  border: 2px solid #2a2a2a;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner {
+  color: #717171;
+  background-color: #343434;
+  border: 2px solid #2a2a2a;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner li {
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner li a {
+  background-color: transparent;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner li a span {
+  user-select: none;
+  cursor: pointer;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner li:hover {
+  border-color: #00ffff;
+  background-color: #47626d;
+  color: #ffffff;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner::-webkit-scrollbar {
+  background-color: #555555;
+  width: 8px;
+}
+
+.new-app-panel .app-text-select-line .btn-group.bootstrap-select.open .dropdown-menu1.open .dropdown-menu1.inner::-webkit-scrollbar-thumb {
+  background-color: #555555;
+  border-radius: 4px;
+  height: 24px;
+}
+
+.new-app-panel ul.ui-autocomplete {
+  border: 2px solid #2d2d2d;
+}
+
+.new-app-panel ul.ui-autocomplete li {
+  background-color: #343434;
+  color: #717171;
+  border: 2px solid transparent;
+}
+
+.new-app-panel ul.ui-autocomplete li:hover {
+  border: 2px solid #00ffff;
+  background-color: #47626d;
+  color: #ffffff;
+}
+
+.new-app-panel ul.ui-autocomplete li.ui-state-focus {
+  margin: 0;
+}
+
+.new-app-panel .app-tree {
+  margin-bottom: 20px;
+}
+
+.new-app-panel .select-tree-box #tree-content {
+  margin-top: -15px;
+  z-index: 5;
+  background-color: #343434;
+  border: 1px solid #2d2d2d;
+}
+
+.app-head {
+  position: relative;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.app-head .app-title {
+  background: #2a2a2a;
+  color: #d6d6d6;
+  border-radius: 30px;
+  padding: 5px 15px;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-head .app-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-head .app-title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-head .app-title {
+    font-size: 14px;
+  }
+}
+
+.app-head .app-circle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border-radius: 50%;
+  border: 2px solid #23888f;
+  cursor: pointer;
+}
+
+.app-head .app-circle .app-circle-inside {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background: #23888f;
+  border-radius: 50%;
+}
+
+.app-head .app-circle:hover {
+  border-color: #ffffff;
+}
+
+.app-head .app-circle:hover .app-circle-inside {
+  background: #ffffff;
+}
+
+@media screen and (max-width: 1919px) {
+  .new-app-panel {
+    padding: 1px 5px;
+  }
+  .new-app-panel .app-head {
+    padding: 5px 0;
+  }
+  .new-app-panel .app-line {
+    margin-top: 5px;
+  }
+  .new-app-panel .app-line .text {
+    padding-left: 0px;
+  }
+  .new-app-panel .app-result-title .app-black-line {
+    margin-top: 0;
+  }
+}
+
+/* btn start */
+.app-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-btn-group {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-btn-group {
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-btn-group {
+    margin: 10px 0;
+  }
+}
+
+.app-btn-group div {
+  border: 1px solid transparent;
+  padding: 0px 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  user-select: none;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-btn-group div {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-btn-group div {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-btn-group div {
+    font-size: 12px;
+  }
+}
+
+/* btn end */
+/* 设备上下架3d按钮样式 */
+.deviceBtn .btn-default {
+  position: absolute;
+  color: #fff;
+  background-color: #356f87;
+  border: 1px solid transparent;
+  padding: 3px 10px;
+  border-radius: 5px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.deviceBtn .btn-default:hover,
+.deviceBtn .btn-default:focus,
+.deviceBtn .btn-default:active,
+.deviceBtn .btn-default:focus:active {
+  color: #fff;
+  background-color: #46606b;
+  border-color: #00f6ff;
+}
+
+/* 设备上下架3d按钮样式完 */
+/* 左侧导航等一系列面板的样式 */
+.view-control-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.view-control-left .BreadcrumbMgr {
+  order: 1;
+  flex: none;
+}
+
+.view-control-left .OverviewMgr {
+  position: relative;
+  order: 2;
+  flex: none;
+}
+
+.view-control-left .new-apps-box {
+  order: 3;
+  flex: none;
+}
+
+/* 左侧导航等一系列面板的样式完 */
+/* 设备上架的确认弹框样式 */
+.newui-layer .device-on-layer-box .device-on-layer-line {
+  color: #bcbcbc;
+  margin: 10px 20px;
+  display: flex;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .text {
+  width: 60px;
+  display: inline-block;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .input-div {
+  position: relative;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .input-div .input {
+  background: #343434;
+  color: #bcbcbc;
+  border: 2px solid #2d2d2d;
+  padding: 5px 10px;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .input-div .ExtendFieldPop {
+  position: absolute;
+  background: #343434;
+  z-index: 10;
+  width: 100%;
+  border: 2px solid #2d2d2d;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .input-div .ExtendFieldPop .ExtendFieldPop-line {
+  padding: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .input-div .ExtendFieldPop .ExtendFieldPop-line:hover {
+  background: #666;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .input-div .ExtendFieldPop.kong {
+  border: none;
+}
+
+.newui-layer .device-on-layer-box .device-on-layer-line .extraRequire {
+  margin-left: 5px;
+}
+
+.app-panel .select-tree-box #tree-content {
+  margin-top: -15px;
+  z-index: 5;
+  background-color: #363634;
+  border: 1px solid #2d2d2d;
+}
+
+/* 设备上架的确认弹框样式完 */

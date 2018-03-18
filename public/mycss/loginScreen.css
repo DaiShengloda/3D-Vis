@@ -1,0 +1,360 @@
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+body .layer-login {
+  color: #c53d43;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  line-height: 48px;
+}
+
+body .layer-login .layui-layer-content {
+  font-size: 22px;
+}
+
+div.login {
+  height: 100%;
+  position: relative;
+  display: block;
+}
+
+div.login .panel {
+  background: rgba(19, 19, 19, 0.8);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 5px 5px #131313;
+  text-align: center;
+}
+
+div.login .panel .title {
+  display: inline-block;
+}
+
+div.login .panel .title img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1930px) {
+  div.login .panel .title {
+    width: 280px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  div.login .panel .title {
+    width: 210px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  div.login .panel .title {
+    width: 160px;
+    margin-bottom: 20px;
+  }
+}
+
+div.login .panel .content {
+  position: relative;
+}
+
+div.login .panel .content .enter div {
+  position: relative;
+}
+
+div.login .panel .content .enter input {
+  padding-right: 0px;
+  background: #4a4a4a;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5) inset;
+  color: #9ca0af;
+  padding-right: 0px !important;
+}
+
+div.login .panel .content .enter span {
+  position: absolute;
+  top: 50%;
+  color: #717171;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 1930px) {
+  div.login .panel .content .enter div {
+    margin-bottom: 20px;
+  }
+  div.login .panel .content .enter input {
+    width: 350px;
+    height: 30px;
+    font-size: 22px;
+    padding: 10px 50px;
+  }
+  div.login .panel .content .enter span {
+    height: 30px;
+    left: 50px;
+    line-height: 30px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  div.login .panel .content .enter div {
+    margin-bottom: 15px;
+  }
+  div.login .panel .content .enter input {
+    width: 270px;
+    height: 20px;
+    font-size: 12px;
+    padding: 10px 50px;
+  }
+  div.login .panel .content .enter span {
+    height: 20px;
+    left: 40px;
+    line-height: 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  div.login .panel .content .enter div {
+    height: 30px;
+    margin-bottom: 10px;
+  }
+  div.login .panel .content .enter input {
+    width: 190px;
+    height: 20px;
+    font-size: 12px;
+    padding: 5px 50px;
+  }
+  div.login .panel .content .enter span {
+    height: 20px;
+    left: 40px;
+    line-height: 20px;
+    font-size: 12px;
+  }
+}
+
+div.login .panel .content .enter .iconfont {
+  left: 15px;
+  color: #9ca0af;
+}
+
+div.login .panel .content .validate {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.login .panel .content .validate div {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5) inset;
+  background: #4a4a4a;
+}
+
+div.login .panel .content .validate .pto img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+div.login .panel .content .validate .vldt input {
+  width: 100%;
+  height: inherit;
+  background: #4a4a4a;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5) inset;
+  color: #9ca0af;
+  text-align: center;
+}
+
+@media screen and (max-width: 1930px) {
+  div.login .panel .content .validate div {
+    height: 50px;
+  }
+  div.login .panel .content .validate .pto {
+    width: 200px;
+  }
+  div.login .panel .content .validate .vldt {
+    width: 150px;
+  }
+  div.login .panel .content .validate .vldt input {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  div.login .panel .content .validate div {
+    height: 40px;
+  }
+  div.login .panel .content .validate .pto {
+    width: 160px;
+  }
+  div.login .panel .content .validate .vldt {
+    width: 120px;
+  }
+  div.login .panel .content .validate .vldt input {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  div.login .panel .content .validate div {
+    height: 30px;
+  }
+  div.login .panel .content .validate .pto {
+    width: 120px;
+  }
+  div.login .panel .content .validate .vldt {
+    width: 90px;
+  }
+  div.login .panel .content .validate .vldt input {
+    font-size: 12px;
+  }
+}
+
+div.login .panel .content .invisibility {
+  margin-top: 5px;
+  text-align: left;
+}
+
+div.login .panel .content .invisibility a {
+  color: #a9a9a9;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1930px) {
+  div.login .panel .content .invisibility a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  div.login .panel .content .invisibility a {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  div.login .panel .content .invisibility a {
+    font-size: 12px;
+  }
+}
+
+div.login .panel .content .loginBtn button {
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #13a9c5 0%, #008ed8 100%);
+}
+
+div.login .panel .content .loginBtn button:active {
+  transform: translateY(1px);
+}
+
+@media screen and (max-width: 1930px) {
+  div.login .panel .content .loginBtn {
+    margin-top: 25px;
+  }
+  div.login .panel .content .loginBtn button {
+    font-size: 22px;
+    height: 50px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  div.login .panel .content .loginBtn {
+    margin-top: 20px;
+  }
+  div.login .panel .content .loginBtn button {
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  div.login .panel .content .loginBtn {
+    margin-top: 15px;
+  }
+  div.login .panel .content .loginBtn button {
+    font-size: 18px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+
+div.login .panel .content .loginPsw {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  margin-top: 10px;
+  color: #a9a9a9;
+  font-size: 14px;
+}
+
+div.login .panel .content .loginPsw input[type=checkbox] {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+div.login .panel .content .loginPsw input[type=checkbox]:checked + label div {
+  background: linear-gradient(to bottom, #13a9c5 0%, #008ed8 100%);
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+}
+
+div.login .panel .content .loginPsw div label {
+  display: inline-block;
+  border: 2px solid #1dacf3;
+  width: 6px;
+  height: 6px;
+  margin: 0px;
+  padding: 1px;
+}
+
+div.login .panel .content .loginPsw div a {
+  color: #a9a9a9;
+  text-decoration: none;
+}
+
+div.login .panel .content input:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1930px) {
+  div.login .panel {
+    width: 400px;
+    padding: 50px 150px;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  div.login .panel {
+    width: 320px;
+    padding: 50px 120px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  div.login .panel {
+    width: 240px;
+    padding: 40px 90px;
+    border-radius: 6px;
+  }
+}

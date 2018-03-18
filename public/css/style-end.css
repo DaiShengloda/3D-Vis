@@ -1,0 +1,209 @@
+#panel_module {
+	padding-top: 5px;
+}
+.tab_contentPanel .form-inline .form-group input, .tab_contentPanel .form-inline .form-group select{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.dataTables_wrapper{
+	margin-top: 5px;
+}
+.form-jsonarea .jsoneditor{
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.form-jsonarea, .form-jsonarea .jsoneditor, 
+.form-jsonarea .jsoneditor .jsoneditor-text{
+	min-height: 150px;
+}
+
+.form-xyz .input-group{
+	margin-right: 5px;
+}
+
+#tab_module li a i{
+	margin-left: 5px;
+}
+.dataTables_wrapper > .row:nth-child(2) > .col-sm-12{
+	/*overflow: auto;*/
+}
+.picker-form-control{
+	display: inline-block;
+    width: auto;
+    vertical-align: middle;
+}
+
+/* guide start*/
+.bs-docs-sidebar .nav>li>a:focus, .bs-docs-sidebar .nav>li>a:hover, 
+.bs-docs-sidebar .nav>li>a.active{
+    padding-left: 19px;
+    color: #563d7c;
+    text-decoration: none;
+    background-color: transparent;
+    /*border-left: 1px solid #563d7c;*/
+}
+.bs-docs-sidebar .nav>li.active>a{
+    border-left: 1px solid #563d7c;
+}
+.bs-docs-sidebar .nav>li>a {
+    display: block;
+    padding: 4px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #767676;
+}
+
+@media (min-width: 992px){}
+.bs-docs-sidebar .nav>.active>ul {
+    display: block;
+}
+.bs-docs-sidebar .nav .nav {
+    /*display: none;*/
+    padding-bottom: 10px;
+}
+
+.bs-docs-sidebar .nav .nav>.active:focus>a, .bs-docs-sidebar .nav .nav>.active:hover>a, .bs-docs-sidebar .nav .nav>.active>a {
+    padding-left: 28px;
+    font-weight: 500;
+}
+
+.bs-docs-sidebar .nav .nav>li>a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.bs-docs-content{
+	padding-left: 15px;
+	height: auto;
+    position: relative;
+}
+.bs-docs-content a{
+	text-decoration: none;
+}
+.bs-docs-content > div:first-child > :first-child{
+	margin-top:20px;
+}
+.bs-docs-section > p, .bs-docs-section > ul, .bs-docs-section > ol, .bs-callout > p, .bs-callout > ol, .bs-callout > ul {
+    font-size: 16px;
+    line-height: 1.75;
+    margin-bottom: 1em;
+}
+.bs-docs-sidenav{
+	margin-top:20px;
+	
+}
+.docs-sidenav{
+	position: fixed;
+}
+
+.bs-docs-content .dataTables_wrapper{
+    margin-bottom: 10px;
+}
+.customRow{
+    height:0px;
+    padding-bottom:65%;
+    overflow-y: auto;
+}
+/* guide end*/
+
+/* earth guide start */
+.earthSetting{
+	position: relative;
+	width: 100%
+}
+.earthSetting > .btnPanel{
+	margin-bottom: 5px;
+}
+.earthSetting > .btnPanel > button{
+	margin-left: 10px;
+}
+.earthSetting > .btnPanel > button:first-child{
+	margin-left: 0px;
+}
+.earthSetting > .network{
+	width: 100%
+}
+
+.panel-body > table >tbody>tr> td{
+	border-top-width: 0px;
+    border-top-style: solid;
+    border-top-color: rgb(221, 221, 221);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(221, 221, 221);
+}
+/* earth guide end */
+
+.itv-search-panel{
+    position: relative;
+    top: 0px;
+    width: 100%;
+    height: 550px;
+    z-index: 1; /*其在network之上*/
+}
+
+.itv-sidebar-tool{
+    position: absolute;
+    top: 100%;
+    border:1px solid rgba(0,0,0,0.2);
+    border-left: 0;
+    border-radius: 0 2px 2px 0;
+    margin-left:48%;
+    background-color:rgba(0,0,0,0.2);
+}
+
+.itv-sidebar-tool .itv-toggle-btn {
+    display: block;
+    width: 23px;
+    height: 13px;
+}
+
+.itv-toggle-btn-up {
+    background: url('./images/up-toggle.png') no-repeat center;
+}
+
+.itv-toggle-btn-down{
+    background: url('./images/down-toggle.png') no-repeat center;
+}
+
+.dataTable .operationCol{
+    text-align: center;
+}
+
+.dataTable .settings{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url('./images/setting.png') no-repeat center;
+    background-size:15px 15px;
+}
+.dataTable .settings:hover{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    background: url('./images/setting-hover.png') no-repeat center;
+    background-size:16px 15px;
+}
+
+/* floorSetting guide start */
+.floorSetting{
+    position: relative;
+    width: 100%
+}
+.floorSetting > .toolbar{
+    margin-bottom: 5px;
+}
+.floorSetting > .toolbar > button{
+    margin-left: 10px;
+}
+.floorSetting > .toolbar > button:first-child{
+    margin-left: 0px;
+}
+.floorSetting > .network-view{
+    width: 100%;
+    position: absolute;
+}

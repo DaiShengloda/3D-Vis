@@ -1,0 +1,83 @@
+.tree-table {
+  color: #bcbcbc;
+  border: none;
+  padding: 0px;
+  width: 500px;
+  height: 370px;
+}
+
+.tree-table .search-box {
+  margin: 0px 10px 10px 10px;
+  border-top: 1px solid #2d2d2d;
+  padding-top: 10px;
+}
+
+.tree-table .search-box .search-input {
+  background-image: -webkit-linear-gradient(top, #343434, #343434);
+  border: 2px solid #2d2d2d;
+  height: 25px;
+  line-height: 25px;
+  color: #bcbcbc;
+  outline: none;
+  width: 85%;
+  min-width: 200px;
+  max-width: 400px;
+  padding: 5px;
+}
+
+.tree-table .search-box .search {
+  float: right;
+  max-width: 50px;
+  width: 50px;
+  height: 25px;
+  background-color: #356f87;
+  border: none;
+  color: white;
+  border-radius: 3px;
+}
+
+.tree-table .table-dom {
+  border: 2px solid #2d2d2d;
+  left: 10px;
+  width: 480px;
+  height: 300px;
+}
+
+.tree-table .table-dom .table-body .table-icon {
+  font-size: 14px;
+}
+
+.tree-table .table-dom .table-body .table-icon .table-icon-i {
+  padding-left: 5px;
+}
+
+.tree-table .table-dom .table-body .usage-progressbar {
+  height: 68%;
+  background: transparent;
+  border: none;
+  vertical-align: middle;
+  margin-top: 5px;
+}
+
+.tree-table .table-dom .table-body .usage-perNum {
+  left: 10%;
+  top: 2px;
+}
+
+@media screen and (max-width: 1919px) {
+  .tree-table {
+    width: 440px;
+  }
+  .tree-table .table-dom {
+    width: 420px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .tree-table {
+    width: 440px;
+  }
+  .tree-table .table-dom {
+    width: 420px;
+  }
+}

@@ -1,0 +1,175 @@
+#virtualDeviceTab {
+  padding: 0;
+  color: #d6d6d6;
+  border: 0 none;
+  background: none;
+  margin: 10px 20px;
+  overflow: hidden;
+}
+
+#virtualDeviceTab .ui-tabs {
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  font-size: 14px;
+  background: none;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-nav {
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  background: none;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-nav .realtimeExt {
+  display: none;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-nav li {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  border-bottom: 2px solid transparent;
+  color: #d6d6d6;
+  background: none;
+  margin-right: 20px;
+  user-select: none;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-nav li.ui-state-hover, #virtualDeviceTab .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-nav li.ui-state-hover a, #virtualDeviceTab .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+  color: #00ffff;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: 5px 0;
+  color: #d6d6d6;
+}
+
+#virtualDeviceTab .ui-tabs .ui-tabs-panel {
+  border-radius: 0;
+  padding: 0;
+  overflow: hidden;
+  max-height: 400px;
+}
+
+.vdBaseInfoTab {
+  border: 1px solid #2d2d2d;
+  font-size: 14px;
+  color: #bcbcbc;
+  margin-top: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.vdBaseInfoTab .VirtualDevice-Table {
+  min-width: 250px;
+  margin: 0.5em 1.3em 1.5em 1.3em;
+}
+
+.vdBaseInfoTab .VirtualDevice-Table td {
+  padding: 5px 0;
+}
+
+.vdBaseInfoTab .VirtualDevice-Table .labelName {
+  padding-right: 10px;
+}
+
+.vmRealtimeTab {
+  border: 1px solid #2d2d2d;
+  font-size: 14px;
+  color: #bcbcbc;
+  margin-top: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.vmRealtimeTab #virtualrealTimeContent {
+  min-width: 250px;
+  margin: 0.5em 1.3em 1.5em 1.3em;
+}
+
+.vmRealtimeTab #virtualrealTimeContent #virtualDeviceTable thead {
+  display: none !important;
+}
+
+.vmRealtimeTab #virtualrealTimeContent #virtualDeviceTable td {
+  padding: 5px 10px 0 10px;
+  border: none;
+}
+
+.realtimeExtendTab {
+  border: 1px solid #2d2d2d;
+  font-size: 14px;
+  color: #bcbcbc;
+  margin-top: 10px;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+
+.realtimeExtendTab #virtualrealTimeExtContent {
+  min-width: 250px;
+  margin: 0.5em 1.3em 1.5em 1.3em;
+}
+
+.realtimeExtendTab #virtualrealTimeExtContent #virtualDeviceExtTable thead {
+  display: none !important;
+}
+
+.realtimeExtendTab #virtualrealTimeExtContent #virtualDeviceExtTable td {
+  padding: 5px 10px 0 10px;
+  border: none;
+}
+
+#v_deviceonPanel {
+  padding: 10px 0 0 20px;
+}
+
+#v_deviceonPanel .virtualDeviceOn {
+  overflow-y: scroll;
+}
+
+#v_deviceonPanel .virtualDeviceOn tbody tr:first-child {
+  margin-top: 0;
+}
+
+#v_deviceonPanel .virtualDeviceOn tbody .labelName {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 0;
+}
+
+#v_deviceonPanel .virtualDeviceOn tbody .labelValue input {
+  width: 100%;
+  border: 2px solid #2d2d2d;
+  background-color: #343434;
+  margin-bottom: 10px;
+  color: #d6d6d6;
+  padding: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#v_deviceonPanel .virtualDeviceOn tbody .required {
+  padding: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#v_deviceonPanel .buttons {
+  float: right;
+  margin-top: 10px;
+}
+
+#v_deviceonPanel .buttons button {
+  margin-right: 10px;
+  background-color: #356f87;
+}

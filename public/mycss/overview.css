@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/* 楼层选择器 start */
+/* 楼层选择器 end */
+/* 楼层选择器开始 */
+.floor-box {
+  position: absolute;
+  top: 30%;
+  right: 10px;
+  background: rgba(53, 53, 53, 0.95);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: #d6d6d6;
+}
+
+.floor-box #floor-box-ul {
+  padding: 0;
+  margin: 5px 0;
+}
+
+.floor-box #floor-box-ul .floor-box-li {
+  padding: 5px 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.floor-box #floor-box-ul .currentFloor, .floor-box #floor-box-ul .floor-box-li:hover {
+  background-image: url("../images/currentFloor.png");
+  background-position: 0 2.5px;
+  background-repeat: no-repeat;
+  background-size: 107% 100%;
+}
+
+.floor-box .icon-angle-top, .floor-box .icon-angle-bottom {
+  cursor: pointer;
+  padding: 7px 0;
+  font-size: 13px;
+  color: #23888f;
+}
+
+.floor-box .icon-angle-top:hover, .floor-box .icon-angle-bottom:hover {
+  color: #00ffff;
+}
+
+/* 楼层选择器结束 */

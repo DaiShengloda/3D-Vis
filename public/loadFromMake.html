@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Obj Demo</title>
+    <script src="./libs/jquery.js"></script>
+     <script type="text/javascript" src="./libs/bootstrap.min.js"></script>
+     <script type="text/javascript" src="./libs/jquery-ui.min.js"></script>
+     <script type="text/javascript" src="./libs/echarts.js"></script>
+     <script type="text/javascript" src="./libs/twaver.js"></script>
+     <script type="text/javascript" src="./libs/t.js"></script>
+     <script src = "./css/fonts/helvetiker_bold.typeface.js"></script>
+     <script type="text/javascript" src="./libs/itv-all-min.js"></script>
+    <script type="text/javascript" src="./libs/twaver-make.js"></script>
+     <script type="text/javascript" src="./libs/register.js"></script>
+     <script type="text/javascript" src="./libs/layer.min.js"></script>
+
+     <script type="text/javascript" src="./js/ModelExtend.js"></script>
+     <script type="text/javascript" src="./js/ServerUtil.js"></script>
+     <script type="text/javascript" src="./js/LoadData.js"></script>
+     <script type="text/javascript" src="./js/Breadcrumb.js"></script>
+     <script type="text/javascript" src="./js/FilterMenu.js"></script>
+     <script type="text/javascript" src="./js/SceneInfoPane.js"></script>
+     <script type="text/javascript" src="./js/NetworkDialog.js"></script>
+     <script type="text/javascript" src="./js/SearchPanel.js"></script>
+     <script type="text/javascript" src="./js/RightClickMenu.js"></script>
+     <script type="text/javascript" src="./js/LinkSearch.js"></script>
+     <script type="text/javascript" src="./js/Info.js"></script>
+     <script type="text/javascript" src="./js/NodeEventHandler.js"></script>
+     <script type="text/javascript" src="./libs/DataCreater.js"></script>
+     <script type="text/javascript" src="./js/AnimateManager.js"></script>
+     <script type="text/javascript" src="./js/ClientAlarmManager.js"></script>
+     <script type="text/javascript" src="./js/Main.js"></script>
+     <script type="text/javascript" src="./js/airflow/AirFlow.js"></script>
+     <script type="text/javascript" src="./js/WaterLeakManager.js"></script>
+     <script type="text/javascript" src="./js/PowerRackPanel.js"></script>
+    <script type="text/javascript">
+//        var network3d;
+        var box;
+        var camera;
+        function load(){
+
+            box = new mono.DataBox();
+            camera = new mono.PerspectiveCamera(60, 1.5, 10, 10000);
+            camera.setPosition(50,200,500);
+
+            var network= new mono.Network3D(box, camera, myCanvas);
+            // network.setClearAlpha(0.1)
+            // network.setClearColor('green');
+            var interaction = new mono.DefaultInteraction(network);
+            network.setInteractions([
+                new mono.SelectionInteraction(network), 
+                interaction]);
+            mono.Utils.autoAdjustNetworkBounds(network,document.documentElement,'clientWidth','clientHeight',0,30);
+
+            var pointLight = new mono.PointLight(0xFFFFFF,1);
+            pointLight.setPosition(1000,1000,1000);
+            box.add(pointLight);
+            var pointLight = new mono.PointLight(0xFFFFFF,1);
+            pointLight.setPosition(-1000,1000,-1000);
+            box.add(pointLight);
+            box.add(new mono.AmbientLight());
+
+            make.Default.path = './modellib/';
+            make.Default.load('twaver.scene.scene1', function(objects){
+                // console.log(object3d);
+                // box.startBatch();
+                // $.each(objects, function(index, val) {
+                //     // box.addByDescendant(val);
+                //     box.add(val);
+                // });
+                // box.endBatch();
+                // box.getNodes().forEach(function(node){
+                //     node.setStyle('m.ambient','#EFEFEF');
+                // });
+                var objects = make.Default.load({id:'twaver.scene.scene1'});
+                console.log(objects);
+                box.addByDescendant(objects);
+                make.Default.load('twaver.scene.building',function (objects) {
+                    
+                   // objs.forEach(function(each){
+                   //    each.setY(-12);
+                   //    each.setX(each.getX() + 18);
+                   //    box.add(each);
+                   // });
+
+                   var object = make.Default.load({id:'twaver.scene.building'});
+                   object.setY(-12);
+                   object.setX(object.getX() + 18);
+                   box.addByDescendant(object);
+
+                })
+            });
+
+        }
+    </script>
+</head>
+<body onload = 'load()'>
+    <div id = "mainDiv">
+        <canvas id="myCanvas"/>
+    </div>
+</body>
+</html>

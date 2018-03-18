@@ -1,0 +1,299 @@
+@charset "UTF-8";
+html body {
+  font-family: "NotoSansHans",  Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+  color: #bcbcbc;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html body {
+    font-size: 12px;
+  }
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bt-arrow {
+  display: block;
+  border-top: 9px solid transparent;
+  border-left: 9px solid #23888f;
+  border-bottom: 9px solid transparent;
+  cursor: pointer;
+  transition: all 0.3S;
+}
+
+.bt-arrow:hover {
+  border-left: 9px solid #00ffff;
+}
+
+.bt-arrow-open {
+  transform: rotate(90deg);
+}
+
+.bt-scroll::-webkit-scrollbar,
+.scroll-class::-webkit-scrollbar {
+  background-color: rgba(53, 53, 53, 0.95);
+  width: 10px;
+}
+
+.bt-scroll::-webkit-scrollbar-thumb,
+.scroll-class::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  height: 24px;
+}
+
+.bt-value {
+  color: #d6d6d6;
+}
+
+.bt-value-input, .info .infoTab .panel .panel-content .content-row .right input.editable {
+  color: #bcbcbc;
+  border: 2px solid #2d2d2d;
+  background: #343434;
+  padding: 5px;
+}
+
+.bt-btn, .info .infoTab .buttons button {
+  border: 1px solid #46606b;
+  color: #ffffff;
+  background: #46606b;
+  border-radius: 3px;
+}
+
+.bt-btn:hover, .info .infoTab .buttons button:hover {
+  border: 1px solid default-highlight-bg-color;
+  background: #46606b;
+}
+
+.bt-btn-second {
+  border: 1px solid #6a6a6a;
+  color: #ffffff;
+  background: #6a6a6a;
+  border-radius: 3px;
+}
+
+.bt-btn-second:hover {
+  border: 1px solid #00ffff;
+  background: #46606b;
+}
+
+@media screen and (max-width: 1919px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 8px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 5px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+}
+
+.info .infoTab {
+  overflow-y: auto;
+  min-height: 200px;
+  max-height: 500px;
+}
+
+.info .infoTab .iconfont {
+  color: #d6d6d6;
+  float: right;
+  cursor: pointer;
+}
+
+.info .infoTab .iconfont:hover {
+  color: #00ffff;
+}
+
+.info .infoTab .panel {
+  border: 2px solid #2d2d2d;
+  position: relative;
+  padding-top: 10px;
+  background: none;
+  margin-top: 20px;
+}
+
+.info .infoTab .panel .panel-header {
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute;
+  padding: 0 10px;
+  left: 10px;
+  top: -11px;
+  background-color: #373737;
+  user-select: none;
+}
+
+.info .infoTab .panel .panel-content .content-row .left {
+  width: 100px;
+  display: inline-block;
+  color: #bcbcbc;
+  margin-right: 20px;
+  line-height: 24px;
+  user-select: none;
+  text-align: right;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.info .infoTab .panel .panel-content .content-row .right {
+  color: #d6d6d6;
+  display: inline-block;
+  min-width: 135px;
+}
+
+.info .infoTab .panel .panel-content .content-row .right span {
+  margin-bottom: 10px;
+  display: block;
+  line-height: 24px;
+}
+
+.info .infoTab .panel .panel-content .content-row .right input {
+  background: transparent;
+  border: none;
+  margin-bottom: 5px;
+  color: #d6d6d6;
+  padding: 3px;
+  width: 205px;
+  height: 28px;
+}
+
+.info .infoTab .panel .panel-content .content-row .right input:first-child {
+  margin-bottom: 10px;
+}
+
+.info .infoTab .panel .panel-content .content-row .right input.editable {
+  margin-left: -10px;
+}
+
+.info .infoTab .panel .panel-content .content-row .right button {
+  font-size: 14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 40px;
+  height: 22px;
+}
+
+.info .infoTab .panel:first-child {
+  margin-top: 15px;
+}
+
+.info .infoTab .buttons {
+  float: right;
+  margin-top: 10px;
+}
+
+.info .infoTab .buttons button {
+  padding: 0;
+  width: 40px;
+  height: 22px;
+  margin-left: 10px;
+}
+
+.info .infoTab .displaynone {
+  display: none;
+}
+
+@media screen and (max-width: 1440px) {
+  .info .infoTab .panel {
+    margin-top: 10px;
+  }
+  .info .infoTab .panel:first-child {
+    margin-top: 5px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .baseInfo .baseInfoTab .panel {
+    margin-top: 20px;
+  }
+  .baseInfo .baseInfoTab .panel .panel-content .content-row .right input {
+    width: 165px;
+  }
+}
+
+.deviceListInfo {
+  color: #bcbcbc;
+}
+
+.deviceListInfo .deviceListInfoTab {
+  margin-top: 5px;
+}
+
+.deviceListInfo .deviceListInfoTab .fixed-table-container .DeviceListTable {
+  border: 2px solid #2a2a2a;
+  border-spacing: 0px;
+}
+
+.deviceListInfo .deviceListInfoTab .fixed-table-container .DeviceListTable thead th {
+  border-left: none;
+  background: #2a2a2a;
+}
+
+.deviceListInfo .deviceListInfoTab .fixed-table-container .DeviceListTable thead th .th-inner {
+  height: 30px;
+  line-height: 16px;
+  padding: 8px 10px;
+}
+
+.deviceListInfo .deviceListInfoTab .fixed-table-container .DeviceListTable tbody td {
+  border-left: none;
+  padding: 7px 10px;
+  height: 30px;
+}
+
+.deviceListInfo .deviceListInfoTab .fixed-table-container .DeviceListTable tbody tr:nth-child(odd) {
+  background: transparent;
+}
+
+.deviceListInfo .deviceListInfoTab .fixed-table-container .DeviceListTable tbody tr:nth-child(even) {
+  background: #2a2a2a;
+}
+
+.alarmTab .infoTab .panel {
+  padding-top: 15px;
+}
+
+.alarmTab .infoTab .panel:first-child {
+  margin-top: 10px;
+}
+
+.alarmTab .infoTab .panel .panel-content .content-row .left {
+  width: 92px;
+}

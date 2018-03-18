@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <title>IT资产管理系统</title>
+    <link rel="stylesheet" href="./libs/pdf/viewer.css">
+    <link rel="stylesheet" href="./css/client-all.css">
+    <link rel="stylesheet" href="./css/info.css">
+    <link rel="stylesheet" href="./css/style_temp.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/datetimepicker.css">
+    <link rel="stylesheet" href="./css/data-nav.css">
+    <link rel="stylesheet" href="./css/bootstrap-select.css">
+    <link rel="stylesheet" href="./css/bootstrap-table.css">
+    <link rel="stylesheet" href="./css/vxgplayer-1.8.11.min.css">
+    <link rel="resource" type="application/l10n" href="./libs/pdf/locale/locale.properties">
+    <link rel="stylesheet" href="./css/customer.css">
+    <link rel="stylesheet" href="./css/newui.css">
+    <link rel="stylesheet" href="./mycss/itSearchPanel.css">
+    <!-- <link rel="stylesheet" href="./css/newui-app-panel.css"> -->
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <link rel="stylesheet" href="./css/select2.css">
+    <!--<link rel="stylesheet" href="./css/dialog.css">-->
+    <link rel="stylesheet" href="./mycss/dialog.css">
+    <link rel="stylesheet" href="./css/pdf.css">
+    <link rel="stylesheet" href="./mycss/cruisePanel.css">
+    <!-- <link rel="stylesheet" href="./css/hw_style.css"> -->
+
+    <link rel="stylesheet" href="./css/pdf.css">
+
+    <!-- 引入sass生成的css文件，最终会合并成一个文件 -->
+    <link rel="stylesheet" href="./mycss/base.css">
+    <link rel="stylesheet" href="./mycss/assetInfoPanel.css">
+    <link rel="stylesheet" href="./mycss/warningPanel.css">
+    <link rel="stylesheet" href="./mycss/warningInfoDetail.css">
+    <link rel="stylesheet" href="./mycss/breadcrumb.css">
+    <link rel="stylesheet" href="./mycss/nav.css">
+    <link rel="stylesheet" href="./mycss/toolbar.css">
+    <link rel="stylesheet" href="./mycss/appPanel.css">
+    <link rel="stylesheet" href="./mycss/newAppBasePanel.css">
+    <link rel="stylesheet" href="./mycss/systemSetting.css">
+    <link rel="stylesheet" href="./mycss/overview.css">
+    <link rel="stylesheet" href="./mycss/legends.css">
+    <link rel="stylesheet" href="./mycss/rackSeatOccupy.css">
+    <link rel="stylesheet" href="./mycss/tempFilterPanel.css">
+    <link rel="stylesheet" href="./mycss/displayFloors.css">
+    <link rel="stylesheet" href="./mycss/rackClickRotate.css">
+    <link rel="stylesheet" href="./mycss/serverTab.css">
+    <link rel="stylesheet" href="./mycss/panelInfo.css">
+    <link rel="stylesheet" href="./mycss/virtualDeciveTab.css">
+    <link rel="stylesheet" href="./mycss/itvPanel.css">
+    <link rel="stylesheet" href="./mycss/treeTable.css">
+    <link rel="stylesheet" href="./mycss/alarmDetail.css">
+
+    <!-- 引入sass生成的css文件结束 -->
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script type="text/javascript" src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./libs/echarts.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-select.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-table.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-table-zh-CN.min.js"></script>
+    <script type="text/javascript" src="./libs/twaver.js"></script>
+    <script type="text/javascript" src="./libs/t.js"></script>
+    <script type="text/javascript" src="./theme/scene.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-datetimepicker.js"></script>
+    <script type="text/javascript" src="./libs/moment.min.js"></script>
+    <script type="text/javascript" src="./libs/zh_compare.js"></script>
+    <script type="text/javascript" src="./libs/pdf/l10n.js"></script>
+    <script type="text/javascript" src="./libs/pdf/pdf.js"></script>
+    <script type="text/javascript" src="./libs/pdf/viewer.js"></script>
+    <script type="text/javascript" src="./css/fonts/helvetiker_bold.typeface.js"></script>
+    <!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=SitkPQ8K2wZANvuOsEnBieOg"></script>
+    -->
+    <script type="text/javascript" src="./libs/select2.full.js"></script>
+
+    <script type="text/javascript" src="./js/config.js"></script>
+
+    <script type="text/javascript" src="./libs/itv-all-min.js"></script>
+    <script type="text/javascript" src="./libs/twaver-make.js"></script>
+    <script type="text/javascript" src="./libs/vxgplayer-1.8.11.min.js"></script>
+    <!--<script type="text/javascript" src="./modellib/longjiang/register.js"></script>-->
+    <script type="text/javascript" src="./libs/layer.min.js"></script>
+    <script type="text/javascript" src="./libs/laypage.js"></script>
+    <script type="text/javascript" src="./libs/jwplayer.js"></script>
+    <script type="text/javascript" src="./libs/socket.io.js"></script>
+    <script type="text/javascript" src="./libs/json.date-extensions.js"></script>
+    <script type="text/javascript" src="./libs/countUp.js"></script>
+    <script type="text/javascript" src="./libs/krpano.js"></script>
+    <script type="text/javascript" src="./libs/hls.js"></script>
+    <script type="text/javascript" src="./libs/videoWall.js"></script>
+
+    <!-- <script type="text/javascript" src="./libs/map/map.js"></script> -->
+    <script type="text/javascript" src="./theme/navBar.js"></script>
+
+    <!-- // <script type="text/javascript" src="./js/_start.js"></script> -->
+    <script type="text/javascript" src="./js/SpaceAvailabilityManager.js"></script>
+    <script type="text/javascript" src="./js/PropertyPane.js"></script>
+    <script type="text/javascript" src="./js/ServerUtil.js"></script>
+    <!-- <script type="text/javascript" src="./admin/js/util.js"></script> -->
+    <script type="text/javascript" src="./js/utils.js"></script>
+    <script type="text/javascript" src="./js/AlertUtil.js"></script>
+
+    <script type="text/javascript" src="./js/EventEmitter.js"></script>
+
+    <script type="text/javascript" src="./js/LoadData.js"></script>
+    <script type="text/javascript" src="./js/Breadcrumb.js"></script>
+    <script type="text/javascript" src="./js/pdf/PdfViewer.js"></script>
+    <script type="text/javascript" src="./js/pdf/PDFManager.js"></script>
+    <script type="text/javascript" src="./js/toolbar/ConfigApp.js"></script>
+    <script type="text/javascript" src="./js/toolbar/GeneralConfigApp.js"></script>
+    <!--<script type="text/javascript" src="./js/toolbar/TemperatureAndHumidityConfigPanel.js"></script>
+    <script type="text/javascript" src="./js/toolbar/UColorSettingPanel.js"></script>
+    <script type="text/javascript" src="./js/toolbar/AddEarthTitle.js"></script>
+    <script type="text/javascript" src="./js/toolbar/AssetManageImg.js"></script>
+    <script type="text/javascript" src="./js/toolbar/AssetFilter.js"></script>
+    <script type="text/javascript" src="./js/toolbar/UnVirtualCategoryForFocus.js"></script>-->
+    <script type="text/javascript" src="./js/toolbar/ToolBarButton.js"></script>
+    <script type="text/javascript" src="./js/toolbar/FilterMenu.js"></script>
+    <script type="text/javascript" src="./js/toolbar/CameraSetting.js"></script>
+    <script type="text/javascript" src="./js/toolbar/CameraMenu.js"></script>
+    <script type="text/javascript" src="./js/toolbar/PlayCameraMenu.js"></script>
+    <script type="text/javascript" src="./js/toolbar/StopCameraMenu.js"></script>
+    <script type="text/javascript" src="./js/toolbar/FullScreen.js"></script>
+    <!--<script type="text/javascript" src="./js/toolbar/Setting.js"></script>-->
+
+    <!-- jstree相关 -->
+    <script type="text/javascript" src="./js/jstree/jstree.js"></script>
+
+    <script type="text/javascript" src="./js/toolbar/ResetDialog.js"></script>
+    <script type="text/javascript" src="./js/toolbar/HelpDialog.js"></script>
+    <script type="text/javascript" src="./js/toolbar/AlarmButton.js"></script>
+    <script type="text/javascript" src="./js/toolbar/SaveCameraBar.js"></script>
+    <script type="text/javascript" src="./js/toolbar/OpenFileBar.js"></script>
+    <script type="text/javascript" src="./js/toolbar/BackgroundColor.js"></script>
+    <script type="text/javascript" src="./js/sceneInfo/InfoRule.js"></script>
+    <script type="text/javascript" src="./js/SceneInfoPane.js"></script>
+    <script type="text/javascript" src="./js/NetworkDialog.js"></script>
+    <script type="text/javascript" src="./js/SearchPanel.js"></script>
+    <script type="text/javascript" src="./js/RightClickMenu.js"></script>
+    <script type="text/javascript" src="./js/link/LinkSearch.js"></script>
+    <script type="text/javascript" src="./js/datainfo/BaseServerTab.js"></script>
+    <script type="text/javascript" src="./js/datainfo/BaseVirtualDeviceTab.js"></script>
+    <script type="text/javascript" src="./js/datainfo/GeneralInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/panelInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/VirtualDevicePanelInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/VirtualDeviceRealtimeInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/VirtualDeviceRealtimeExtendInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/alarmTab.js"></script>
+    <script type="text/javascript" src="./js/datainfo/DeviceListInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/StatisticsInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/ServerAlarm.js"></script>
+    <script type="text/javascript" src="./js/port/PortOccuPancyManager.js"></script>
+    <script type="text/javascript" src="./js/datainfo/DevPanelManager.js"></script>
+    <script type="text/javascript" src="./js/datainfo/CustomInfo.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/LoadTabPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/routeTabPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/routePanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/NewTabPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/ProcessTabPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/InterfacesPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/virtualtopologyPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/demo/StorageTabPanel.js"></script>
+    <!-- // <script type="text/javascript" src="./js/datainfo/Info.js"></script> -->
+    <script type="text/javascript" src="./js/datainfo/ServerPanel.js"></script>
+    <script type="text/javascript" src="./js/datainfo/ServerTab.js"></script>
+    <script type="text/javascript" src="./js/datainfo/VirtualDeviceTab.js"></script>
+    <script type="text/javascript" src="./js/datainfo/NodeEventHandler.js"></script>
+    <script type="text/javascript" src="./libs/DataCreater.js"></script>
+    <script type="text/javascript" src="./js/AnimateManager.js"></script>
+    <script type="text/javascript" src="./js/alarm/Alarm.js"></script>
+    <script type="text/javascript" src="./js/alarm/AlarmType.js"></script>
+    <script type="text/javascript" src="./js/alarm/AlarmStatus.js"></script>
+    <script type="text/javascript" src="./js/alarm/AlarmManager.js"></script>
+    <script type="text/javascript" src="./js/alarm/AlarmTooltip.js"></script>
+    <script type="text/javascript" src="./js/alarm/VirtualDeviceAlarm.js"></script>
+    <script type="text/javascript" src="./js/PowerManager.js"></script>
+    <script type="text/javascript" src="./js/ClientAlarmManager.js"></script>
+    <script type="text/javascript" src="./js/ITVSearchBasePanel.js"></script>
+    <script type="text/javascript" src="./js/ITSearchPane.js"></script>
+    <script type="text/javascript" src="./js/ITSpaceSearchPane.js"></script>
+    <script type="text/javascript" src="./js/InitPropertyDialog.js"></script>
+    <script type="text/javascript" src="./js/AfterLookAtManager.js"></script>
+    <script type="text/javascript" src="./js/VirtualDeviceManager.js"></script>
+    <script type="text/javascript" src="./js/VirtualDeviceOnManager.js"></script>
+    <script type="text/javascript" src="./js/VirtualDeviceOffManager.js"></script>
+    <script type="text/javascript" src="./js/NameplateManager.js"></script>
+    <script type="text/javascript" src="./js/MicoEnviroment.js"></script>
+    <script type="text/javascript" src="./js/DataNavManager.js"></script>
+    <script type="text/javascript" src="./js/CoolingPipelineManager.js"></script>
+    <script type="text/javascript" src="./js/navbar/ItvToggleBtn.js"></script>
+    <script type="text/javascript" src="./js/navbar/NavBarManager.js"></script>
+    <script type="text/javascript" src="./js/SearchManager/ITSearchManager.js"></script>
+
+    <script type="text/javascript" src="./js/navbar/AssetPanelMgr.js"></script>
+    <script type="text/javascript" src="./js/navbar/About.js"></script>
+    <script type="text/javascript" src="./js/navbar/WarningStatisticsMgr.js"></script>
+    <script type="text/javascript" src="./js/navbar/EquipStatisticsMgr.js"></script>
+    <script type="text/javascript" src="./js/navbar/rackClickRotateMgr.js"></script>
+    <script type="text/javascript" src="./js/navbar/loadConfig.js"></script>
+    <script type="text/javascript" src="./js/app/AppManager.js"></script>
+    <script type="text/javascript" src="./js/app/Application.js"></script>
+    <script type="text/javascript" src="./js/app/ITSearchApp.js"></script>
+    <script type="text/javascript" src="./js/app/SpaceSearchApp.js"></script>
+    <script type="text/javascript" src="./js/app/TempApp.js"></script>
+    <script type="text/javascript" src="./js/app/CoolingPipeApp.js"></script>
+    <script type="text/javascript" src="./js/app/SeatApp.js"></script>
+    <script type="text/javascript" src="./js/app/AllApps.js"></script>
+    <script type="text/javascript" src="./js/app/TempAndHumApp.js"></script>
+    <script type="text/javascript" src="./js/app/SmokeApp.js"></script>
+    <script type="text/javascript" src="./js/app/UPreOccupiedApp.js"></script>
+    <script type="text/javascript" src="./js/app/RecommendedLocationApp.js"></script>
+    <script type="text/javascript" src="./js/usearch/USearchPanel.js"></script>
+    <script type="text/javascript" src="./js/usearch/USearchManager.js"></script>
+    <script type="text/javascript" src="./js/app/USearchApp.js"></script>
+    <script type="text/javascript" src="./js/app/CustomPanelApp.js"></script>
+    <script type="text/javascript" src="./js/appManager/PanoramicManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/PanoramicMakerManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/RackPreOccupiedManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/UPreOccupiedManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/MulCameraManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/NewCameraManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/RecommendedLocationManager.js"></script>
+    <script type="text/javascript" src="./js/appManager/TobaccoRodManager.js"></script>
+    <script type="text/javascript" src="./js/toolbar/RightToolBar.js"></script>
+    <script type="text/javascript" src="./js/DCLabelManager.js"></script>
+    <script type="text/javascript" src="./js/Main.js"></script>
+    <script type="text/javascript" src="./js/airflow/AirFlow.js"></script>
+    <script type="text/javascript" src="./js/WaterLeakManager.js"></script>
+    <script type="text/javascript" src="./js/PowerRackPanel.js"></script>
+    <script type="text/javascript" src="./js/AssetOnApp.js"></script>
+    <script type="text/javascript" src="./js/DeviceOn.js"></script>
+    <script type="text/javascript" src="./js/DeviceOff.js"></script>
+    <script type="text/javascript" src="./js/RealTime.js"></script>
+    <script type="text/javascript" src="./js/link/LinkAdd.js"></script>
+    <script type="text/javascript" src="./js/VideoManager.js"></script>
+    <script type="text/javascript" src="./js/SmokeSensorManager.js"></script>
+    <script type="text/javascript" src="./js/jquery-pager.js"></script>
+    <script type="text/javascript" src="./js/realtime/RealtimeDynamicEnviroManager.js"></script>
+    <script type="text/javascript" src="./js/realtime/RealtimeAlarmManager.js"></script>
+    <script type="text/javascript" src="./js/realtime/RealtimeDataManager.js"></script>
+    <script type="text/javascript" src="./js/toolbar/EventManagerMenu.js"></script>
+    <script type="text/javascript" src="./js/monitor/Interface.js"></script>
+    <script type="text/javascript" src="./js/monitor/Monitor.js"></script>
+    <script type="text/javascript" src="./js/monitor/CameraMonitor.js"></script>
+    <script type="text/javascript" src="./js/monitor/MonitorDecorator.js"></script>
+    <script type="text/javascript" src="./js/monitor/SelectPanelDecorator.js"></script>
+    <script type="text/javascript" src="./js/monitor/RealTimeDecorator.js"></script>
+    <script type="text/javascript" src="./js/monitor/AllDataDecorator.js"></script>
+    <script type="text/javascript" src="./js/monitor/InfoDecorator.js"></script>
+    <script type="text/javascript" src="./js/monitor/InnerInfoDecorator.js"></script>
+    <!-- <script type="text/javascript" src="./js/realtime/EquipmentMonitor.js"></script> -->
+    <script type="text/javascript" src="./js/monitor/PortMonitor.js"></script>
+    <script type="text/javascript" src="./js/monitor/MonitorManager.js"></script>
+    <script type="text/javascript" src="./js/view/DefaultViewTemplate.js"></script>
+    <script type="text/javascript" src="./js/view/ViewVirtualDeviceTemplate.js"></script>
+    <script type="text/javascript" src="./js/view/ViewAllDataTemplate.js"></script>
+    <script type="text/javascript" src="./js/view/PortStatusViewTemplate.js"></script>
+    <script type="text/javascript" src="./js/view/ViewTemplateManager.js"></script>
+    <script type="text/javascript" src="./js/view/KVTextBillboardViewTemplate.js"></script>
+    <script type="text/javascript" src="./js/view/PortStatusViewTemplate.js"></script>
+    <script type="text/javascript" src="./js/view/PortUsageViewTemplate.js"></script>
+    <script type="text/javascript" src="./libs/license3D.js"></script>
+    <script type="text/javascript" src="./libs/license2D.js"></script>
+    <script type="text/javascript" src="./js/monitor.js"></script>
+    <script type="text/javascript" src="./js/weight/WeightManager.js"></script>
+    <script type="text/javascript" src="./js/post/PostManager.js"></script>
+    <script type="text/javascript" src="./js/inspection/BaseInspectionManager.js"></script>
+    <script type="text/javascript" src="./js/inspection/RoomInspectionManager.js"></script>
+    <script type="text/javascript" src="./js/inspection/RackInspectionManager.js"></script>
+    <script type="text/javascript" src="./js/AllSpaceSearch.js"></script>
+    <script type="text/javascript" src="./js/port/PortManager.js"></script>
+    <script type="text/javascript" src="./js/port/PortStatusManager.js"></script>
+    <script type="text/javascript" src="./js/animate/CameraAnimateManager.js"></script>
+    <script type="text/javascript" src="./js/picker/DataPicker.js"></script>
+    <script type="text/javascript" src="./js/animate/AlarmAnimateManager.js"></script>
+    <script type="text/javascript" src="./js/seat/SeatManager.js"></script>
+    <!-- // <script type="text/javascript" src="./plugin/DCDoubleClick.js"></script> -->
+    <script type="text/javascript" src="./js/fpsMode/FPSInteraction.js"></script>
+    <script type="text/javascript" src="./js/fpsMode/ModeChange.js"></script>
+    <script type="text/javascript" src="./js/toolbar/FPSButton.js"></script>
+    <script type="text/javascript" src="./js/toolbar/SystemSetting.js"></script>
+    <script type="text/javascript" src="./js/toolbar/ShowRackNumber.js"></script>
+    <script type="text/javascript" src="./js/HTMLUtil.js"></script>
+    <script type="text/javascript" src="./js/fs/FileView.js"></script>
+    <script type="text/javascript" src="./js/pdf/AssetPDFViewManager.js"></script>
+    <!-- // <script type="text/javascript" src="./plugin/ComboRoomFloorBeforeLookAtRoom.js"></script> -->
+    <!-- // <script type="text/javascript" src="./plugin/SimulateCamera.js"></script> -->
+    <script type="text/javascript" src="./js/earth/SphereInteraction.js"></script>
+    <script type="text/javascript" src="./js/earth/CloudManager.js"></script>
+    <script type="text/javascript" src="./js/earth/eutils.js"></script>
+    <script type="text/javascript" src="./js/earth/map.js"></script>
+    <script type="text/javascript" src="./js/earth/AreaDcBoard.js"></script>
+    <script type="text/javascript" src="./js/earth/AreaScene.js"></script>
+    <script type="text/javascript" src="./js/earth/NationalScene.js"></script>
+    <script type="text/javascript" src="./js/earth/EarthScene.js"></script>
+    <script type="text/javascript" src="./js/earth/EarthSceneView.js"></script>
+
+    <script type="text/javascript" src="./js/earth/EarthMap.js"></script>
+    <script type="text/javascript" src="./js/earth/DefaultEarthScene.js"></script>
+    <script type="text/javascript" src="./js/earth/CustomEarthSceneView.js"></script>
+    <script type="text/javascript" src="./js/earth/FlowLinkManager.js"></script>
+
+    <script type="text/javascript" src="./js/link/LinkDialog.js"></script>
+
+    <script type="text/javascript" src="./extend/loadExtend.js"></script>
+    <script type="text/javascript" src="./extend/ModelPlugin.js"></script>
+    <script type="text/javascript" src="./theme/models/models.js"></script>
+    <script type="text/javascript" src="./js/util/TextBillboardWithArrow.js"></script>
+    <script type="text/javascript" src="./js/util/TextBillboardWithArrowOld.js"></script>
+    <script type="text/javascript" src="./js/util/dealUserEventHandler.js"></script>
+    <script type="text/javascript" src="./js/util/CustomPanelDialog.js"></script>
+    <script type="text/javascript" src="./js/DeviceLabel.js"></script>
+    <script type="text/javascript" src="./js/window/win.js"></script>
+    <script type="text/javascript" src="./js/panel/BaseMgr.js"></script>
+    <script type="text/javascript" src="./js/panel/PanelMgr.js"></script>
+
+    <script type="text/javascript" src="./js/itmv/ITVCategory.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVConfigItem.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVLayer.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVConfigItemLayer.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVRelationType.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVRelation.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVDataManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVAlarm.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVAlarmManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVDefaultModelManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVVisibleManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVVirtualManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVGroupManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVHandler.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVRelationManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVOutLayouter.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVManager.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVPanel.js"></script>
+    <script type="text/javascript" src="./js/itmv/ITVPanelMgr.js"></script>
+    
+    <!-- <script type="text/javascript" src="./component/itvDcTotal.js"></script> -->
+    <!-- <script type="text/javascript" src="./component/itvList.js"></script> -->
+    <!-- <script type="text/javascript" src="./component/itvMark.js"></script> -->
+    <!-- <script type="text/javascript" src="./component/itvRackTotal.js"></script> -->
+    <!-- <script type="text/javascript" src="./component/overview.js"></script> -->
+    <!-- <script type="text/javascript" src="./component/nav.js"></script>
+    <script type="text/javascript" src="./component/warningPanel.js"></script>
+    <script type="text/javascript" src="./component/assetInfo.js"></script> -->
+
+    <!-- <script type="text/javascript" src="./component/alarmStyle.js"></script> -->
+    <script>
+        if (window.module) module = window.module;
+    </script>
+</head>
+
+<body style="overflow: hidden">
+    <section id="container">
+        <div class="itv-header">
+            <!--<span>3D资产管理系统</span>-->
+            <div class="itv-nav-btn"></div>
+            <a class="itv-logo" href="#"></a>
+        </div>
+        <div class="itv-content">
+            <div class="itv-nav-content">
+                <ul class="itv-navbar-nav">
+                </ul>
+                <div class="itv-navbar-nav-right-border"></div>
+            </div>
+            <div class="itv-navbar-nav-contral-border"></div>
+            <div id="itv-search-panel" class="itv-search-panel">
+                <div>
+
+                </div>
+                <!-- <div class="itv-sidebar-tool itv-shadow">
+                    <a>
+                        <i class="itv-toggle-btn itv-toggle-btn-right"></i>
+                    </a>
+                </div> -->
+            </div>
+
+            <div class="itv-center-right">
+                <div id='itv-main' class="itv-main">
+                    <span style="position:absolute;font-family:DigifaceWide;font-size:1px;margin-left:-100px;">itv</span>
+                    <!-- 引入这种字体，否则canvas第一次绘制时还是默认的 -->
+                </div>
+            </div>
+        </div>
+
+        <!-- spinner start-->
+        <div id="spinner" class="spinner">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+        </div>
+        <!-- spinner end-->
+
+        <!-- <div id="spinner" class="spinner">
+            <div class="spinner-container container1">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container2">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+            <div class="spinner-container container3">
+                <div class="circle1"></div>
+                <div class="circle2"></div>
+                <div class="circle3"></div>
+                <div class="circle4"></div>
+            </div>
+        </div> -->
+
+        <!--alarmConfigDialog begin-->
+        <!--
+    <div id="alarmConfigDialog" style="display: none">
+        <div class="temperatureBox">
+            <div><h5 style="font-weight: bold">温度告警：</h5></div>
+            <div style="height: 30px"><span>温度值低于</span>
+                <span><input class="lowValue input-min"
+                             style="width: 40px;height: 22px;color: #ffab00;border-width: 1px;" value="2"></span>
+                <span>℃，或高于</span>
+                <span><input class="highValue input-min"
+                             style="width: 40px;height: 22px;color: #ffab00;border-width: 1px;" value="3"></span>
+                <span>℃时发生告警</span></div>
+            <div class="temperatureSlider" style="margin-bottom: 20px"></div>
+        </div>
+        <div class="humidityBox">
+            <div><h5 style="font-weight: bold">湿度告警：</h5></div>
+            <div style="height: 30px"><span>湿度值低于</span>
+                <span><input class="lowValue input-min"
+                             style="width: 40px;height: 22px;color: #ffab00;border-width: 1px;" value="2"></span>
+                <span>%，或高于</span>
+                <span><input class="highValue input-min"
+                             style="width: 40px;height: 22px;color: #ffab00;border-width: 1px;" value="2"></span>
+                <span>%时发生告警</span></div>
+            <div class="humiditySlider" style="margin-bottom: 5px"></div>
+        </div>
+    </div>
+    -->
+        <!--alarmConfigDialog end-->
+
+        <!--alarmListDialog begin-->
+        <div id="alarmListDialog" class="alarmListDialog init" style="display:none;overflow:hidden;">
+            <div class="searchBox">
+                <table>
+                    <tr>
+                        <td class="searchItems mytd asset-number">
+                            <span class="name">{{alarm_History_Asset_Number}}:</span>
+                            <br class="searchItems-br">
+                            <span>
+                                <input class="asset_id w130" name="asset_id">
+                                </input>
+                            </span>
+                        </td>
+                        <td class="searchItems mytd asset-name">
+                            <span class="name">{{alarm_History_Asset_Name}}:</span>
+                            <br class="searchItems-br">
+                            <span>
+                                <input class="asset_name w130" name="asset_name">
+                                </input>
+                            </span>
+                        </td>
+
+                        <td class="searchItems">
+                            <span class="name searchItems-span">{{alarm_History_Asset_Type}}:</span>
+                            <br class="searchItems-br">
+                            <span>
+                                <div id="modal_asset_type_id" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <select class="asset_type_id" name="asset_type_id">
+                                        <option selected value="">{{alarm_History_All}}</option>
+                                    </select>
+                                </div>
+                            </span>
+                        </td>
+                        <td class="searchItems">
+                            <span class="name searchItems-span">{{alarm_History_Alarm_Type}}:</span>
+                            <br class="searchItems-br">
+                            <span>
+                                <div id="modal_alarm_type_id" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <select class="alarm_type_id" name="alarm_type_id">
+                                        <option value=""> - {{alarm_History_All}} -</option>
+                                    </select>
+                                </div>
+                            </span>
+                        </td>
+                        <td class="searchItems">
+                            <span class="name searchItems-span">{{alarm_History_Alarm_Level}}:</span>
+                            <br class="searchItems-br">
+                            <span>
+                                <div id="modal_alarm_level" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                    <select name="alarm_level" class="alarm_level js-example-responsive">
+                                        <option value=""> - {{alarm_History_All}} -</option>
+                                    </select>
+                                </div>
+                            </span>
+                        </td>
+                        <td class="searchItems">
+                            <span class="name searchItems-span">{{alarm_History_Alarm_Status}}:</span>
+                            <br class="searchItems-br">
+                            <div id="modal_alarmStatus" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+                                <select name="alarmStatus" class="alarmStatus">
+                                    <option value=""> - {{alarm_History_All}} -</option>
+                                    <option value="confirmed"> - {{alarm_History_Confirmed}} -</option>
+                                    <option value="unconfirmed"> - {{alarm_History_Unconfirmed}} -</option>
+                                    <!--<option value="new">&nbsp&nbsp&nbsp{{alarm_History_Alarm}}</option>-->
+                                    <!--<option value="clear">&nbsp&nbsp&nbsp{{alarm_History_Restore}}</option>-->
+                                    <!--<optgroup label="{{alarm_History_Unconfirmed}}">-->
+                                    <!--<option value="new-unconfirmed">{{alarm_History_Unconfirmed_Alarm}}</option>-->
+                                    <!--<option value="clear-unconfirmed">{{alarm_History_Unconfirmed_Recovery}}</option>-->
+                                    <!--</optgroup>-->
+                                    <!--<optgroup label="{{alarm_History_Confirmed}}">-->
+                                    <!--<option value="new-confirmed">{{alarm_History_Confirmed_Alarms}}</option>-->
+                                    <!--<option value="clear-confirmed">{{alarm_History_Confirmed_Recovery}}</option>-->
+                                    <!--</optgroup>-->
+                                </select>
+                            </div>
+                        </td>
+                        <td class="searchItems mytd alarm-time">
+                            <span class="name">{{alarm_History_Alarm_Time}}:</span>
+                            <br class="searchItems-br">
+                            <input class="w150 date alarm_time_min" name="alarm_time_min" placeholder="yyyy-mm-dd hh:ii:ss" value="" /> -
+                            <input class="w150 date alarm_time_max" name="alarm_time_max" placeholder="yyyy-mm-dd hh:ii:ss" value="" />
+                        </td>
+                        <td class="searchItems mytd">
+                            <br class="searchItems-br">
+                            <span class="searchButtonBox fs13">
+                                <button class="searchButton bt-btn">{{Query}}</button>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="alarmListBox">
+            </div>
+            <div class="pagerBox"></div>
+        </div>
+        <!--alarmListDialog end-->
+
+        <!--alarmChartDialog begin-->
+        <div id="chartBox" class="chartBox" style="display: none">
+            <div>
+                <div id="alarmCountGroupByDayBox" class="" style="width: 800px;height: 250px;border-style: solid;border-width: 0px;margin: auto;"></div>
+            </div>
+            <div style="margin: auto;width: 800px;">
+
+                <div id="alarmCountGroupByTypeBox" class="fl" style="width: 400px;height: 300px;border-style: solid;border-width: 0px;"></div>
+                <div id="alarmCountGroupByLevelBox" class="fl" style="width: 400px;height: 300px;border-style: solid;border-width: 0px;"></div>
+            </div>
+        </div>
+        <!--alarmChartDialog end-->
+        <!--alarmOperationDialog begin-->
+        <div id="alarmOperationDialog" style="display:none;width: 100%;">
+            <input type="hidden" class="alarmId">
+            <input type="hidden" class="alarmRtId">
+            <input type="hidden" class="operation">
+            <input type="hidden" class="target">
+            <input type="hidden" class="alarmTypeId">
+            <div>
+                <div style="width: 100%;margin-top: 10px" class="desc"></div>
+                <div>
+                    <textarea style="width: 100%;height: 80px;margin-top: 10px" class="notice" placeholder="确认告警内容"></textarea>
+                </div>
+            </div>
+        </div>
+        <!--alarmOperationDialog end-->
+        <!--
+    <div id="serverPanel" class="serverPanel">
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">基本信息</a></li>
+                <li><a href="#tabs-2">面板信息</a></li>
+                <li><a href="#tabs-3">负载状态</a></li>
+                <li><a href="#tabs-4">磁盘信息</a></li>
+                <li><a href="#tabs-5">进程列表</a></li>
+                <li><a href="#tabs-6">虚拟拓扑</a></li>
+                <li><a href="#tabs-7">端口信息</a></li>
+                <li><a href="#tabs-8">告警信息</a></li>
+            </ul>
+            <div id="tabs-1" class="baseInfo">
+                <div class="baseInfoTab">
+                </div>
+            </div>
+
+            <div id="tabs-2" class="panel2DInfo">
+                <div>
+                    <div class="panel panelInfo">
+                        <div class="header">面板信息</div>
+                        <div class="content">
+                            <div class="panel2dBox">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="tabs-3" class="loadPanel">
+                <div>
+                    <div class="panel loads">
+                        <div class="header">CPU / MEM负载状态</div>
+                        <div class="content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <div class="cpuLoadBox loadBox"></div>
+                                    </td>
+                                    <td>
+                                        <div class="memLoadBox loadBox"></div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="panel cpus">
+                        <div class="header">单个负载状态</div>
+                        <div class="content">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-4" class="storagePanel">
+                <div>
+                    <div class="panel storage">
+                        <div class="header">磁盘信息</div>
+                        <div class="content">
+                            <div class="storageBarBox">
+
+                            </div>
+                            <div class="storagePieBox">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-5" class="processPanel">
+                <div>
+                    <div class="panel process">
+                        <div class="header">进程列表</div>
+                        <div class="content">
+                            <div class="processListBox">
+                                <table align="center">
+                                    <thead>
+                                    <tr>
+                                        <td class="pid">PID</td>
+                                        <td class="name">名称</td>
+                                        <td class="path">路径</td>
+                                        <td class="params">参数</td>
+                                        <td class="cpu">CPU</td>
+                                        <td class="mem">MEM</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="pid hrSWRunIndex"></td>
+                                        <td class="name hrSWRunName"></td>
+                                        <td class="path hrSWRunPath"></td>
+                                        <td class="params hrSWRunParameters"></td>
+                                        <td class="cpu hrSWRunPerfCPUPercent"></td>
+                                        <td class="mem hrSWRunPerfMemPercent"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-6" class="topologyPanel">
+                <div>
+                    <div class="panel topology">
+                        <div class="header">虚拟拓扑</div>
+                        <div class="content">
+                            <div class="topo">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-7" class="interfacesPanel">
+                <div>
+                    <div class="panel interface">
+                        <div class="header">端口信息</div>
+                        <div class="content">
+                            <div class="interfacesBox">
+                                <table align="center">
+                                    <thead>
+                                    <tr>
+                                        <td class="ifIndex">索引</td>
+                                        <td class="ifDescr">描述</td>
+                                        <td class="ifType">类型</td>
+                                        <td class="ifMtu">MTU</td>
+                                        <td class="ifSpeed">速率(Mb/s)</td>
+                                        <td class="ifPhysAddress">物理地址</td>
+                                        <td class="ifStatus">状态</td>
+                                        <td class="ifOctetsSpeed">端口速率(KB/s)</td>
+                                        <td class="ifSpeedUtilization">带宽利用率(%)</td>
+                                        <td class="ifDiscardsRate">丢包率(B/s)</td>
+                                        <td class="ifErrorsRate">错包率(B/s)</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td class="ifIndex"></td>
+                                        <td class="ifDescr"></td>
+                                        <td class="ifType"></td>
+                                        <td class="ifMtu"></td>
+                                        <td class="ifSpeed"></td>
+                                        <td class="ifPhysAddress"></td>
+                                        <td class="ifStatus"></td>
+                                        <td class="ifOctetsSpeed"></td>
+                                        <td class="ifSpeedUtilization"></td>
+                                        <td class="ifDiscardsRate"></td>
+                                        <td class="ifErrorsRate"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-8" class="alarmPanel">
+                <div>
+                    <div class="panel alarm">
+                        <div class="header">告警信息</div>
+                        <div class="content">
+                            <div class="alarmBox">
+                                <table align="center">
+                                    <thead>
+                                    <tr>
+                                        <td class="dataId">编号</td>
+                                        <td class="name">名称</td>
+                                        <td class="dataTypeId">类型</td>
+                                        <td class="alarmTypeId">告警类型</td>
+                                        <td class="dateTime">开始时刻</td>
+                                        <td class="status">告警状态</td>
+                                        <td class="level">告警级别</td>
+                                        <td class="description">告警描述</td>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   -->
+        <div class="cameraHelp cameraHelp-zh">
+            <div class="title">
+                <h4>&nbsp;&nbsp;&nbsp;&nbsp;镜头动画由一系列的镜头动作组成，如镜头在不同位置之间移动，查看资产信息等。用户可以通过自定义镜头动画，添加一系列的镜头动作，来实现在3D机房中的动画巡航。</h4>
+            </div>
+            <br />
+            <div class="content">
+                <div>
+                    <p style="width:95%; margin: 0 auto;">&nbsp;&nbsp;&nbsp;&nbsp;在系统界面右上角点击“镜头动画管理”图标，菜单上显示当前场景已有的动画列表。点击“更多”，打开镜头动画管理界面，显示系统所有的动画列表。通过界面左侧功能菜单的“巡航”按钮，也可以打开镜头动画的管理界面。</p>
+                </div>
+                <br />
+                <div>
+                    <div>
+                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;镜头动作添加和管理说明： </h4>
+                    </div>
+                    <ul>
+                        <li>点击“添加”按钮，将镜头的当前位置信息保存到记录中，作为该记录中的镜头位置和镜头目标。</li>
+                        <li>进行界面操作时，可以点击“隐藏”来暂时隐藏管理界面，位置调整完毕后，再点击“镜头动画管理”按钮，调出管理界面。</li>
+                        <li>可以设置镜头的“等待时长”、"播放时长"和“保持时长”来控制播放时间，播放时的字幕内容，点击数据编号，弹出资产选择框，选择镜头动画对应查看的资产。</li>
+                        <li>点击“保存”按钮，保存新增动画或编辑动画的结果。</li>
+                        <li>当一个位置添加完成后，您可以点击“预览”来预览该镜头；点击“添加”，继续添加下一个镜头位置，所有的镜头位置将会组成这个镜头的动画。</li>
+                    </ul>
+                </div>
+                <br />
+                <b>&nbsp;&nbsp;&nbsp;&nbsp;更加详细的操作，可参考本软件的操作手册。</b>
+            </div>
+        </div>
+        <div class="cameraHelp cameraHelp-en">
+            <br />
+            <div class="content">
+                <p style="width:95%; margin: 0 auto;">&nbsp;&nbsp;The Lens Animation is made up of a series of lenses movement, such as lens moving between different positions, checking asset details, etc. User can define the lens animations by adding a series of lens movement, to simulate
+                    DC patrolling in the 3D scene. Please refer to the User Manual for detail steps.</p>
+            </div>
+        </div>
+    </section>
+    <div id="video_container" class="row" style="display:none">
+        <div id="videoList" class="col-md-3" style="height : 500px;overflow:scroll">
+            <ul class="list-group" id="realtime_video">{{video_Container_Live_Video}}
+            </ul>
+            <ul class="list-group" id="history_video">{{video_Container_History_Video}}
+            </ul>
+        </div>
+        <div id="video_container_2" class="col-md-9">
+            <div id="video"></div>
+        </div>
+    </div>
+
+    <div class='view-control'></div>
+    <div class='view-control-left'>
+        <div class='new-apps-box'></div>
+    </div>
+    <div class="deviceBtn"></div>
+    <div class="dialog-box"></div>
+    <div class="custom-panel-box"></div>
+    <div class="preoccupied-box"></div>
+    <div class="panoramic-box">
+        <div id="panoramic"></div>
+        <div class="panoramic-map"></div>
+    </div>
+    <div class="floor-panel-box"></div>
+</body>
+<script>
+    window.onload = function() {
+        setTimeout(() => {
+            load();
+        }, 0);
+    }
+</script>
+
+</html>

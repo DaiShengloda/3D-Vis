@@ -1,0 +1,82 @@
+
+// 背景颜色
+$default-bg-color: rgba(53,53,53,0.95);
+$default-title-bg-color: #2a2a2a;
+$default-3d-billboard-bg-color: #23888F;
+$default-highlight-bg-color: #00ffff;//鼠标滑过时高亮的背景色
+
+
+// 字体颜色
+$default-font-color: #bcbcbc;
+$default-highlight-color: #d6d6d6;//高亮的字体颜色
+$default-placeholder-color:#717171;
+$default-highlight2-color:#ffffff;//主要用于按钮和对话框标题
+
+// 默认字体
+$default-font-family: "NotoSansHans", Verdana, Helvetica, Arial, 'Open Sans', sans-serif; 
+
+// 默认字体大小
+$default-font-size: 14px;
+$default-title-font-size:16px;
+
+// 组件-按钮
+$comp-btn-bg-color: #46606b;//推荐使用的可以点击按钮的背景色
+$comp-btn-second-bg-color: #6a6a6a;//不推荐使用的不可以点击按钮的背景色
+$comp-btn-color: $default-highlight2-color;
+$comp-btn-border-radius: 3px;
+$comp-btn-border-hover-color: $default-highlight-bg-color;
+$comp-btn-border-hover-bg-color: #46606b;
+
+// 组件-dialog
+$comp-dialog-title-color: $default-highlight2-color;
+
+// 组件-输入框
+$comp-input-border-color:#2d2d2d; 
+$comp-input-bg-color:#343434; 
+$comp-input-color:$default-font-color;
+$comp-input-border-width: 2px;
+// 组件-tab
+
+// 组件内分隔线
+$default-inner-separater-color: #2d2d2d; 
+$default-inner-separater-height: 1px;
+$default-inner-separater-width: 270px;
+// 组件外分隔线
+$default-outter-separater-color: #23888f; 
+// 组件箭头
+$default-arrow: #23888f;
+// 组件关闭按钮
+$default-close: #23888f;
+
+//组件select
+$comp-input-select-bg-color: #343434;
+$comp-input-select-border-color: #2d2d2d;
+$comp-input-select-border-width: 2px;
+$comp-input-select-focus-bg-color: #47626d;
+$comp-input-select-focus-color:$default-highlight2-color;
+$comp-input-select-font-size: $default-title-font-size;
+$comp-input-select-color: $default-highlight-color;
+
+//组件内btn 或者input 的默认高度
+$comp-input-height: 28px;
+
+$comp-inner-separater-color: #2a2a2a; 
+$comp-inner-separater-height: 1px;
+$comp-inner-separater-width: 270px;
+
+
+$comp-input-select-scroll-bg-color: #555555;
+
+//toolbar的背景色
+
+$comp-toolbar-bg-deep-color: rgba(53,53,53,0.9);
+$comp-toolbar-bg-middle-color: rgba(53,53,53,0.6);
+$comp-toolbar-bg-shadow-color: rgba(53,53,53,0.3);
+
+//navbar 
+$comp-nav-color: $default-highlight-color;
+$comp-nav-menu-color: #9d9d9d;
+$comp-nav-select-color: $default-highlight-bg-color;
+
+
+

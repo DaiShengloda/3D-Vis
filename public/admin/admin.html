@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>机房后台管理</title>
+  <link rel="stylesheet" type="text/css" href="../css/easyui-bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../css/icon.css">
+  <link rel="stylesheet" type="text/css" href="../css/demo.css">
+
+    <script src="../libs/jquery.js"></script>
+    <script src="../libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../libs/t.js"></script>
+    <script type="text/javascript" src="../libs/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="../libs/moment.min.js"></script>
+    <script type="text/javascript" src="../libs/twaver.js"></script>
+    <script type="text/javascript" src="../libs/twaver-make.js"></script>
+
+  <script type="text/javascript" src="./js/util.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+  <script type="text/javascript" src="./js/Page.js"></script>
+  <script type="text/javascript" src="./js/tabManager.js"></script>
+  <script type="text/javascript" src="./js/AddDataInfoPage.js"></script>
+  <script type="text/javascript" src="./js/UpdateDataInfoPage.js"></script>
+  <script type="text/javascript" src="./js/ListPage.js"></script>
+  <script type="text/javascript" src="./js/UpdatePage.js"></script>
+  <script type="text/javascript" src="./js/AddPage.js"></script>
+  <script type="text/javascript" src="./js/CustomField.js"></script>
+
+
+</head>
+<body class="easyui-layout" onload = "load()">
+    <div class="group wrap header" data-options="region:'north',split:false,border:0">
+      <div class="content">
+        <div class="navigation-toggle" data-tools="navigation-toggle" data-target="#navbar-1" style="display: none;">
+          <span>机房后台管理</span>
+        </div>
+        <div id="elogo" class="navbar navbar-left">
+          <ul>
+            <li>
+              <a id="logo" href="/index.php"><img src="../css/images/logo.svg" alt="机房后台管理"></a>
+            </li>
+          </ul>
+        </div>
+        <div id="navbar-1" class="navbar navbar-right">
+          <ul>
+            <li><a href="./datatype.html">资产模型</a></li>
+            <li><a href="./data.html">资产</a></li>
+            <li><a href="#">场景</a></li>
+            <li><a href="/">列表</a></li>
+          </ul>
+        </div>
+        <div style="clear:both"></div>
+      </div>
+    </div>
+    <div data-options="region:'south',split:false" style="height:30px;"></div>
+    <div data-options="region:'west',split:true" title="模块" style="width:200px; padding:10px" id = "treeDiv">
+        <ul class="easyui-tree" id="mainMenu"></ul>
+    </div>
+    <div data-options="region:'center'">
+     <div class="easyui-tabs" style="width:100%;height:100%" id = "tab">
+    <div title="系统介绍" style="padding:10px;" >
+      <p style="font-size:14px">系统介绍</p>
+      <ul>
+        <li>3D资产管理系统</li>
+        <li>系统介绍</li>
+      </ul>
+    </div>
+    </div>
+</body>
+</html>

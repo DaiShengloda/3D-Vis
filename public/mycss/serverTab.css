@@ -1,0 +1,161 @@
+#serverTab {
+  padding: 0;
+  color: #d6d6d6;
+  border: 0 none;
+  background: none;
+  margin: 10px 20px 20px;
+  overflow: hidden;
+}
+
+#serverTab .ui-tabs {
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  font-size: 14px;
+  background: none;
+}
+
+#serverTab .ui-tabs .ui-tabs-nav {
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  background: none;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#serverTab .ui-tabs .ui-tabs-nav li {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  border-bottom: 2px solid transparent;
+  color: #717171;
+  background: none;
+  margin-right: 20px;
+  user-select: none;
+}
+
+#serverTab .ui-tabs .ui-tabs-nav li.ui-state-hover, #serverTab .ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+#serverTab .ui-tabs .ui-tabs-nav li.ui-state-hover a, #serverTab .ui-tabs .ui-tabs-nav li.ui-tabs-active a {
+  color: #00ffff;
+}
+
+#serverTab .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+  padding: 5px 0;
+  color: #bcbcbc;
+}
+
+#serverTab .ui-tabs .ui-tabs-panel {
+  border-radius: 0;
+  padding: 0;
+}
+
+#realTimeContent {
+  padding: 0;
+  color: #d6d6d6;
+  border: 0 none;
+  background: none;
+  margin: 5px 20px;
+  overflow: hidden;
+}
+
+#realTimeContent > div {
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  font-size: 14px;
+  background: none;
+}
+
+#realTimeContent > div .nav-tabs {
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  background: none;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#realTimeContent > div .nav-tabs li {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  border: 0 none;
+  border-bottom: 2px solid transparent;
+  color: #d6d6d6;
+  background: none;
+  margin-right: 20px;
+  user-select: none;
+}
+
+#realTimeContent > div .nav-tabs li:hover, #realTimeContent > div .nav-tabs li.active {
+  color: #00ffff;
+  border-bottom: 2px solid #00ffff;
+}
+
+#realTimeContent > div .nav-tabs li:hover a, #realTimeContent > div .nav-tabs li.active a {
+  color: #00ffff;
+  border: none;
+}
+
+#realTimeContent > div .nav-tabs li a {
+  padding: 5px 0;
+  color: #d6d6d6;
+  border: none;
+}
+
+#realTimeContent > div .tab-content .realtimeTab form > .form-group-no-margin {
+  width: 50%;
+  margin-bottom: 15px;
+}
+
+#realTimeContent > div .tab-content .realtimeTab form > .form-group-no-margin .col-sm-5 {
+  color: #bcbcbc;
+}
+
+#realTimeContent > div .tab-content .realtimeTab form > .form-group-no-margin .col-sm-7 {
+  color: #d6d6d6;
+}
+
+@media (min-width: 768px) {
+  #realTimeContent > div .tab-content .realtimeTab form > .form-group-no-margin .col-sm-5 {
+    width: 51.66666667%;
+  }
+  #realTimeContent > div .tab-content .realtimeTab form > .form-group-no-margin .col-sm-7 {
+    width: 48.33333333%;
+  }
+}
+
+#realTimeContent > div .tab-content .realtimeTab form > .form-group-no-margin label {
+  font-size: 14px;
+}
+
+#realTimeContent > div .tab-content .realtimeTab form .realtimeArr {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  #realTimeContent > div .tab-content .realtimeTab form .realtimeArr .form-group-no-margin .col-sm-5 {
+    width: 47%;
+  }
+  #realTimeContent > div .tab-content .realtimeTab form .realtimeArr .form-group-no-margin .col-sm-7 {
+    width: 40%;
+  }
+}
+
+#realTimeContent > div .tab-content .realtimeTab form .realtimeArr .form-group-no-margin label {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1440px) {
+  #serverTab {
+    margin: 5px 15px 10px;
+  }
+}

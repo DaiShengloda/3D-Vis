@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <title>清空楼层数据实施工具</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="css/bootstrap-table.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tableExport.js"></script>
+    <script src="js/jquery.base64.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table-export.js"></script>
+    <link rel="stylesheet" href="sweetalert.css"> 
+    <script src="sweetalert.min.js"></script>
+    <link href="http://cdn.bootcss.com/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/bootstrap3-dialog/1.35.4/css/bootstrap-dialog.min.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap3-dialog/1.35.4/js/bootstrap-dialog.min.js"></script>
+    <script>
+        
+        var floor;
+        var parent_id;
+        var $el;
+        var floorDataParams = function (id){
+            return  {
+                parentId:parent_id
+            }
+        }
+        $(function(){
+            var ceche = window.localStorage;
+            $('#btn').attr("disabled",true);  
+            $('#floor').on('click-row.bs.table',function(e, row, element){
+                 $('.div-b').css("display", "block");
+                 $el = $(element);
+                 parent_id = row.id;
+                 floor = row.id;
+            $('#nextTable').bootstrapTable('refresh');             
+        })
+        $('#nextTable').on('check.bs.table',function(row){
+                 $('#btn').attr("disabled",false);  
+                 $('#btn').css('background-color','green');           
+            })
+        $('#nextTable').on('check-all.bs.table',function(row){
+                 $('#btn').attr("disabled",false); 
+                 $('#btn').css('background-color','green');              
+            })
+
+        $('#nextTable').on('uncheck.bs.table',function(row){
+                 $('#btn').attr("disabled",true);             
+            })
+        $('#nextTable').on('uncheck-all.bs.table',function(row){
+                 $('#btn').attr("disabled",true);             
+            })
+
+        })
+
+        function getIdSelections() {
+            var params = [];
+             $.map($('#nextTable').bootstrapTable('getSelections'), function(row) {
+                params.push(row.category);
+            });
+
+            BootstrapDialog.confirm('清空选中及所有子孙分类数据?', function(result){
+            if(result) {
+                $.ajax({
+	            type: "GET",
+	            cache:false,
+	            dataType: "json",
+	            url:'/clear/data/clearData',
+	            data: {'category':params,'floor':floor},
+                success:function(data){
+                    $('#nextTable').bootstrapTable('refresh');
+                    $('#btn').attr("disabled",true);  
+                    if(params.length === 1){
+                        $el.css("background-color","orange");
+                    }else{
+                        $el.css("background-color","red");
+                    }
+                    BootstrapDialog.show({
+                      message: '已删除' + data[0].affectedRows + '条'
+                     });
+                },
+                error:function(){
+                    $('#nextTable').bootstrapTable('refresh');
+                    $('#btn').attr("disabled",true);  
+                    BootstrapDialog.show({
+                     message: '删除失败，请尝试重新删除'
+                 });
+                }
+	    	})
+            }else {
+                BootstrapDialog.show({
+                  message: '已取消!'
+                 });
+            }
+        });
+}
+    function floorParams(){
+            return result = {
+                categoryId:'floor'
+            }
+        }  
+    </script>
+
+    <style>
+        body{ 
+            margin: 0;
+            padding: 0;      
+        }
+       .div-a{ float:left;width:30%;
+       } 
+       .div-b{ float:left;width:49%;
+       margin-left: 100px;
+       display: none
+       }
+       .div-b .btn{
+           margin-left: 90%;
+           margin-top: 10px;
+           width: 100px;
+           background-color: #FFDEAD
+       }
+       .div-b .btn:hover{
+           background-color: red;
+           font-size: 15px;
+           color: wheat
+       }
+    </style>
+</head>
+
+<body>
+    <h1>清空楼层数据实施工具</h1>
+    <div class="div-a">
+    <h2>楼层列表</h2>
+    <table id="floor"
+           data-toggle="table"
+           data-query-params= 'floorParams'
+           data-url="/clear/data/categoryFloor"
+           >
+        <thead>
+        <tr>
+            <th data-field="id" >编号</th>
+            <th data-field="name">名称</th>
+        </tr>
+        </thead>
+        </table>
+    </div>
+    
+    <div class="div-b">
+        <h2>楼层下一级数据分类</h2>
+        <table id="nextTable"
+           data-toggle="table"
+           data-url="/clear/data/FloorData"
+           data-query-params= 'floorDataParams'
+           data-cache='false'
+        >
+        <thead >
+        <tr>
+            <th data-field="state" data-checkbox="true"></th>
+            <th data-field="description">名称</th>
+            <th data-field="count" >数量</th>
+            <th data-field="category">分类</th>
+        </tr>
+        </thead>
+        </table>
+        <button id='btn' class='btn'  onclick="getIdSelections();">清空</button>
+    </div>
+</body>
+</html>

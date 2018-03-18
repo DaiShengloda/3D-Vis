@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>机房后台管理</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style-end.css">
+    <link rel="stylesheet" href="../css/bootstrapValidator.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-treeview.min.css">
+    <link rel="stylesheet" href="../css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="../css/select.bootstrap.min.css">
+    <link rel="stylesheet" href="../css/jsoneditor.min.css">
+    <link rel="stylesheet" href="../css/twaver-doodle.css">
+    <link rel="stylesheet" href="../css/jstree.css">
+    <link rel="stylesheet" href="../css/systemSetting.css">
+
+    <script type="text/javascript" src="../js/config.js"></script>
+
+    <script type="text/javascript" src="../libs/jquery.js"></script>
+    <script type="text/javascript" src="../libs/jquery-ui.min.js"></script>
+    <script src="../libs/esprima.js"></script>
+    <script type="text/javascript" src="../libs/jquery.easyui.min.js"></script>
+    <!--<script type="text/javascript" src="../libs/jquery.ba-resize.js"></script>-->
+    <script type="text/javascript" src="../libs/t.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="../libs/moment.min.js"></script>
+    <script type="text/javascript" src="../libs/BootstrapTab.js"></script>
+    <script type="text/javascript" src="../libs/jsoneditor-minimalist.min.js"></script>
+    <script type="text/javascript" src="../libs/layer.min.js"></script>
+    <script type="text/javascript" src="../libs/FileSaver.js"></script>
+    <script type="text/javascript" src="../libs/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../libs/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap-treeview.min.js"></script>
+    <script type="text/javascript" src="../libs/anchor.min.js"></script>
+    <script type="text/javascript" src="../libs/bsPicker.js"></script>
+    <script type="text/javascript" src="../libs/xlsx.core.min.js"></script>
+    <script type="text/javascript" src="../libs/Blob.js"></script>
+    <script type="text/javascript" src="../libs/dxf.js"></script>
+    <script type="text/javascript" src="../libs/twaver.js"></script>
+    <script type="text/javascript" src="../libs/twaver-make.js"></script>
+    <script type="text/javascript" src="../libs/twaver-doodle.js"></script>
+    <script type="text/javascript" src="../libs/itv-all-min.js"></script>
+
+    <script type="text/javascript" src="../libs/License2D.js"></script>
+    <script type="text/javascript" src="../libs/License3D.js"></script>
+
+    <script type="text/javascript" src="./js/util.js"></script>
+    <script type="text/javascript" src="./js/validator.js"></script>
+    <script type="text/javascript" src="./js/WaterLeakEditor.js"></script>
+    <script type="text/javascript" src="./js/HeatMapEditor.js"></script>
+    <script type="text/javascript" src="./js/InspectionEditor.js"></script>
+    <script type="text/javascript" src="./js/ConfigApp.js"></script>
+    <script type="text/javascript" src="./js/GeneralConfigApp.js"></script>
+    <script type="text/javascript" src="./js/TemperatureAndHumidityConfigPanel.js"></script>
+    <script type="text/javascript" src="./js/UColorSettingPanel.js"></script>
+    <script type="text/javascript" src="./js/AssetManageImg.js"></script>
+    <script type="text/javascript" src="./js/AssetFilter.js"></script>
+    <script type="text/javascript" src="./js/UnVirtualCategoryForFocus.js"></script>
+    <script type="text/javascript" src="./js/BackgroundColor.js"></script>
+    <script type="text/javascript" src="./js/AddEarthTitle.js"></script>
+    <script type="text/javascript" src="./js/AssetStatistics.js"></script>
+    <script type="text/javascript" src="./js/TempField.js"></script>
+    <script type="text/javascript" src="./js/SytemSettingPage.js"></script>
+    <!--
+    <script type="text/javascript" src="../js/ServerUtil.js"></script>
+    -->
+    <script type="text/javascript" src="./js/CustomField.js"></script>
+
+    <script type="text/javascript" src="./js/tree.js"></script>
+    <script type="text/javascript" src="./js/module.js"></script>
+    <script type="text/javascript" src="./js/dataTable.js"></script>
+    <script type="text/javascript" src="./js/RoleDataTable.js"></script>
+    <script type="text/javascript" src="./js/PanoramicDataTable.js"></script>
+    <script type="text/javascript" src="./js/tabPanel.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript" src="./js/UpdateCutomTablePanel.js"></script>
+    <script type="text/javascript" src="./js/Page.js"></script>
+    <script type="text/javascript" src="./js/ListPage.js"></script>
+    <script type="text/javascript" src="./js/ImportExcel.js"></script>
+    <script type="text/javascript" src="./js/ImportEquipmentPage.js"></script>
+    <script type="text/javascript" src="./js/ImportRackPage.js"></script>
+    <script type="text/javascript" src="./js/ImportLinkPage.js"></script>
+    <script type="text/javascript" src="./js/ImportPortPage.js"></script>
+    <script type="text/javascript" src="./js/ImportModels.js"></script>
+    <script type="text/javascript" src="./js/ImportExtFieldPage.js"></script>
+    <script type="text/javascript" src="./js/RolePermissionPanel.js"></script>
+    <script type="text/javascript" src="./js/RoleAssetPanel.js"></script>
+    <script type="text/javascript" src="./js/UserRolePanel.js"></script>
+    <script type="text/javascript" src="./js/CameraGroupAssetPanel.js"></script>
+    <script type="text/javascript" src="./js/PanoramicDataPanel.js"></script>
+    <script type="text/javascript" src="./js/UploadPDFPage.js"></script>
+    <script type="text/javascript" src="./js/batchUpdateDataIdPanel.js"></script>
+    <script type="text/javascript" src="./js/SaveSceneDialog.js"></script>
+    <script type="text/javascript" src="./js/guidePanel.js"></script>
+    <script type="text/javascript" src="./js/WeixinPanel.js"></script>
+    <script type="text/javascript" src="./js/earthSettingPanel.js"></script>
+    <script type="text/javascript" src="./js/earthSettingSubPanel.js"></script>
+    <script type="text/javascript" src="./js/parkSettingPanel.js"></script>
+    <script src="./js/buildingSettingPanel.js"></script>
+    <script type="text/javascript" src="./js/FloorSettingPanel.js"></script>
+    <script type="text/javascript" src="./js/SceneSettingPanel.js"></script>
+
+    <!--负载规则设置移动到后端-->
+    <script type="text/javascript" src="./js/warningRuleConfig.js"></script>
+    <script type="text/javascript" src="./js/loadConfig.js"></script>
+
+    <!--后台引入新的地球场景-->
+    <script type="text/javascript" src="./js/EarthScene.js"></script>
+    <script type="text/javascript" src="./js/SphereInteraction.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="DCIM" src="../css/images/logo.svg" id='top-logo'>
+                </a>
+            </div>
+            <ul id="navpage" class="nav navbar-nav">
+                <!-- <li><a href="./datatype.html">{{Datatype}}</a></li>
+            <li><a href="./data.html">{{Data}}</a></li> -->
+                <li><a href="./scene.html">{{Scene}}</a></li>
+                <li><a href="./index.html">{{List}}</a></li>
+                <li><a href="./deviceEditor.html">{{Panel}}</a></li>
+                <li><a href="../rackEditor.html"> {{Rack_Editor}}</a></li>
+            </ul>
+            <ul id="navstate" class="nav navbar-nav navbar-right">
+                <li><a href="#" id="user">admin</a></li>
+                <li><a href="/admin/logout" id="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-3 col-md-2 sidebar"></div>
+            <div class="col-sm-9 col-md-10 main contentPane"></div>
+        </div>
+    </div>
+    <div style="display:none">
+        <canvas id="adminCanvas" width="512px" height="512px"></canvas>
+    </div>
+    <script type="text/javascript" src="./js/HeatMapImg.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* 告警统计 */
+.warningStatistics {
+  width: 760px;
+  height: 600px;
+}
+
+.warningStatistics_body_warningNumber {
+  height: 250px;
+  width: 760px;
+}
+
+.warningStatistics_body_warningType, .warningStatistics_body_warningLevel {
+  display: inline-block;
+  height: 350px;
+  width: 50%;
+}

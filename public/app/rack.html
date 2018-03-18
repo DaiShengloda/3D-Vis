@@ -1,0 +1,112 @@
+<head>
+    <title></title>
+</head>
+<body>
+    <div id = "main" style = "width:100%;height:10px;position:relative">
+        <div id = "waiting" style = "width:100%;height:500px;margin:0 auto;text-align:center;padding-top:300px">waiting for load</div>
+    </div>
+</body>
+    <link rel="stylesheet" href="./css/client-all.css">
+<!--     <link rel="stylesheet" href="./css/jquery-ui.min.css"> -->
+ <script src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./libs/twaver.js"></script>
+    <script type="text/javascript" src="./libs/t.js"></script>
+
+    <script type="text/javascript" src="./libs/itv-all-min.js"></script>
+    <script type="text/javascript" src="./libs/twaver-make.js"></script>
+
+    <script type="text/javascript" src="./js/monitor.js"></script>
+    <script type="text/javascript" src="./js/ServerUtil.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+<script type="text/javascript">
+    try{
+       make.Default.path = "./modellib/";
+       var params = app.parseURLParameters();
+       Number.isNaN = Number.isNaN || window.isNaN;
+       var dataManager = new it.DataManager();
+       var sceneManager = new it.SceneManager(dataManager);
+
+       var mainDiv = document.getElementById('main');
+       var network = sceneManager.network3d;
+       var box = network.getDataBox();
+       var h = app.getWindowHeight();
+       mainDiv.style.height = h + 'px';
+       var style =  window.getComputedStyle(mainDiv);
+
+       console.log(style.height);
+       network.adjustBounds(style.width.replace('px',''),style.height.replace('px',''));
+
+       mainDiv.appendChild(network.getRootView()); 
+       
+       dataManager.addCategory(app.getCategory('rack'));
+       dataManager.addCategory(app.getCategory('equipment'));
+       var pm = new it.PropertyManager(sceneManager);
+       pm.setPropertyPaneSize(40,40);
+       var dataTypeId = params.dataTypeId;
+       var id = params.id;
+        pm.setDefaultRackRule(['rack']);
+        pm.setDefaultEquipmentRule(['equipment']); 
+        pm.getOffset = function(node){ // 设置property Dialog的位置
+               return  {left:1,bottom:1};
+        }
+        function callback(){
+           sceneManager.loadScene();
+        };
+        
+        app.getEquipmentTypes(function(equipmentTypes){
+          dataManager.addDataTypeFromJson(equipmentTypes);
+          app.getRackTypes(function(rackTypes){
+             dataManager.addDataTypeFromJson(rackTypes);
+             ServerUtil.api('data','get',{id:id},function(rack){
+               dataManager.addDataFromJson([rack]);
+               ServerUtil.api('data','search',{parentId:id},function(equipments){
+                 dataManager.addDataFromJson(equipments);
+                 callback();
+               });
+             });
+          });
+        }); 
+        touch();
+        function touch(){
+           var viewManager3d = sceneManager.viewManager3d;
+           var lastTouchTime = null;
+           network.getRootView().addEventListener('touchstart',function(e) {
+             if(lastTouchTime == null){
+                lastTouchTime = new Date().getTime();
+                return;
+             }
+             var diff = new Date().getTime() - lastTouchTime;
+             if(diff > 500){
+               lastTouchTime = new Date().getTime();
+               return;
+             }else{
+               lastTouchTime = null;
+             }
+             if(event.touches.length > 1){
+               return;
+             }
+             var element = viewManager3d.filterDoubleClickElement(e);
+             if(element){
+                 viewManager3d.handleDoubleClick(element);
+                  pm.propertyPane.setWidthForPropertyPane('10px');
+             }else{
+                 var focusNode = viewManager3d.getFocusNode();
+                 viewManager3d.handleDoubleClickBackground();
+                 var data = sceneManager.getNodeData(focusNode);
+                 var category = dataManager.getCategoryForData(data);
+                 if(category && category.getId() === 'rack'){
+                   viewManager3d.setFocusNode(null);
+                   pm.propertyPane.hide
+                 }
+             }      
+          });
+        };
+
+       mainDiv.removeChild(document.getElementById('waiting'));
+       var title = document.getElementsByTagName('title');
+       title[0].innerHTML = params.description; 
+    }catch(e){
+        alert(e);
+    } 
+</script>

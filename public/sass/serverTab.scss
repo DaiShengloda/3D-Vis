@@ -1,0 +1,155 @@
+@import "_default";
+@import "_mixin";
+#serverTab {
+    padding: 0;
+    color: $default-highlight-color;
+    border: 0 none;
+    background: none;
+    margin: 10px 20px 20px;
+    // margin-right: 30px;
+    overflow: hidden;
+    .ui-tabs {
+        padding: 0;
+        border-radius: 0;
+        border: 0 none;
+        font-size: $default-font-size;
+        background: none;
+        .ui-tabs-nav {
+            padding: 0;
+            border-radius: 0;
+            border: 0 none;
+            background: none;
+            font-size: $default-title-font-size;
+            margin-bottom: 5px;
+            li {
+                outline: none;
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                border: 0 none;
+                border-bottom: 2px solid transparent;
+                color: $default-placeholder-color;
+                background: none;
+                margin-right: 20px;
+                user-select: none;
+                &.ui-state-hover,
+                &.ui-tabs-active {
+                    color: $default-highlight-bg-color;
+                    border-bottom: 2px solid $default-highlight-bg-color;
+                    a {
+                        color: $default-highlight-bg-color;
+                    }
+                }
+            }
+            .ui-tabs-anchor {
+                padding: 5px 0;
+                color: $default-font-color;
+            }
+        }
+        .ui-tabs-panel {
+            border-radius: 0;
+            padding: 0;
+            // overflow-y: auto;
+        }
+    }
+}
+
+#realTimeContent {
+    padding: 0;
+    color: $default-highlight-color;
+    border: 0 none;
+    background: none;
+    margin: 5px 20px;
+    overflow: hidden;
+    >div {
+        padding: 0;
+        border-radius: 0;
+        border: 0 none;
+        font-size: 14px;
+        background: none;
+        .nav-tabs {
+            padding: 0;
+            border-radius: 0;
+            border: 0 none;
+            background: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+            li {
+                margin: 0;
+                padding: 0;
+                border-radius: 0;
+                border: 0 none;
+                border-bottom: 2px solid transparent;
+                color: $default-highlight-color;
+                background: none;
+                margin-right: 20px;
+                user-select: none;
+                &:hover,
+                &.active {
+                    color: $comp-btn-border-hover-color;
+                    border-bottom: 2px solid $comp-btn-border-hover-color;
+                    a {
+                        color: $comp-btn-border-hover-color;
+                        border: none;
+                    }
+                }
+                a {
+                    padding: 5px 0;
+                    color: $default-highlight-color;
+                    border: none;
+                }
+            }
+        }
+        .tab-content {
+            .realtimeTab {
+                form {
+                    >.form-group-no-margin {
+                        width: 50%;
+                        margin-bottom: 15px;
+                        .col-sm-5 {
+                            color: $default-font-color;
+                        }
+                        .col-sm-7 {
+                            color: $default-highlight-color;
+                        }
+                        @media (min-width: 768px) {
+                            .col-sm-5 {
+                                width: 51.66666667%;
+                            }
+                            .col-sm-7 {
+                                width: 48.33333333%;
+                            }
+                        }
+                        label {
+                            font-size: 14px;
+                        }
+                    }
+                    .realtimeArr {
+                        width: 50%;
+                        margin-bottom: 30px;
+                        .form-group-no-margin {
+                            @media (min-width: 768px) {
+                                .col-sm-5 {
+                                    width: 47%;
+                                }
+                                .col-sm-7 {
+                                    width: 40%;
+                                }
+                            }
+                            label {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1440px) {
+    #serverTab {
+        margin: 5px 15px 10px;
+    }
+}

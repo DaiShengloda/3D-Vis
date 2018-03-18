@@ -1,0 +1,31 @@
+@import "default";
+@import "mixin";
+
+.RackSeatOccupy{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    margin-left: -300px;
+    background: $default-bg-color;
+    padding: 10px 0;
+    @include titleFontSize();
+    .RackSeatOccupy-title{
+        background: $default-title-bg-color;
+        color: $default-highlight-color;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 30px;
+        margin-left: 10px;
+        cursor: default;
+        user-select: none;
+    }
+    canvas{
+        margin-top: -15px;
+    }
+    .RackSeatOccupy-Pop{
+        color: $default-font-color;
+        background: $default-title-bg-color;
+        padding: 10px;
+        border-radius: 3px;
+    }
+}

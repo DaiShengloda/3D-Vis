@@ -1,0 +1,24 @@
+body .cancelConfigDialog{
+    width: auto;
+    height: auto;
+}
+body .cancelConfigDialog.layui-layer{
+    background: rgba(53,53,53,0.9);
+    color: #bcbcbc;
+}
+body .cancelConfigDialog .layui-layer-title{
+    background-color: transparent;
+    color: #bcbcbc;
+    border: 1px solid #2a2a2a;
+}
+body .cancelConfigDialog  a.layui-layer-close1{
+    color: #454545;
+}
+body .cancelConfigDialog  a.layui-layer-close1:hover{
+    color: #bcbcbc;
+}
+body .cancelConfigDialog .layui-layer-btn a{
+    border-color: transparent;
+    background-color: #356f87;
+    color: #fff;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8" />
+    <title>jwplayer</title>
+
+    <!-- 播放视频相关 -->
+    <script type="text/javascript" src="./libs/jwplayer.js"></script>
+</head>
+<script>
+    function load() {
+        var playerId = 'playerId';
+        player = jwplayer(playerId);
+        player.setup({
+            flashplayer: './ext-lib/jwplayer.flash.swf',
+            primary: jwplayer.utils.isChrome() ? "flash" : "html5",
+            autostart: false,
+            repeat: true,
+            width: 500,
+            height: 500,
+            dock: false,
+        });
+    }
+
+    function test() {
+        player.load({file : './resource/video/test.mp4'});
+        player.play();
+    }
+
+</script>
+
+<body onload="load()" style="overflow: hidden">
+    <div id='playerId'></div>
+</body>
+
+</html>

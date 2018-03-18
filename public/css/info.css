@@ -1,0 +1,316 @@
+.serverPanel {
+    display: none;
+    width: 1000px;
+    position: relative;
+    left: 10px;
+}
+
+.panel {
+    /*padding-top: 10px;*/
+
+    background-color: #4d4d4d; 
+    color: #d6d6d6;   
+}
+
+.loads {
+    padding: 10px 10px 20px 10px;
+}
+
+.panel .header {
+    /*background-color: #dddddd;*/
+    border-radius: 5px 5px 0px 0px;
+    display: block;
+    height: 29px;
+    padding-left: 15px;
+    /*padding-top: 5px;*/
+    font-size: 16px;
+
+    color: #d6d6d6;
+    background-color: rgba(36,36,36,0.9);
+    border-radius: 5px;
+    line-height: 29px;
+
+}
+
+.panel .content {
+    padding: 10px;
+    /*background-color: #eeeeee;*/    
+    position: relative;
+
+    background-color: #353535;
+    margin: 10px 10px 0px 10px;
+    border: 1px solid #595959;
+}
+
+.panel .content label {
+    width: 60px;
+    display: inline-block;
+}
+
+.baseInfo .content td {
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.baseInfo .sysDescLabel {
+    position: absolute;
+}
+
+.baseInfo textarea {
+    margin-left: 65px;
+    width: 90%;
+    height: 40px;
+}
+
+.loadPanel .loads table {
+    width: 100%;
+}
+
+.loadPanel .loads td {
+    width: 50%
+}
+
+.loadBox {
+    width: 100%;
+    height: 250px;
+}
+
+.cpusLoadBox {
+    height: 100px;
+    width: 100px;
+    /*border-style: solid;*/
+    /*border-width: 2px;*/
+    /*border-color: red;*/
+    margin: 5px;
+    float: left;
+}
+
+.cpus .content {
+    height: 120px;
+    overflow: auto;
+}
+
+.storage .content {
+    height: 320px;
+}
+
+.storageBarBox {
+    width: 70%;
+    height: 300px;
+    float: left;
+    /*border: 1px solid red;*/
+}
+
+.storagePieBox {
+    width: 30%;
+    height: 300px;
+    float: right;
+}
+
+.process .content {
+    height: 480px;
+}
+
+.processListBox {
+    overflow-y: auto;
+    height: 100%;
+    padding-right: 1px;
+}
+
+.processListBox table {
+    display: block;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.processListBox tr {
+    display: block;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.processListBox thead {
+    display: block;
+}
+
+.processListBox tbody {
+    display: block;
+}
+
+.processListBox td {
+    display: inline-block;
+    /*word-break: break-all;*/
+    border-left-style: solid;
+    border-left-width: 1px;
+    /*border-right-style:solid;*/
+    /*border-right-width: 1px;*/
+    /*height: 32px;*/
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.processListBox .pid {
+    width: 10%;
+}
+
+.processListBox .name {
+    width: 15%;
+}
+
+.processListBox .path {
+    width: 28%;
+}
+
+.processListBox .params {
+    width: 28%;
+}
+
+/*.processListBox .type {*/
+/*width: 10%;*/
+/*}*/
+
+/*.processListBox .status {*/
+/*width: 8%;*/
+/*}*/
+
+.processListBox .cpu {
+    width: 7%;
+}
+
+.processListBox .mem {
+    width: 7%;
+}
+
+.topology .topo{
+    width: 100%;
+    height: 480px;
+
+}
+
+.interfacesBox{
+    width: 900px;
+    height: 460px;
+    overflow: auto;
+
+    padding-right: 1px;
+}
+.interfacesBox table{
+
+    width: 1400px;
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.interfacesBox .ifIndex{
+
+    width: 5%;
+}
+/*.interfacesBox .ifDescr{*/
+
+    /*width: 15%;*/
+/*}*/
+.interfacesBox .ifType{
+
+    width: 5%;
+}
+.interfacesBox .ifMtu{
+
+    width: 5%;
+}
+.interfacesBox .ifSpeed{
+
+    width: 10%;
+}
+.interfacesBox .ifPhysAddress{
+
+    width: 10%;
+}
+.interfacesBox .ifStatus{
+
+    width: 5%;
+}
+.interfacesBox .ifOctetsSpeed{
+
+    width: 5%;
+}
+.interfacesBox .ifSpeedUtilization{
+
+    width: 5%;
+}
+.interfacesBox .ifDiscardsRate{
+
+    width: 5%;
+}
+
+.interfacesBox .ifErrorsRate{
+
+    width: 5%;
+}
+
+
+.content .panel2dBox{
+    position: relative;
+    width: 100%;
+    height: 480px;
+    /*float: left;*/
+}
+
+.alarmBox{
+    width: 900px;
+    height: 460px;
+    overflow: auto;
+    padding-right: 1px;
+}
+
+.alarmBox table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+.alarmBox thead{
+    background-color: #abc;
+}
+
+.alarmBox .dataId{
+
+    width: 80px;
+}
+
+.alarmBox .name{
+
+    width: 80px;
+}
+
+.alarmBox .dataTypeId{
+
+    width: 80px;
+}
+
+.alarmBox .alarmTypeId{
+
+    width: 80px;
+}
+
+.alarmBox .dateTime{
+
+    width: 140px;
+}
+
+.alarmBox .status{
+
+    width: 80px;
+}
+
+.alarmBox .level{
+
+    width: 80px;
+}
+
+.alarmBox .description{
+
+    width: 250px;
+}

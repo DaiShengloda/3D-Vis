@@ -1,0 +1,123 @@
+#configPage {
+    height: 663px;
+    overflow-y: scroll;
+}
+
+.page {
+    width:650px;
+    padding-left:20px;
+    margin-bottom: 50px;
+}
+
+#configPage .firstPage {
+    width: 40%;
+}
+
+.pageTitle {
+    border-bottom:1px solid #eee;
+    padding-bottom:9px;
+    margin:20px 0px 10px -10px;
+    height:50px;
+}
+
+#btnBox {
+    width:20%;
+    padding-left:20px;
+    margin-top: 20px;
+}
+
+.sysBtn {
+    margin-right:15px;
+}
+
+/* 负载规则设置 */
+.warningRuleConfig{
+    width:650px;
+    height: 300px;
+}
+
+.warningRuleConfig .title{
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: bold
+}
+
+.warningRuleConfig .label{
+    font-size:14px;
+    color:rgba(0, 0, 0, 1);
+    font-weight: normal
+}
+
+.warningRuleConfig input{
+    width: 70px;
+    height: 24px;
+    border: 2px solid rgba(89, 89, 89, 1);
+    background-color: rgba(158, 158, 158, 1);
+}
+
+.warningRuleConfig .value{
+    line-height: 24px;
+    font-family: 'Pirulen';
+    text-align: center;
+    font-size: 18px;
+}
+
+.ui-slider-handle{
+    width: 1px;
+    background-color: #000;
+}
+.warningRuleConfig_body_btns{
+    margin-top: 35px;
+}
+.warningRuleConfig_body_btns span{
+    float: right;
+    width: 80px;
+    text-align: center;
+    margin-right: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* height: 18px; */
+    border-radius: 5px;
+    color:rgba(232, 232, 232, 1);
+    background-color: rgba(106, 106, 106, 1);
+    cursor: pointer;
+}
+.warningRuleConfig_body_btns .warningRuleConfig_body_btns_default {
+    float:left;
+}
+.warningRuleConfig .sliderBar{
+    margin-top:26px;
+    border-radius: 0px;
+    border: 0px;
+}
+
+.warningRuleConfig .sliderBar div{
+    border-radius: 0px;
+}
+
+.warningRuleConfig .sliderBar span.ui-slider-handle{
+    top:0;
+    bottom:0;
+    width: 1px;
+    height: 100%;
+    margin-left:0;
+    border:0px;
+    background-color: #000;
+}
+.warningRuleConfig .sliderBar span.ui-slider-handle:focus{
+    outline: none;
+}
+
+/* 基本设置 */
+#generalBox table td {
+    padding-right: 15px;
+}
+#generalBox .checkbox-class {
+    font-weight: normal;
+}
+#generalBox .checkbox-class div.itv-checker {
+    display: inline;
+}

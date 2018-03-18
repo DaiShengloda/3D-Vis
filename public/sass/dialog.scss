@@ -1,0 +1,1531 @@
+/*jquery-ui-dialog start*/
+
+@import "default";
+@import "mixin";
+@import "base";
+.ui-dialog-blackStyle {
+    color: $default-bg-color;
+    border: none;
+    padding: 0px;
+    background: $default-bg-color;
+    border-radius: unset;
+    .ui-dialog-titlebar {
+        background: rgb(42, 42, 42);
+        height: 38px;
+        // font-size: 16px;
+        @include titleFontSize();
+        // margin: 10px 10px 0px 10px;
+        // border-radius: 5px;
+        border: none;
+        color: $default-font-color;
+        .ui-dialog-titlebar-close {
+            background: rgb(42, 42, 42);
+            border: none;
+            margin-right: 5px;
+            .ui-icon-closethick,
+            .ui-button-text {
+                display: none;
+            }
+        }
+    }
+    @media screen and (max-width: 1919px) {
+        .ui-dialog-titlebar {
+            height: auto;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .ui-dialog-titlebar {
+            height: auto;
+        }
+    }
+    .ui-dialog-content {
+        color: $default-font-color;
+        font-family: $default-font-family;
+        padding: 10px;
+        border: 1px solid rgba(89, 89, 89, 0.5);
+        margin: 1em 1.3em 1.5em 1.3em;
+        background: rgb(48, 48, 48);
+        overflow: hidden;
+    }
+    .pagerBox {
+        margin-top: 0px;
+        .pagerMessage {
+            @include fontSize();
+            ;
+            color: $default-font-color;
+            padding: 0px;
+            margin: 5px;
+        }
+        .fr {
+            padding-top: 5px;
+            letter-spacing: 2px;
+        }
+        a {
+            background: rgba(63, 63, 63, 0);
+            border: none;
+            color: $default-font-color;
+        }
+        a:hover {
+            color: $default-highlight-bg-color;
+        }
+    }
+    .ui-dialog-buttonpane {
+        background: rgba(48, 54, 62, 0.3);
+        padding: 0px 0px 0px 0px;
+        border-width: 0px 0px 0px 0px;
+        box-shadow: inset 0 0px 0 $default-highlight2-color;
+    }
+    .ui-dialog-buttonset button {
+        color: #30363e;
+        font-size: 12px;
+        text-shadow: 0 0px 0px;
+        border-color: rgb(255, 171, 0);
+        background-color: rgb(255, 171, 0);
+        background-image: -webkit-linear-gradient(top, #ffab00, #bc7f01);
+        background-position: 0px -32px;
+    }
+    .ui-state-hover,
+    .ui-widget-content .ui-state-hover,
+    .ui-widget-header .ui-state-hover {
+        border: none;
+        background: none;
+        font-weight: normal;
+        color: $default-font-color;
+    }
+    .ui-state-focus,
+    .ui-widget-content .ui-state-focus,
+    .ui-widget-header .ui-state-focus {
+        color: #454545;
+    }
+    .ui-state-active,
+    .ui-widget-content .ui-state-active,
+    .ui-widget-header .ui-state-active {
+        border: none;
+        background: none;
+        font-weight: normal;
+        color: $default-font-color;
+    }
+}
+
+.datetimepicker {
+    background-color: $comp-input-bg-color;
+    border: 2px solid #2d2d2d;
+    box-shadow: 3px 3px 2px #000000;
+    color: $comp-input-color;
+}
+
+
+/*jquery-ui-dialog end*/
+
+
+/*historyAlarmDialog start*/
+
+.ui-dialog-blackStyle #alarmListDialog {
+    padding: 0px 0px;
+    border: none;
+    margin-top: 0px;
+    background: rgba(48, 48, 48, 0);
+    margin: 0px 20px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox {
+    padding: 5px 0px 10px 0px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .mytd {
+    padding-bottom: 2px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+        padding-right: 16px;
+    }
+    .ui-dialog-blackStyle #alarmListDialog .searchBox {
+        padding-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+        padding-right: 16px;
+    }
+    .ui-dialog-blackStyle #alarmListDialog .searchBox {
+        padding-bottom: 10px;
+    }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems:last-child {
+    padding-right: 0px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+    @include fontSize();
+    ;
+    line-height: 25px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+    background-image: -webkit-linear-gradient(top, $comp-input-bg-color, $comp-input-bg-color);
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    @include fontSize();
+    ;
+    color: $comp-input-color;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+    background-image: -webkit-linear-gradient(top, $comp-input-bg-color, $comp-input-bg-color);
+    background-color: $comp-input-bg-color;
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    @include fontSize();
+    ;
+    color: $comp-input-color;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .searchButton {
+    // background-image: -webkit-linear-gradient(top, rgba(56, 56, 56, 0.6), rgba(56, 56, 56, 0.6));
+    border: none;
+    height: 27px;
+    line-height: 27px;
+    color: #e6e6e6;
+    padding: 0px 10px 8px 10px;
+    border-radius: 3px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+    background-image: -webkit-linear-gradient(top, $comp-input-bg-color, $comp-input-bg-color);
+    border: 2px solid #2d2d2d;
+    @include fontSize();
+    ;
+    color: $comp-input-color;
+}
+
+.ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+    overflow: hidden;
+    @include fontSize();
+    ;
+    color: $default-font-color;
+}
+
+.ui-dialog-blackStyle {
+    #alarmListDialog {
+        #alarmListBox {
+            .fs10 {
+                width: 50px;
+                height: 23px;
+                line-height: 23px;
+                // background: #6a6a6a;
+                color: #ffffff;
+                border: 1px solid transparent;
+                font-size: 12px;
+            }
+            .fs10:hover {
+                background: #47626d;
+                border: 1px solid #00f6ff;
+                color: #ffffff;
+            }
+        }
+    }
+}
+
+.ui-dialog-blackStyle {
+    #alarmListDialog {
+        .searchBox {
+            table {
+                display: inline-block;
+                width: 100%;
+                tbody {
+                    display: inline-block;
+                    width: 100%;
+                    tr {
+                        display: inline-block;
+                        width: 100%;
+                        .asset-number {
+                            input {
+                                width: 155px;
+                            }
+                        }
+                        .asset-name {
+                            input {
+                                width: 155px;
+                            }
+                        }
+                        .alarm-time {
+                            input {
+                                width: 150px;
+                            }
+                        }
+                        .searchButton {
+                            width: 60px;
+                        }
+                        .searchItems {
+                            .searchItems-br {
+                                display: unset;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle {
+        #alarmListDialog {
+            margin: 0px 15px;
+            .searchBox {
+                padding: 15px 0px 10px 0px;
+                table {
+                    tbody {
+                        tr {
+                            .asset-number {
+                                input {
+                                    width: 150px;
+                                }
+                            }
+                            .asset-name {
+                                input {
+                                    width: 150px;
+                                }
+                            }
+                            .alarm-time {
+                                input {
+                                    width: 150px;
+                                }
+                            }
+                            .searchItems {
+                                float: left;
+                                .searchItems-span {
+                                    position: relative;
+                                    top: -10px;
+                                }
+                                .searchItems-br {
+                                    display: none;
+                                }
+                                .modal {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle {
+        #alarmListDialog {
+            margin: 0px 15px;
+            .searchBox {
+                padding: 15px 0px 10px 0px;
+                table {
+                    tbody {
+                        tr {
+                            .asset-number {
+                                input {
+                                    width: 150px;
+                                }
+                            }
+                            .asset-name {
+                                input {
+                                    width: 150px;
+                                }
+                            }
+                            .alarm-time {
+                                input {
+                                    width: 150px;
+                                }
+                            }
+                            .searchItems {
+                                float: left;
+                                .searchItems-span {
+                                    position: relative;
+                                    top: -10px;
+                                }
+                                .searchItems-br {
+                                    display: none;
+                                }
+                                .modal {
+                                    display: inline-block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*historyAlarmDialog end*/
+
+
+/*equipStatisticsDialog start*/
+
+.ui-dialog-blackStyle #equipStatisticsListDialog {
+    padding: 0px 6px;
+    border: none;
+    margin-top: 0px;
+    background: rgba(48, 48, 48, 0);
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox {
+    padding: 5px 0px 10px 0px;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .mytd {
+    padding-bottom: 2px;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems {
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems {
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems {
+        padding-right: 16px;
+    }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems:last-child {
+    padding-right: 0px;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems span:first-child {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems span:first-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems span:first-child {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems input {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    background-color: #343434;
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems select {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .searchButton {
+    background-color: #46606b;
+    border: 1px solid transparent;
+    height: 28px;
+    line-height: 28px;
+    color: #e6e6e6;
+    padding: 0px 5px;
+    border-radius: 3px;
+    text-align: center;
+    cursor: default;
+    user-select: none;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .searchButton:hover {
+    cursor: pointer;
+    background-color: #46606b;
+    color: #ffffff;
+    border: 1px solid #00f6ff;
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    border: 2px solid #2d2d2d;
+    color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog .searchBox .searchItems .select2-selection__rendered {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #equipStatisticsListDialog #alarmListBox {
+    overflow: hidden;
+    color: #bcbcbc;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog #equipListBox {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog #equipListBox {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #equipStatisticsListDialog #equipListBox {
+        font-size: 12px;
+    }
+}
+
+
+/*equipStatisticsDialog end*/
+
+
+/*alarmDetail start*/
+
+.ui-dialog-blackStyle .label-inline-block {
+    font-weight: 700;
+}
+
+.ui-dialog-blackStyle .label-min {
+    width: 90px;
+    text-align: left;
+}
+
+.ui-dialog-blackStyle .label-value {
+    color: $default-font-color;
+}
+
+
+/*alarmDetail end*/
+
+
+/*alarmConfirm start*/
+
+.ui-dialog-blackStyle .ui-dialog-content .form-control {
+    background: rgb(64, 64, 64);
+    border-radius: unset;
+    border: 1px solid rgb(42, 42, 42);
+    color: #717171;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-control:focus {
+    border-color: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group .control-label {
+    width: 90px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group div {
+    text-align: right;
+    width: 280px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group div button {
+    background: rgb(106, 106, 106);
+    border-radius: 5px;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border: none;
+    margin-right: 35px;
+}
+
+
+/*alarmConfirm end*/
+
+
+/*alarmContentPane start*/
+
+.ui-dialog-blackStyle .alarm-content-panel {
+    top: 0px;
+    background: rgba(48, 48, 48, 0);
+    border: none;
+    padding: 0px;
+    margin: 15px 20px 0px 20px;
+    span {
+        font-size: 14px;
+    }
+    .fs10 {
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        // background: rgb(106, 106, 106);
+        color: $comp-btn-color;
+        border: none;
+        font-size: 12px;
+    }
+    @media screen and (max-width: 1919px) {
+        span {
+            font-size: 12px;
+        }
+        .fs10 {
+            width: 40px;
+            ;
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        span {
+            font-size: 12px;
+        }
+        .fs10 {
+            width: 40px;
+            font-size: 12px;
+        }
+    }
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group {
+    margin-top: 0px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group input {
+    background-image: -webkit-linear-gradient(top, $comp-input-bg-color, $comp-input-bg-color);
+    border: 2px solid #2d2d2d;
+    height: 28px;
+    line-height: 28px;
+    @include fontSize();
+    ;
+    color: $default-font-color;
+    outline: none;
+    width: 200px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group input:focus {
+    border: 2px solid #2d2d2d;
+    outline: none;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel #alarm_chart_pane {
+    background: rgb(48, 48, 48);
+    border: 1px solid rgba(89, 89, 89, 0.5);
+    padding: 10px;
+    /*margin-top: -10px*/
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .fs10:hover {
+    background: #47626d;
+    border: 1px solid $comp-btn-border-hover-color;
+    color: $comp-btn-color;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+    background: rgba(42, 42, 42, 0);
+    overflow: visible;
+    // font-size: 16px;
+    @include titleFontSize();
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_right:after {
+    top: 13px;
+    cursor: pointer;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_left {
+    margin-left: 0px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_left:before {
+    top: 13px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle .alarm-content-panel {
+        margin: 15px 20px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle .alarm-content-panel {
+        margin: 10px 15px 15px 15px;
+    }
+}
+
+
+/*alarmContentPane end*/
+
+
+/*panel panelInfo start*/
+
+.ui-dialog-blackStyle #serverPanel {
+    left: 0px;
+    position: relative;
+    padding: 0;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel {
+    background: rgb(48, 48, 48);
+    color: $default-font-color;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    width: 900px;
+    height: 510px;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel .content {
+    padding: 0px;
+    background: rgb(48, 48, 48);
+    margin: 0px;
+    border: none;
+    padding-top: 70px;
+    height: 510px;
+}
+
+.ui-dialog-blackStyle #serverPanel .app-head {
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+// @media screen and (max-width: 1919px) {
+//     .ui-dialog-blackStyle #serverPanel #moveTitle {
+//         font-size:12px;
+//     } 
+//     .ui-dialog-blackStyle #serverPanel .app-head .app-circle {
+//         top: 2px;
+//     }
+// }
+// @media screen and (max-width: 1440px) {
+//     .ui-dialog-blackStyle #serverPanel #moveTitle {
+//         font-size:12px;
+//     }
+//     .ui-dialog-blackStyle #serverPanel .app-head .app-circle {
+//         top: 2px;
+//     }
+// }
+// @media screen and (max-width: 1919px) {
+//     .ui-dialog-blackStyle #serverPanel #togFace {
+//         font-size:12px;
+//     } 
+// }
+// @media screen and (max-width: 1440px) {
+//     .ui-dialog-blackStyle #serverPanel #togFace {
+//         font-size:12px;
+//     }
+// }
+.ui-dialog-blackStyle #serverPanel .panel2dBox {
+    height: 440px;
+    >div {
+        div:nth-child(2) {
+            left: 4px!important;
+        }
+    }
+}
+
+// .ui-dialog-blackStyle #serverPanel .portPanelBtn {
+//     position:relative;
+//     top: 400px;
+//     left: 235px;
+//     background: rgb(106, 106, 106);
+//     color: white;
+//     padding: 3px;
+//     padding: 5px 10px 5px 10px;
+//     border: none;
+//     border-radius: 3px;
+// }
+// @media screen and (max-width: 1919px) {
+//     .ui-dialog-blackStyle #serverPanel .portPanelBtn {
+//         top: 295px;
+//         left: 145px;
+//     }
+// }
+// @media screen and (max-width: 1440px) {
+//     .ui-dialog-blackStyle #serverPanel .portPanelBtn {
+//         top: 295px;
+//         left: 145px;
+//     }
+// }
+.ui-dialog-blackStyle #serverPanel .portPanel {
+    /*width: '305px',*/
+    background: rgb(57, 57, 57);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 510px;
+    width: 100px;
+    border-right: 1px solid rgba(89, 89, 89, 0.5);
+    z-index: 9999;
+    &>div {
+        width: 100px;
+        height: 510px;
+    }
+    .right {
+        position: absolute;
+        top: 5px;
+        left: 120px;
+        z-index: 9999999;
+        width: 800px;
+        height: 50px;
+        #uploadSpeed {
+            float: left;
+            margin-right: 30px;
+        }
+        #downloadSpeed {
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    .port-text {
+        float: left;
+        margin-right: 30px;
+        p {
+            font-size: 14px;
+        }
+        .top-text {
+            color: $default-font-color;
+            margin-bottom: 5px;
+        }
+        .bottom-text {
+            color: $default-highlight-bg-color;
+        }
+    }
+}
+
+// @media screen and (max-width: 1919px) {
+//     .ui-dialog-blackStyle #serverPanel .portPanel{
+//         height: 400px;
+//         width: 255px;
+//     }
+// }
+// @media screen and (max-width: 1440px) {
+//     .ui-dialog-blackStyle #serverPanel .portPanel{
+//         height: 400px;
+//         width: 255px;
+//     }
+// }
+.ui-dialog-blackStyle #serverPanel .portPanel .icon-switch-arrow:hover {
+    color: rgb(34, 138, 141);
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .app-title {
+    cursor: move;
+}
+
+
+/*panel panelInfo end*/
+
+
+/* equipment link start */
+
+.ui-dialog-blackStyle .link-group {
+    /*width: 600px;*/
+    background-color: rgba(53, 53, 53, 0.9);
+    padding: 10px;
+    border: none;
+    color: #f0f0f0;
+    margin: 0;
+}
+
+.link-group .iconfont {
+    font-size: 24px;
+}
+
+.link {
+    background-color: #303030;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.link-over {
+    color: #039ca2;
+    background-color: $default-title-bg-color;
+}
+
+.link-over>.link-separater {
+    border-top: 1px solid #039ca2;
+}
+
+.link-separater {
+    width: 55px;
+    height: 1px;
+    border-top: 1px solid #f0f0f0;
+    margin: 0 10px;
+    display: inline-block;
+    margin: 0 -20px;
+}
+
+.link-over>.link-separater-over {
+    border-top: 1px solid #00fefe;
+}
+
+.link-node {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    /*border: 1px solid #006e54;*/
+    width: 90px;
+}
+
+.link-node-over {
+    color: #00fefe;
+}
+
+.link-without-type {
+    margin-top: 4px;
+}
+
+.link-node>span {
+    display: block;
+    @include fontSize();
+    ;
+}
+
+
+/* equipment link end*/
+
+
+/* processList start*/
+
+.ui-dialog-blackStyle {
+    .processList {
+        padding: 0px;
+        .processListBox {
+            overflow: hidden;
+            table {
+                border: none;
+                thead {
+                    border: none;
+                    background: $default-bg-color;
+                    tr {
+                        width: 833px;
+                    }
+                }
+                tbody {
+                    overflow-x: hidden;
+                    height: 515px;
+                    width: 850px;
+                    .even {
+                        background: #353535;
+                    }
+                    .odd {
+                        background: #303030;
+                    }
+                }
+                tr,
+                td {
+                    border: none;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                td.pid {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+
+/* processList end*/
+
+
+/* video panel start*/
+
+.ui-dialog-blackStyle {
+    .camera-box {
+        border: none;
+        .center-box {
+            .left-box {
+                border: none;
+                video {
+                    border: 1px solid rgb(89, 89, 89);
+                }
+            }
+            .right-box {
+                border: none;
+                width: 460px;
+                .camera-list-box {
+                    border: 1px solid rgb(89, 89, 89);
+                    height: 480px;
+                    margin-top: 10px;
+                    overflow-x: hidden;
+                    table {
+                        border-collapse: collapse;
+                        .name {
+                            width: 25%;
+                        }
+                        tr {
+                            height: 30px;
+                        }
+                        thead {
+                            background: #1f1f1f;
+                        }
+                        tbody tr {
+                            .operation a {
+                                color: #bcbcbc;
+                            }
+                            .operation a.on {
+                                color: red;
+                            }
+                            .operation a:hover {
+                                background: none;
+                            }
+                        }
+                        tbody tr:hover {
+                            background: #47626b;
+                            border: 1px solid #00f6ff;
+                        }
+                    }
+                }
+                .camera-list-box::-webkit-scrollbar {
+                    background-color: $comp-input-select-scroll-bg-color;
+                    width: 8px;
+                }
+                .camera-list-box::-webkit-scrollbar-thumb {
+                    background-color: #202020;
+                    border-radius: 4px;
+                    height: 24px;
+                }
+                .even {
+                    background-color: #242424;
+                }
+                .odd {
+                    background: #282828;
+                }
+            }
+        }
+        @media screen and (max-width: 1919px) {
+            .center-box {
+                .right-box {
+                    width: 340px;
+                }
+            }
+        }
+        @media screen and (max-width: 1440px) {
+            .center-box {
+                .right-box {
+                    width: 340px;
+                }
+            }
+        }
+    }
+}
+
+
+/* video panel end*/
+
+
+/* new dialog1*/
+
+.new-dialog1 {
+    &.ui-dialog-blackStyle {
+        background: rgba(53, 53, 53, 1);
+        .ui-dialog-titlebar {
+            margin: 0;
+            border-radius: 0;
+        }
+        .new-app-panel {
+            margin: 0;
+            background: none;
+            border: none;
+            padding: 10px 20px 0 20px;
+            .app-btn-line {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                // margin: 0;
+                .app-tip {
+                    color: $comp-input-select-color;
+                }
+                .app-btn-group {
+                    div {
+                        cursor: pointer;
+                        width: 60px !important;
+                        font-size: $default-font-size;
+                    }
+                }
+            }
+        }
+        .cancelOccupiedPop {
+            .bt-scroll {
+                max-height: 400px;
+                overflow-y: auto;
+                .app-table-block {
+                    position: relative;
+                    border: 2px solid #2d2d2d;
+                    padding: 10px;
+                    height: auto;
+                    margin-top: 20px;
+                    .app-title {
+                        position: absolute;
+                        top: -18px;
+                        background: rgba(53, 53, 53, 1);
+                        padding: 5px;
+                        font-weight: bold;
+                        color: #fff;
+                    }
+                    .app-table {
+                        margin-left: 20px;
+                        .app-table-key {
+                            text-align: right;
+                        }
+                        .app-table-value {
+                            padding-left: 10px;
+                        }
+                    }
+                }
+                .app-btn-line {
+                    margin-bottom: 10px;
+                    .app-btn-group {
+                        // margin-bottom: 10px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .conflictOccupiedPop {
+            .app-line {
+                margin-top: 0;
+            }
+            .app-text-line {
+                justify-content: center;
+            }
+            .app-big-btn-group {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 10px 0 20px 0;
+                .bigBtn {
+                    background-color: $comp-btn-bg-color;
+                    color: $comp-btn-color;
+                    border: 1px solid transparent;
+                    border-radius: 3px;
+                    padding: 0px 5px;
+                    margin-left: 10px;
+                    cursor: default;
+                    user-select: none;
+                    height: $comp-input-height;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include fontSize();
+                    width: 100px;
+                }
+                .bigBtn.active {
+                    cursor: pointer;
+                    // background-color: $default-highlight-bg-color;
+                    @extend .bt-btn;
+                }
+                .bigBtn.active:hover {
+                    background-color: $comp-btn-border-hover-bg-color;
+                    border-color: $comp-btn-border-hover-color;
+                }
+            }
+        }
+    }
+    &.ui-dialog {
+        .ui-dialog-buttonpane {
+            margin-top: 0;
+        }
+    }
+}
+
+.PreOccupiedPop {
+    .app-tip {
+        color: $default-highlight-bg-color !important;
+    }
+    .clear-it {
+        background-color: $comp-btn-second-bg-color;
+    }
+}
+
+.portOccupancyPanel {
+    min-width: 240px;
+    max-height: 400px;
+    overflow-y: auto;
+    table {
+        width: 100%;
+        thead {
+            tr {
+                background: #303030;
+            }
+            td {
+                padding-left: 30px;
+            }
+        }
+        td {
+            height: 24px;
+            border: none;
+            line-height: 24px;
+        }
+    }
+    tbody {
+        td {
+            padding-left: 20px;
+        }
+        .even {
+            background: #353535;
+        }
+        .odd {
+            background: #303030;
+        }
+    }
+}
+
+
+/* new dialog1 end*/
+
+
+/* mulCamera start */
+
+#mulCamera-box {
+    border: none;
+    background: none;
+    padding: 0px;
+    .center-box {
+        height: 517px;
+    }
+    .left-box {
+        float: left;
+        width: 74%;
+        height: 100%;
+        .parent-player-box {
+            height: 100%;
+            position: relative;
+            padding: 8px;
+            background: rgba(42, 42, 42, 0.95);
+        }
+        .icon-full-screen-:before {
+            content: "\e6b2";
+        }
+        .icon-full-screen-back:before {
+            content: "\e6b3";
+        }
+        .player-box {
+            height: 100%;
+            position: relative;
+            margin-left: -1%;
+            .videoBox {
+                // border:1px solid black;
+                float: left;
+                margin: 0px 0px 1% 1%;
+                position: relative;
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: fill;
+                }
+                .video-id {
+                    position: absolute;
+                    top: 0px;
+                    color: white
+                }
+                .video-name {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    color: white
+                }
+            }
+            .loadEffect {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+            }
+            .loadEffect span {
+                display: inline-block;
+                width: 10px;
+                height: 3px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                background: #bcbcbc;
+                position: absolute;
+                -webkit-animation: load 1.04s ease infinite;
+            }
+            @-webkit-keyframes load {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0.2;
+                }
+            }
+            .loadEffect span:nth-child(1) {
+                left: 20px;
+                top: 50%;
+                margin-top: -5px;
+                -webkit-animation-delay: 0.13s;
+            }
+            .loadEffect span:nth-child(2) {
+                left: 24px;
+                top: 34px;
+                -webkit-transform: rotate(45deg);
+                -webkit-animation-delay: 0.26s;
+            }
+            .loadEffect span:nth-child(3) {
+                left: 50%;
+                top: 30px;
+                margin-left: -15px;
+                -webkit-transform: rotate(90deg);
+                -webkit-animation-delay: 0.39s;
+            }
+            .loadEffect span:nth-child(4) {
+                top: 34px;
+                right: 44px;
+                -webkit-transform: rotate(135deg);
+                -webkit-animation-delay: 0.52s;
+            }
+            .loadEffect span:nth-child(5) {
+                right: 40px;
+                top: 50%;
+                margin-top: -5px;
+                -webkit-transform: rotate(180deg);
+                -webkit-animation-delay: 0.65s;
+            }
+            .loadEffect span:nth-child(6) {
+                right: 44px;
+                bottom: 40px;
+                -webkit-transform: rotate(225deg);
+                -webkit-animation-delay: 0.78s;
+            }
+            .loadEffect span:nth-child(7) {
+                bottom: 35px;
+                left: 50%;
+                margin-left: -15px;
+                -webkit-transform: rotate(270deg);
+                -webkit-animation-delay: 0.91s;
+            }
+            .loadEffect span:nth-child(8) {
+                bottom: 40px;
+                left: 24px;
+                -webkit-transform: rotate(315deg);
+                -webkit-animation-delay: 1.04s;
+            }
+            .firstCol {
+                //margin-left: 0px;
+            }
+        }
+        .btn-fullScreen {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            z-index: 3;
+            //background: #00f6ff;
+            // width: 16px;
+            // height: 16px;
+        }
+        .btn-fullScreen:hover {
+            color: #00f6ff;
+            cursor: pointer;
+        }
+    }
+    .fullScreen {
+        width: 100%;
+        .player-box {
+            background: #303030;
+        }
+    }
+    .right-box {
+        float: right;
+        width: 25%;
+        height: 100%;
+        .search-input {
+            background-image: -webkit-linear-gradient(top, #343434, #343434);
+            border: 2px solid #2d2d2d;
+            height: 25px;
+            line-height: 25px;
+            color: #bcbcbc;
+            outline: none;
+            width: 70%;
+            min-width: 150px;
+            padding: 5px
+        }
+        .search {
+            float: right;
+            max-width: 50px;
+            width: 50px;
+            height: 25px;
+            background-color: #356f87;
+            border: none;
+            color: white;
+            border-radius: 3px;
+        }
+        .table-box {
+            height: 480px;
+            overflow-y: scroll;
+            margin-top: 10px;
+        }
+        .mul-camera-box {
+            margin-top: 10px;
+            cursor: pointer;
+            .mul-camera-title {
+                margin-left: 25px;
+                padding: 0px 8px;
+            }
+            .mul-camera-row {
+                height: 25px;
+                padding-left: 20px;
+                .iconfont {
+                    padding-right: 10px;
+                }
+            }
+        }
+        .firstFieldset {
+            margin-top: 0px;
+        }
+        .selected {
+            background: #47626d;
+            border: 2px solid #00f6ff;
+            color: white;
+            .mul-camera-title {
+                color: #00f6ff;
+            }
+        }
+        .unSelected {
+            border: 2px solid #2d2d2d;
+            color: #bcbcbc;
+            .mul-camera-title {
+                color: white;
+            }
+        }
+    }
+    @media screen and (max-width: 1919px) {
+        .left-box {
+            width: 74%;
+            ;
+        }
+        .right-box {
+            width: 25%;
+        }
+    }
+    @media screen and (max-width: 1440px) {
+        .left-box {
+            width: 74%;
+            ;
+        }
+        .right-box {
+            width: 25%;
+        }
+    }
+}
+
+
+/* mulCamera end */
+
+
+/* user dialog start */
+
+.user-dialog1 {
+    &.ui-dialog-blackStyle.ui-dialog {
+        background: rgba(53, 53, 53, 1);
+        .ui-dialog-titlebar {
+            margin: 0;
+            border-radius: 0;
+        }
+        .ui-dialog-buttonpane {
+            margin-top: 0;
+        }
+        .ui-dialog-content {
+            padding: 0;
+            border: 0;
+            iframe {
+                border: 0;
+            }
+        }
+    }
+}
+
+.user-dialog2 {
+    &.ui-dialog-blackStyle.ui-dialog {
+        background: rgba(53, 53, 53, 1);
+        .ui-dialog-titlebar {
+            border-radius: 0;
+            height: 0;
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            border: 0;
+        }
+        .ui-dialog-buttonpane {
+            margin-top: 0;
+        }
+        .ui-dialog-content {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            iframe {
+                border: 0;
+            }
+        }
+    }
+}
+
+
+/* user dialog end */

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrapValidator.min.css">
+    <style type="text/css">
+        .right-content{
+            box-shadow: 1px 0 5px #888; 
+            width: 0; position: absolute; 
+            height: 350px; 
+            top:10px; 
+            right:15px; 
+            overflow: hidden; 
+            z-index: 2;
+            background: #ECEFF2; 
+            margin-right: -300px;
+        }
+    </style>
+
+    <title>资产管理</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+                <img alt="DCIM" src="../css/images/logo.svg"  id='top-logo'>
+            </a>
+        </div>
+        <ul id="mynav" class="nav navbar-nav">
+            <li><a href="./datatype.html">资产模型</a></li>
+            <li><a href="./data.html">资产</a></li>
+            <li><a href="./scene.html">场景</a></li>
+            <li><a href="./index.html">列表</a></li>
+        </ul>
+        <form class="navbar-form navbar-right">
+            <button  id='import' class="btn btn-default">加载</button>
+        </form>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+          <div id="formDiv" class="col-sm-4">
+            <form id="dataForm" class="form-horizontal">
+                <div class="form-group">
+                    <label for="id" class="col-sm-3 control-label">#</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" id="id" name="id">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="dataTypeId" class="col-sm-3 control-label">资产模型</label>
+                    <div class="col-sm-9">
+                      <select class="form-control" id="dataTypeId" name="dataTypeId">
+                          <option default>选择资产模型</option>
+                      </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description" class="col-sm-3 control-label">描述</label>
+                    <div class="col-sm-9">
+                      <textarea class="form-control" row="3" id="description" name="description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="position" class="col-sm-3 control-label">物理坐标</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" id="position" name="position">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="rotation" class="col-sm-3 control-label">旋转</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" id="rotation" name="rotation">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="location" class="col-sm-3 control-label">逻辑坐标</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" id="location" name="location">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="parentId" class="col-sm-3 control-label">父对象</label>
+                    <div class="col-sm-9">
+                      <input class="form-control" id="parentId" name="parentId">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                      <button id="submit" type="submit" class="btn btn-default">提交</button>
+                    </div>
+                </div>
+            </form>
+          </div>
+          <div id="preview" class="col-sm-8"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../libs/jquery.js"></script>
+    <script type="text/javascript" src="../libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../libs/bootstrapValidator.min.js"></script>
+    <script type="text/javascript" src="../libs/moment.min.js"></script>
+    <script type="text/javascript" src="../libs/t.js"></script>
+    <script type="text/javascript" src="../libs/twaver.js"></script>
+    <script type="text/javascript" src="../libs/twaver-make.js"></script>
+    <script type="text/javascript" src="../libs/twaver-doodle.js"></script>
+    <script type="text/javascript" src="../libs/License2D.js"></script>
+    <script type="text/javascript" src="../libs/License3D.js"></script>
+    <script type="text/javascript" src="./js/util.js"></script>
+    <script type="text/javascript" src="./js/dataType.js"></script>
+    <script type="text/javascript" src="./js/dataEditor.js"></script>
+    <script type="text/javascript" src="../js/config.js"></script>
+</body>
+</html>

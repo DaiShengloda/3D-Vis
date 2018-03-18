@@ -1,0 +1,391 @@
+@import "_default.scss";
+@import "base";
+#cruise-panel {
+    padding: 0;
+}
+
+#cruise-panel {
+    width: 292px!important;
+}
+
+#cruise-panel,#animation_list_panel,#new_animation_panel,#edit_animation_panel {
+    padding: 0px;
+    min-height: 10px!important;
+    border: 0 none;
+}
+
+
+/* 巡航开始 */
+
+
+#cruise-panel.ui-dialog-content {
+    background: rgba(53, 53, 53, 0);
+}
+
+#cruise-panel.ui-dialog-content button {
+    outline: none;
+}
+
+#cruise-panel  ul {
+    border: 1px solid rgba(89, 89, 89, 1);
+    width: 292px!important;
+}
+
+#cruise-panel .btn-content {
+    margin-bottom: 12px;
+}
+
+.animate-list-btn,.help-btn {
+    padding: 0 18px;
+    text-align: center;
+    border: 2px solid #464749;
+    color: #D5D6D7;
+    line-height: 46px;
+    background-color: #2F3031;
+    font-size: $default-title-font-size!important;
+}
+
+.animate-list-btn span,.help-btn span {
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+
+.cruise-pane-clicked {
+    border: 2px solid #00A4A7;
+    background-color: #43616D;
+}
+
+.cruise-pane-span-clicked {
+    color: #00EAF2;
+}
+/* 巡航结束 */
+
+
+/* 动画说明开始 */
+#animation_description_pane p {
+    max-width: 1028px;
+}
+/* 动画说明结束 */
+
+
+/* 动画列表开始 */
+#animation_list_panel.ui-dialog-content {
+    background-color: rgba(62, 62, 62, 0.0);
+}
+
+#animation_list_panel ul {
+    margin: 0;
+    padding: 0;
+}
+
+#animation_list_panel li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#animation_list_panel #animation_list_new_btn {
+    border: 2px solid #494D4E;
+    background-color: #2F3031;
+    color: #D6D7D8;
+    font-size: $default-title-font-size;
+    padding: 5px 12px;
+    margin-bottom: 12px;
+    outline: none;
+}
+
+#animation_list_panel #animation_list_new_btn.clicked {
+    border: 2px solid #00A4A7;
+    background-color: #43616D;
+}
+
+#animation_list_panel #animation_list_new_btn span {
+    margin-right: 12px;
+}
+
+#animation_list_panel .animation-list-content {
+    border: 2px solid #494D4E;
+}
+
+#animation_list_panel .animation-list-content .title {
+    background-color: #292A2B;
+}
+
+#animation_list_panel .animation-list-content li {
+    padding: 10px 13px;
+}
+
+#animation_list_panel .animation-list-content li.even {
+    background-color: #343536;
+}
+
+#animation_list_panel .animation-list-content li.odd {
+    background-color: #2F3031;
+}
+
+#animation_list_panel .animation-list-content li span {
+    display: inline-block;
+    min-width: 90px;
+    /*max-width: 150px;*/
+    text-align: center;
+    padding: 0 13px;
+    font-size: $default-font-size;
+    vertical-align: middle;
+}
+
+#animation_list_panel .animation-list-content li span:last-child {
+    min-width: 202px;
+}
+
+#animation_list_panel .animation-list-content li .last button {
+    width: 50px;
+    height: 28px;
+    // border: 2px solid #676869;
+    // background-color: #676869;
+    // color: #F3F4F5;
+    // border-radius: 5px;
+    @extend .bt-btn-second;
+    margin-right: 26px;
+    font-size: $default-font-size;
+    cursor: pointer;
+    outline: none;
+    padding-left: 0;
+}
+
+#animation_list_panel .animation-list-content li .last button:last-child {
+    margin-right: 0;
+}
+
+#animation_list_panel .animation-list-content li .last button.animate-list-btn-clicked {
+    @extend .bt-btn-second:hover;
+}
+
+#animation_list_panel .page-box {
+    margin-top: 14px;
+}
+
+#animation_list_panel .page-text {
+    font-size: 14px;
+    margin-right: 22px;
+    color: #969798;
+}
+
+#animation_list_panel .page-box span {
+    color: #696A6B;
+    margin-right: 26px;
+    font-size: $default-font-size;
+    cursor: pointer;
+}
+
+#animation_list_panel .page-box span:nth-child(2) {
+    margin-right: 40px;
+}
+
+#animation_list_panel .page-box span:last-child {
+    margin-right: 0;
+}
+/* 动画列表结束 */
+
+
+/* 新建动画开始 */
+#new_animation_panel,#edit_animation_panel {
+    position: relative;
+    padding-bottom: 28px;
+}
+
+#new_animation_panel .bottom-btn-box,#edit_animation_panel .bottom-btn-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2000;
+}
+
+#new_animation_panel .bottom-btn-box button,#edit_animation_panel .bottom-btn-box button {
+    width: 50px;
+    height: 28px;
+    margin-right: 26px;
+    font-size: $default-font-size;
+    cursor: pointer;
+    outline: none;
+    @extend .bt-btn-second;
+}
+
+#new_animation_panel.ui-dialog-content,#edit_animation_panel.ui-dialog-content {
+    background-color: rgba(62, 62, 62,0.0);
+}
+
+#new_animation_panel .new-animation-box,#edit_animation_panel .new-animation-box {
+    margin-right: 25px; 
+}
+
+#new_animation_panel .new-animation-box p,#edit_animation_panel .new-animation-box p {
+    padding: 0 0 5px 0;
+    margin: 0;
+    font-size: $default-font-size;
+}
+
+#new_animation_panel .new-animation-box input,#edit_animation_panel .new-animation-box input {
+    height: 25px;
+    outline: none;
+    @extend .bt-value-input;
+    font-size: $default-font-size;
+    padding-left: 5px;
+}
+
+#new_animation_panel .auto-play-box,#edit_animation_panel .auto-play-box {
+    margin-top: 27px;
+    float: left;
+    font-size: $default-font-size;
+}
+
+#new_animation_panel .auto-play-box input[type="checkbox"],#edit_animation_panel .auto-play-box input[type="checkbox"] {
+    border: 2px solid #2F3031;
+    background-color: #333435;
+    margin-left: 5px;
+}
+
+#new_animation_panel .btn-box,#edit_animation_panel .btn-box {
+    margin-left: 35px;
+    margin-top: 26px;
+}
+
+#new_animation_panel .btn-box button,#edit_animation_panel .btn-box button {
+    padding: 3px 18px;
+    outline: none;
+    @extend .bt-btn-second;
+    margin-right: 10px;
+    font-size: $default-font-size;
+}
+
+#new_animation_panel .btn-box button:last-child,#edit_animation_panel .btn-box button:last-child {
+    margin-right: 0;
+}
+
+#new_animation_panel .new-animation-content,#edit_animation_panel .new-animation-content {
+    height: 590px;
+    margin-top: 20px;
+    overflow: auto;
+}
+
+#new_animation_panel .content-box,#edit_animation_panel .content-box {
+    margin-top: 15px;
+    background: #2F3031;
+    padding: 20px 22px;
+    border: 1px solid #58595A;
+    padding-bottom: 10px;
+    padding-right: 45px;
+    position: relative;
+    width: 1124px;
+}
+
+#new_animation_panel .content-box .content-input-box,#edit_animation_panel .content-box .content-input-box {
+    margin-right: 38px;
+    font-size: $default-font-size;
+    margin-bottom: 12px;
+}
+
+#new_animation_panel .content-box .no-margin,#edit_animation_panel .content-box .no-margin {
+    margin-right: 0;
+}
+
+#new_animation_panel .content-box .content-input-box input,#edit_animation_panel .content-box .content-input-box input {
+    outline: none;
+    margin-left: 5px;
+    height: 25px;
+    padding-left: 5px;
+    @extend .bt-value-input;
+    font-size: $default-font-size;
+}
+
+#new_animation_panel .content-box .delete-btn,#edit_animation_panel .content-box .delete-btn {
+    padding: 2px 8px;
+    outline: none;
+    margin-top: 5px;
+    cursor: pointer;
+    @extend .bt-btn-second;
+    font-size: $default-font-size;
+}
+
+#new_animation_panel .content-box .closeBtn,#edit_animation_panel .content-box .closeBtn {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 0;
+    background-color: #2F3031;
+    border: 0 none;
+    outline: none;
+    color: #414243;
+    cursor: pointer;
+}
+
+#new_animation_panel button.clicked,#edit_animation_panel button.clicked {
+    @extend .bt-btn-second:hover;
+}
+
+#new_animation_panel .all-input .auto-play-box,#edit_animation_panel .all-input .auto-play-box {
+    position: relative;
+}
+
+#new_animation_panel .all-input .auto-play-box div,#edit_animation_panel .all-input .auto-play-box div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+    width: 29px;
+    height: 29px;
+    background: url(../css/images/check/polaris.png) no-repeat;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: -4px;
+    left: 60px;
+
+    background-position: 0 0;
+}
+
+#new_animation_panel .all-input .auto-play-box div:hover,#edit_animation_panel .all-input .auto-play-box div:hover {
+    background-position: -31px 0;
+}
+
+#new_animation_panel .all-input .auto-play-box div input,#edit_animation_panel .all-input .auto-play-box div input {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+    box-sizing: border-box;
+    line-height: normal;
+
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: sans-serif;
+}
+
+#new_animation_panel .all-input .auto-play-box div .helper,#edit_animation_panel .all-input .auto-play-box div .helper {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    display: block;
+    width: 80%;
+    height: 80%;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(255, 255, 255);
+    border: 0px;
+    opacity: 0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#new_animation_panel .all-input .auto-play-box div.clicked,#edit_animation_panel .all-input .auto-play-box div.clicked {
+    background-position: -62px 0;
+}
+/* 新建动画结束 */

@@ -1,0 +1,37 @@
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="app_third_page">
+    	<div class="header">
+    		机柜
+    	</div>
+        <ul id = "list">
+        </ul>
+    </div>
+</body>
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/t.js"></script>
+
+    <script type="text/javascript" src="./libs/datetimepicker.min.js"></script>
+    <script type="text/javascript" src="./libs/twaver.js"></script>
+    <script type="text/javascript" src="./libs/itv-all-min.js"></script>
+    <script type="text/javascript" src="./libs/twaver-make.js"></script>
+    <!--<script type="text/javascript" src="/js/register.js"></script>
+    <script type="text/javascript" src="./modellib/beier/register.js"></script>
+    <script type="text/javascript" src="./modellib/longjiang/register.js"></script>
+    <script type="text/javascript" src="./modellib/yx/register.js"></script>-->
+    <script type="text/javascript" src="./libs/layer.min.js"></script>
+    <script type="text/javascript" src="./libs/socket.io.js"></script>
+
+
+    <script type="text/javascript" src="./js/ServerUtil.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+	<script type="text/javascript">
+	    var params = app.parseURLParameters();
+        var text = (params.dc) + "/" + (params.description || params.id);
+        $('title').html(text);
+        var id = params.id;
+        app.initRackList(id);
+	</script>

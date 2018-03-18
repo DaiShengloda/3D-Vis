@@ -1,0 +1,495 @@
+@charset "UTF-8";
+html body {
+  font-family: "NotoSansHans",  Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+  color: #bcbcbc;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  html body {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html body {
+    font-size: 12px;
+  }
+}
+
+.clearfix {
+  display: block;
+}
+
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.bt-arrow {
+  display: block;
+  border-top: 9px solid transparent;
+  border-left: 9px solid #23888f;
+  border-bottom: 9px solid transparent;
+  cursor: pointer;
+  transition: all 0.3S;
+}
+
+.bt-arrow:hover {
+  border-left: 9px solid #00ffff;
+}
+
+.bt-arrow-open {
+  transform: rotate(90deg);
+}
+
+.bt-scroll::-webkit-scrollbar,
+.scroll-class::-webkit-scrollbar {
+  background-color: rgba(53, 53, 53, 0.95);
+  width: 10px;
+}
+
+.bt-scroll::-webkit-scrollbar-thumb,
+.scroll-class::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  height: 24px;
+}
+
+.bt-value {
+  color: #d6d6d6;
+}
+
+.bt-value-input, .app-panel .app-text-select-line .ui-selectmenu-button {
+  color: #bcbcbc;
+  border: 2px solid #2d2d2d;
+  background: #343434;
+  padding: 5px;
+}
+
+.bt-btn, .app-btn-group div.active {
+  border: 1px solid #46606b;
+  color: #ffffff;
+  background: #46606b;
+  border-radius: 3px;
+}
+
+.bt-btn:hover, .app-btn-group div.active:hover {
+  border: 1px solid default-highlight-bg-color;
+  background: #46606b;
+}
+
+.bt-btn-second, .app-btn-group div.clear-it {
+  border: 1px solid #6a6a6a;
+  color: #ffffff;
+  background: #6a6a6a;
+  border-radius: 3px;
+}
+
+.bt-btn-second:hover, .app-btn-group div.clear-it:hover {
+  border: 1px solid #00ffff;
+  background: #46606b;
+}
+
+@media screen and (max-width: 1919px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 8px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .bt-scroll::-webkit-scrollbar,
+  .scroll-class::-webkit-scrollbar {
+    width: 5px;
+  }
+  .bt-scroll::-webkit-scrollbar-thumb,
+  .scroll-class::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+}
+
+.app-panel {
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+  border-top: 1px solid #00f6ff;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-panel {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-panel {
+    width: 240px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-panel {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+
+.app-panel span, .app-panel .app-text-line {
+  user-select: none;
+  cursor: default;
+}
+
+.app-panel .app-main {
+  padding: 1px 15px;
+  background: rgba(53, 53, 53, 0.95);
+}
+
+.app-panel .app-tree {
+  background: rgba(53, 53, 53, 0.95);
+  padding: 0 0 15px 15px;
+}
+
+.app-panel .app-line {
+  display: flex;
+  height: 28px;
+  margin: 10px 0;
+}
+
+.app-panel .app-line .text {
+  width: 28%;
+  color: #bcbcbc;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.app-panel .app-black-line {
+  height: 0px;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 20px;
+  width: 100%;
+  padding: 0 15px;
+}
+
+.app-panel .app-text-line {
+  color: #fff;
+  align-items: center;
+}
+
+.app-panel input {
+  padding: 5px;
+  color: #bcbcbc;
+  background-color: #343434;
+  border: 2px solid #2d2d2d;
+}
+
+.app-panel .app-input-line input {
+  width: 100%;
+}
+
+.app-panel .app-text-input-line .input {
+  width: 72%;
+}
+
+.app-panel .app-text-select-line .ui-selectmenu-button {
+  display: flex;
+  align-items: center;
+}
+
+.app-panel .app-text-select-line .ui-selectmenu-button .ui-selectmenu-text {
+  padding: 5px;
+}
+
+.app-panel .app-text-select-line .ui-selectmenu-button:focus {
+  outline: 0px;
+}
+
+.app-head {
+  position: relative;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.app-head .app-title {
+  background: #2a2a2a;
+  color: rgba(53, 53, 53, 0.95);
+  border-radius: 30px;
+  padding: 5px 15px;
+  user-select: none;
+  cursor: default;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-head .app-title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-head .app-title {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-head .app-title {
+    font-size: 14px;
+  }
+}
+
+.app-head .app-circle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border-radius: 50%;
+  border: 2px solid #23888f;
+  cursor: pointer;
+}
+
+.app-head .app-circle .app-circle-inside {
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background: #23888f;
+  border-radius: 50%;
+}
+
+.app-head .app-circle:hover {
+  border-color: #00ffff;
+}
+
+.app-head .app-circle:hover .app-circle-inside {
+  background: #00ffff;
+}
+
+/* btn start */
+.app-btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-btn-group {
+    margin: 20px 0;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-btn-group {
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-btn-group {
+    margin: 10px 0;
+  }
+}
+
+.app-btn-group div {
+  border: 1px solid transparent;
+  padding: 0px 5px;
+  margin-left: 5px;
+  cursor: default;
+  user-select: none;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-btn-group div.active:hover {
+  background: #46606b;
+  border-color: #00ffff;
+}
+
+.ui-selectmenu-open .app-panel-selectmenu-ul {
+  border: 2px solid #2d2d2d;
+  background-color: #343434;
+  color: #bcbcbc;
+  padding: 1px;
+  overflow-y: scroll;
+  max-height: 150px;
+}
+
+.ui-selectmenu-open .app-panel-selectmenu-ul li {
+  border: 1px solid transparent;
+  background-color: rgba(53, 53, 53, 0.95);
+  color: #bcbcbc;
+  margin: 1px 0;
+  font-size: 14px;
+}
+
+.ui-selectmenu-open .app-panel-selectmenu-ul li.ui-state-focus {
+  border-color: #00ffff;
+  background-color: #46606b;
+  color: #ffffff;
+}
+
+.ui-selectmenu-open .app-panel-selectmenu-ul::-webkit-scrollbar {
+  background-color: #555555;
+  width: 8px;
+}
+
+.ui-selectmenu-open .app-panel-selectmenu-ul::-webkit-scrollbar-thumb {
+  background-color: #2a2a2a;
+  border-radius: 4px;
+  height: 24px;
+}
+
+.app-pop {
+  padding: 20px 20px 30px 20px;
+  background: rgba(53, 53, 53, 0.95);
+  position: absolute;
+  left: 330px;
+  top: 200px;
+  z-index: 2;
+  border: none;
+}
+
+@media screen and (min-width: 1919px) {
+  .app-pop {
+    width: 300px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-pop {
+    width: 240px;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-pop {
+    width: 200px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 1919px) {
+  .app-pop {
+    padding: 10px 1px;
+  }
+}
+
+.app-pop .pop-title-line {
+  font-size: 16px;
+  background: #2a2a2a;
+  color: #d6d6d6;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0 -5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-pop .pop-close {
+  float: right;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.app-pop .app-main {
+  padding: 0;
+  background: none;
+}
+
+.app-pop .app-tree {
+  background: none;
+}
+
+.app-pop.app-panel.asset-on-pop {
+  padding: 20px 20px 0px 20px;
+  left: 50%;
+  top: 30%;
+  margin-left: -150px;
+}
+
+.app-pop.app-panel.asset-on-pop .app-btn-group {
+  margin: 15px 0 10px 0;
+}
+
+.link-search-pop {
+  display: block;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+}
+
+.link-search-pop .link {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.link-search-pop .link .link-node {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1919px) {
+  .app-panel .app-main {
+    padding: 1px 10px;
+  }
+  .app-panel .app-line {
+    margin: 5px 0;
+  }
+  .app-panel .app-line .text {
+    padding-left: 5px;
+  }
+  .app-head {
+    padding: 5px 0;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .app-panel .app-main {
+    padding: 1px 10px;
+  }
+  .app-panel .app-line {
+    margin: 5px 0;
+  }
+  .app-panel .app-line .text {
+    padding-left: 0px;
+    width: 35%;
+  }
+  .app-panel .app-line .input {
+    width: 65%;
+  }
+  .app-panel .app-tree {
+    padding: 0 0 10px 10px;
+  }
+  .app-head {
+    padding: 5px 0;
+  }
+}

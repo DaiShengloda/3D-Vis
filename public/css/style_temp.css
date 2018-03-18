@@ -1,0 +1,68 @@
+#doorControl {
+    padding: 0;
+}
+table.gridtable {
+	font-family: verdana,arial,sans-serif;
+	font-size:14px;
+	color:#bcbcbc;
+	/* border-width: 1px;
+	border-color: #666666; */
+    /* border-collapse: collapse; */
+}
+table.gridtable tr:nth-child(even) {
+    background-color: #343536;
+}
+table.gridtable tr:nth-child(odd) {
+    background-color: #2F3031;
+}
+table.gridtable tr:first-child {
+    background-color: rgb(42, 42, 42);
+}
+table.gridtable th {
+	/* border-width: 1px; */
+	padding: 10px;
+	/* border-style: solid; */
+	/* border-color: #666666; */
+	/* background-color: rgba(255,255,255,0.9); */
+}
+table.gridtable td {
+	/* border-width: 1px; */
+	padding: 10px;
+	/* border-style: solid; */
+	/* border-color: #666666; */
+	/* background-color: rgba(255,255,255,0.6); */
+}
+.fl{
+	float:left;
+}
+.fr {
+    float: right;
+}
+
+.pagination > li > a, .pagination > li > span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #337ab7;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd
+}
+.pagination-sm > li > a, .pagination-sm > li > span {
+    padding: 5px 10px;
+    font-size: 12px
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+.pagination-sm > li:first-child > a, .pagination-sm > li:first-child > span {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px
+}
+.pagination > li {
+  display: inline;
+}

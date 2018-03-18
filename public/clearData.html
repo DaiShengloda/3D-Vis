@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>IT资产数据管理中心</title>
+        <link rel="stylesheet" href="./libs/pdf/viewer.css">
+    <link rel="stylesheet" href="./css/client-all.css">
+    <link rel="stylesheet" href="./css/info.css">
+    <link rel="stylesheet" href="./css/style_temp.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <link rel="stylesheet" href="./css/datetimepicker.css">
+    <link rel="stylesheet" href="./css/data-nav.css">
+    <link rel="stylesheet" href="./css/bootstrap-select.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/vxgplayer-1.8.11.min.css">
+    <link rel="resource" type="application/l10n" href="./libs/pdf/locale/locale.properties">
+    <link rel="stylesheet" href="./css/customer.css">
+    <!-- <link rel="stylesheet" href="./css/hw_style.css"> -->
+
+    <script>
+        if (typeof module === 'object') {
+            window.module = module;
+            module = undefined;
+        }
+    </script>
+    <script type="text/javascript" src="./libs/jquery.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./libs/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./libs/echarts.min.js"></script>
+    <script type="text/javascript" src="./libs/bootstrap-select.js"></script>
+    <script type="text/javascript" src="./libs/BootstrapTab.js"></script>
+
+    <script>
+        if (window.module) module = window.module;
+    </script>
+
+    <style>
+       body {
+           margin: 0;
+           padding: 0;
+        }
+        .title{
+            height: 100px;
+            width: 100%;
+        }
+         .title .top {
+            text-align: center;
+        }
+        .tabl_data{
+            height: 500px;
+            width: 80%;
+            margin-left: 10%;
+
+        }
+        .tabl_data table {
+            background-color: yellow;
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+        .tabl_data table td{
+            width:100px;padding:5px;
+            border:1px solid green;
+            
+        }
+        .tabl_data table tr{
+         display:block; 
+         margin:2px 0;  
+        }
+    </style>
+    </head>
+    <body>
+        <div class = "title">
+          <div class = "">
+              <div class = "top">
+                  <h1>IT资产数据模型管理系统</h1>
+              </div>
+          </div>
+        </div>
+
+        <div class = "tabl_data">
+            <table>
+                <tr>
+                     <td>编号</td>
+                     <td>姓名</td>
+                     <td>描述</td>
+                     <td>坐标</td>
+                     <td>2D坐标</td>
+                </tr>
+                <tr>
+                    <td>1</td> 
+                    <td>kitty</td> 
+                    <td>一个人的姓名</td> 
+                    <td>20.5</td> 
+                    <td>90.5</td> 
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>

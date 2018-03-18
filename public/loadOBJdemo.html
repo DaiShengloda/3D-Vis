@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Obj Demo</title>
+     <script type="text/javascript" src="./libs/t.js"></script>
+     <script type="text/javascript" src="./libs/twaver.js"></script>
+    <script type="text/javascript">
+//        var network3d;
+        var box;
+        var camera,network;
+        function load(){
+
+            box = new mono.DataBox();
+            camera = new mono.PerspectiveCamera(30, 1.5, 10, 10000);
+            camera.setPosition(50,200,500);
+
+            network= new mono.Network3D(box, camera, myCanvas);
+            var interaction = new mono.DefaultInteraction(network);
+            network.setInteractions([new mono.SelectionInteraction(network), interaction]);
+            mono.Utils.autoAdjustNetworkBounds(network,document.documentElement,'clientWidth','clientHeight',0,30);
+
+            var pointLight = new mono.PointLight(0xFFFFFF,1);
+            pointLight.setPosition(1000,1000,1000);
+            box.add(pointLight);
+            var pointLight = new mono.PointLight(0xFFFFFF,1);
+            pointLight.setPosition(-1000,1000,-1000);
+            box.add(pointLight);
+            box.add(new mono.AmbientLight(0x888888));
+        }
+
+        function loadFile(){
+            var files = document.getElementById('files').files;
+            if(files && files.length > 0){
+                var obj, mtl, pns = {};
+                for(var i=0;i<files.length;i++){
+                    var file = files[i];
+                    if(file.type){
+                        if(file.type.startsWith('image')){
+                            var fn = file.name.substring(0, file.name.indexOf(".")).toLowerCase();
+                            pns[fn] = file;
+                        }
+                    } else {
+                        if(file.name.indexOf(".")>0){
+                            if(file.name.endsWith('obj')){
+                                obj = file;
+                            } else if(file.name.endsWith('mtl')){
+                                mtl = file;
+                            }
+                        }
+                    }
+
+                }
+                if(!obj){
+                    alert("File with suffix '.obj' is required");
+                    return;
+                }
+                document.getElementById('btnSearch').value = "loading...";
+                var loader = new mono.OBJMTLLoader();
+                // box.startBatch();
+                loader.loadFiles(obj, mtl, pns, function (object) {
+                    var boundingBox = object.getBoundingBoxWithChildren();
+                    var s = boundingBox.size();
+                    var p = object.getPosition();
+                    var x = s.x + p.x  + 100, y = s.y + p.y + 100, z = s.z + p.z + 100;
+                    camera.setPosition(x, y, z);
+                    box.addByDescendant(object);
+                    box.getSelectionModel().setSelection(object.getChildren());
+                    box.getNodes().forEach(function(node){
+                        node.setStyle('m.ambient','#EFEFEF');
+                        console.log(node.vertices);
+                    });
+                    setTimeout(function () {
+                        for(var i = 0;i < 10;i ++){
+                               var clone = object.clonePrefab();
+                                // var clone = new mono.Cube(50,50,50);
+                                clone.setStyle('m.color','red');
+                                clone.setX(100);
+                                box.addByDescendant(clone);
+                        }
+                        
+                    },100)
+                    
+
+                    // box.endBatch();
+                    document.getElementById('btnSearch').value = "load";
+                });
+            }
+        }
+
+    </script>
+</head>
+<body onload = 'load()'>
+    <div id="toolbar" style="background: coral;">
+        File Path: <input id='files' type='file' class='input' size='30' multiple='multiple'/>
+        <input type="button" id="btnSearch" value="Load" onclick="loadFile()"/> (Click button to load drawing from file)
+    </div>
+    <div id = "mainDiv">
+        <canvas id="myCanvas"/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,689 @@
+/*jquery-ui-dialog start*/
+
+.ui-dialog-blackStyle {
+    color: #bcbcbc;
+    border: none;
+    padding: 0px;
+    background: rgba(53, 53, 53, 0.9);
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar {
+    background: #2a2a2a;
+    height: 38px;
+    margin: 10px 10px 0px 10px;
+    border-radius: 5px;
+    border: none;
+    color: #bcbcbc;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle .ui-dialog-titlebar {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle .ui-dialog-titlebar {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle .ui-dialog-titlebar {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .ui-dialog-titlebar-close {
+    background: #2a2a2a;
+    border: none;
+    margin-right: 5px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon-closethick,
+.ui-dialog-blackStyle .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-button-text {
+    display: none;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content {
+    color: #bcbcbc;
+    font-family: "Source Han Sans CN", "Microsoft YaHei", Verdana, Helvetica, Arial, "Open Sans", sans-serif;
+    padding: 10px;
+    border: 1px solid rgba(89, 89, 89, 0.5);
+    margin: 1em 1.3em 1.5em 1.3em;
+    background: #303030;
+    overflow: hidden;
+}
+
+.ui-dialog-blackStyle .pagerBox .pagerMessage {
+    color: #bcbcbc;
+    padding: 0px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle .pagerBox .pagerMessage {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle .pagerBox .pagerMessage {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle .pagerBox .pagerMessage {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle .pagerBox .fr {
+    padding-top: 5px;
+}
+
+.ui-dialog-blackStyle .pagerBox a {
+    background: rgba(63, 63, 63, 0);
+    border: none;
+    color: #bcbcbc;
+}
+
+.ui-dialog-blackStyle .pagerBox a:hover {
+    color: #00f6ff;
+}
+
+.ui-dialog-blackStyle .ui-dialog-buttonpane {
+    background: rgba(48, 54, 62, 0.3);
+    padding: 0px 0px 0px 0px;
+    border-width: 0px 0px 0px 0px;
+    box-shadow: inset 0 0px 0 #ffffff;
+}
+
+.ui-dialog-blackStyle .ui-dialog-buttonset button {
+    color: #30363e;
+    font-size: 12px;
+    text-shadow: 0 0px 0px;
+    border-color: #ffab00;
+    background-color: #ffab00;
+    background-image: -webkit-linear-gradient(top, #ffab00, #bc7f01);
+    background-position: 0px -32px;
+}
+
+.ui-dialog-blackStyle .ui-state-hover,
+.ui-dialog-blackStyle .ui-widget-content .ui-state-hover,
+.ui-dialog-blackStyle .ui-widget-header .ui-state-hover {
+    border: none;
+    background: none;
+    font-weight: normal;
+    color: #bcbcbc;
+}
+
+.ui-dialog-blackStyle .ui-state-focus,
+.ui-dialog-blackStyle .ui-widget-content .ui-state-focus,
+.ui-dialog-blackStyle .ui-widget-header .ui-state-focus {
+    color: #454545;
+}
+
+.ui-dialog-blackStyle .ui-state-active,
+.ui-dialog-blackStyle .ui-widget-content .ui-state-active,
+.ui-dialog-blackStyle .ui-widget-header .ui-state-active {
+    border: none;
+    background: none;
+    font-weight: normal;
+    color: #bcbcbc;
+}
+
+.datetimepicker {
+    background-color: #343434;
+    border: 2px solid #2d2d2d;
+    box-shadow: 3px 3px 2px #000000;
+    color: #717171;
+}
+
+
+/*jquery-ui-dialog end*/
+
+
+/*historyAlarmDialog start*/
+
+.ui-dialog-blackStyle #alarmListDialog {
+    padding: 0px 20px;
+    border: none;
+    margin-top: 0px;
+    background: rgba(48, 48, 48, 0);
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox {
+    padding: 5px 0px 25px 0px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .mytd {
+    padding-bottom: 2px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+        padding-right: 16px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems {
+        padding-right: 16px;
+    }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems:last-child {
+    padding-right: 0px;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems span:first-child {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems input {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    background-color: #343434;
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems select {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .searchButton {
+    background-image: -webkit-linear-gradient(top, rgba(56, 56, 56, 0.6), rgba(56, 56, 56, 0.6));
+    border: none;
+    height: 27px;
+    line-height: 27px;
+    color: #e6e6e6;
+    padding: 0px 10px 8px 10px;
+    border-radius: 3px;
+}
+
+.ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    border: 2px solid #2d2d2d;
+    color: #717171;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #alarmListDialog .searchBox .searchItems .select2-selection__rendered {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+    overflow: hidden;
+    color: #bcbcbc;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle #alarmListDialog #alarmListBox {
+        font-size: 12px;
+    }
+}
+
+
+/*historyAlarmDialog end*/
+
+
+/*alarmDetail start*/
+
+.ui-dialog-blackStyle .label-inline-block {
+    font-weight: 700;
+}
+
+.ui-dialog-blackStyle .label-min {
+    width: 90px;
+    text-align: left;
+}
+
+.ui-dialog-blackStyle .label-value {
+    color: #bcbcbc;
+}
+
+
+/*alarmDetail end*/
+
+
+/*alarmConfirm start*/
+
+.ui-dialog-blackStyle .ui-dialog-content .form-control {
+    background: #404040;
+    border-radius: unset;
+    border: 1px solid #2a2a2a;
+    color: #717171;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-control:focus {
+    border-color: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group .control-label {
+    width: 90px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group div {
+    text-align: right;
+    width: 280px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-content .form-group div button {
+    background: #6a6a6a;
+    border-radius: 5px;
+    color: white;
+    width: 60px;
+    height: 30px;
+    border: none;
+    margin-right: 35px;
+}
+
+
+/*alarmConfirm end*/
+
+
+/*alarmContentPane start*/
+
+.ui-dialog-blackStyle .alarm-content-panel {
+    top: 0px;
+    background: rgba(48, 48, 48, 0);
+    border: none;
+    padding: 0px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group {
+    margin-top: 0px;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group input {
+    background-image: -webkit-linear-gradient(top, #343434, #343434);
+    border: 2px solid #2d2d2d;
+    height: 27px;
+    line-height: 27px;
+    color: #717171;
+    outline: none;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle .alarm-content-panel .input-group input {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle .alarm-content-panel .input-group input {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle .alarm-content-panel .input-group input {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .input-group input:focus {
+    border: 2px solid #2d2d2d;
+    outline: none;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel #alarm_chart_pane {
+    background: #303030;
+    border: 1px solid rgba(89, 89, 89, 0.5);
+    padding: 10px;
+    /*margin-top: -10px*/
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .fs10 {
+    width: 40px;
+    height: 20px;
+    line-height: 20px;
+    background: #6a6a6a;
+    color: #ffffff;
+    border: none;
+}
+
+.ui-dialog-blackStyle .alarm-content-panel .fs10:hover {
+    background: #47626d;
+    border: 1px solid #00f6ff;
+    color: #ffffff;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+    background: rgba(42, 42, 42, 0);
+    overflow: visible;
+}
+
+@media screen and (max-width: 1920px) {
+    .ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_right:after {
+    top: 13px;
+    cursor: pointer;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_left {
+    margin-left: 0px;
+}
+
+.ui-dialog-blackStyle .ui-dialog-titlebar .it-property-title .arrow_left:before {
+    top: 13px;
+    cursor: pointer;
+}
+
+
+/*alarmContentPane end*/
+
+
+/*panel panelInfo start*/
+
+.ui-dialog-blackStyle #serverPanel {
+    left: 0px;
+    position: relative;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel {
+    background: #303030;
+    color: #bcbcbc;
+}
+
+.ui-dialog-blackStyle #serverPanel .panel .content {
+    padding: 0px;
+    background: #303030;
+    margin: 0px;
+    border: none;
+}
+
+.ui-dialog-blackStyle #serverPanel .app-head {
+    padding: 0px;
+    margin: 0px 0px 10px 0px;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #serverPanel #moveTitle {
+        font-size: 12px;
+    }
+    .ui-dialog-blackStyle #serverPanel .app-head .app-circle {
+        top: 2px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #serverPanel #moveTitle {
+        font-size: 12px;
+    }
+    .ui-dialog-blackStyle #serverPanel .app-head .app-circle {
+        top: 2px;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #serverPanel #togFace {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #serverPanel #togFace {
+        font-size: 12px;
+    }
+}
+
+.ui-dialog-blackStyle #serverPanel .panel2dBox {
+    height: 650px;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanelBtn {
+    position: relative;
+    top: 400px;
+    left: 235px;
+    background: #6a6a6a;
+    color: white;
+    padding: 3px;
+    padding: 5px 10px 5px 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #serverPanel .portPanelBtn {
+        top: 295px;
+        left: 145px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #serverPanel .portPanelBtn {
+        top: 295px;
+        left: 145px;
+    }
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel {
+    /*width: '305px',*/
+    background: #393939;
+    padding: 20px;
+    height: 510px;
+    width: 340px;
+    border-top: solid 2px #228a8d;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 9999;
+}
+
+@media screen and (max-width: 1919px) {
+    .ui-dialog-blackStyle #serverPanel .portPanel {
+        height: 400px;
+        width: 255px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .ui-dialog-blackStyle #serverPanel .portPanel {
+        height: 400px;
+        width: 255px;
+    }
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .icon-switch-arrow:hover {
+    color: #228a8d;
+}
+
+.ui-dialog-blackStyle #serverPanel .portPanel .app-title {
+    cursor: move;
+}
+
+
+/*panel panelInfo end*/
+
+
+/* equipment link start */
+
+.ui-dialog-blackStyle .link-group {
+    /*width: 600px;*/
+    background-color: rgba(53, 53, 53, 0.9);
+    padding: 10px;
+    border: none;
+    color: #f0f0f0;
+    margin: 0;
+}
+
+.link-group .iconfont {
+    font-size: 24px;
+}
+
+.link {
+    background-color: #303030;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.link-over {
+    color: #039ca2;
+    background-color: #2a2a2a;
+}
+
+.link-over>.link-separater {
+    border-top: 1px solid #039ca2;
+}
+
+.link-separater {
+    width: 55px;
+    height: 1px;
+    border-top: 1px solid #f0f0f0;
+    margin: 0 10px;
+    display: inline-block;
+    margin: 0 -20px;
+}
+
+.link-over>.link-separater-over {
+    border-top: 1px solid #00fefe;
+}
+
+.link-node {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    /*border: 1px solid #006e54;*/
+    width: 90px;
+}
+
+.link-node-over {
+    color: #00fefe;
+}
+
+.link-without-type {
+    margin-top: 4px;
+}
+
+.link-node>span {
+    display: block;
+}
+
+@media screen and (max-width: 1920px) {
+    .link-node>span {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .link-node>span {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .link-node>span {
+        font-size: 12px;
+    }
+}
+
+
+/* equipment link end*/

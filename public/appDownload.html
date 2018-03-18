@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>App下载</title>
+</head>
+
+<body>
+    <div style="text-align: center;font-size: 20px">
+        您的地址是：<span style="color: tomato" id="location"></span>
+    </div>
+    <div style="text-align: center;font-size: 20px">
+        <p style="color: lightskyblue">请点击或扫描二维码：</p>
+        <div>
+            <a style="text-align: center" id="code" href="./AppPackage/zhjc.apk"></a>
+        </div>
+    </div>
+</body>
+<script src="./libs/jquery.js"></script>
+<script src="./libs/jquery.qrcode.min.js"></script>
+<script>
+    setTimeout(function () {
+        open('./AppPackage/zhjc.apk')
+    }, 2000)
+    jQuery(function () {
+        var url = window.location.host;
+        jQuery("#location").html(url);
+        jQuery('#code').qrcode({
+            width: 200,
+            height: 200,
+            text: "http://" + url + "/appDownload.html"
+        })
+    })
+
+</script>
+
+</html>
